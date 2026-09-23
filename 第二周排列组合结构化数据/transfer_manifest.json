@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-09-23T15:27:54.154934+00:00",
+  "source_root": "C:\\data\\research\\第二周交流与产出",
+  "filter": {
+    "question_id_prefix": "COMB_",
+    "participant_ids": [
+      "P01",
+      "P02",
+      "P03",
+      "P04"
+    ]
+  },
+  "counts": {
+    "participants": 4,
+    "participant_traces": 12,
+    "questions": 9,
+    "question_variants": 9,
+    "observed_steps": 74
+  },
+  "question_ids": [
+    "COMB_A1",
+    "COMB_A2",
+    "COMB_A3",
+    "COMB_B1",
+    "COMB_B2",
+    "COMB_B3",
+    "COMB_C1",
+    "COMB_C2",
+    "COMB_C3"
+  ],
+  "files": [
+    {
+      "name": "participant_traces_combinatorics.jsonl",
+      "size_bytes": 45217,
+      "sha256": "50f4bde4e3a7da39422676739f8d8a61232b3ca5ecd47adbfee89ab04f0872be"
+    },
+    {
+      "name": "question_metadata_combinatorics.json",
+      "size_bytes": 6855,
+      "sha256": "a52b7c3da5c098534ac379b080b14cb87eb3c0b6514ff57a08ed4d91ce920dbb"
+    },
+    {
+      "name": "question_trace_variants_combinatorics.json",
+      "size_bytes": 85551,
+      "sha256": "7338aa0aef85e902cc691af0fe681d7ff067803e0cd42a1644c05cab72036c17"
+    },
+    {
+      "name": "README.md",
+      "size_bytes": 1191,
+      "sha256": "620c1f099d1d7915322e4e6947349073db8a320f82ce796014dfe50900a87bc6"
+    },
+    {
+      "name": "reviewed_trace_annotations_combinatorics.json",
+      "size_bytes": 62882,
+      "sha256": "d28937f3ce541b056b4698819843d4ad51df27bcbe219303d1c219112e50c106"
+    }
+  ]
+}

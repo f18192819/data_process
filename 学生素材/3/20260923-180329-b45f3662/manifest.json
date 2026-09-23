@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.0",
+  "sessionId": "20260923-180329-b45f3662",
+  "status": "complete",
+  "startedUnixMs": 1790157810273,
+  "startedMonoNs": 2252754130938000,
+  "endedMonoNs": 2254748950029277,
+  "pointCount": 172016,
+  "captureDevice": {
+    "id": "b63a81acebc16a2a",
+    "idType": "android_id",
+    "platform": "android",
+    "manufacturer": "HONOR",
+    "model": "ELN-W09",
+    "os": {
+      "name": "Android",
+      "version": "13",
+      "apiLevel": 33
+    }
+  },
+  "requestedChannels": {
+    "ink": true,
+    "audio": true,
+    "video": true
+  },
+  "ink": {
+    "deviceName": "T8C-ZM_0c12c1",
+    "deviceAddress": "C1:12:0C:00:6B:1B",
+    "deviceVersion": 106,
+    "deviceType": 107,
+    "reportedWidth": 21000,
+    "reportedHeight": 29700,
+    "coordinateProfile": {
+      "name": "INKLAB_MM_UL_V1",
+      "rawBounds": [
+        0,
+        0,
+        21000,
+        29700
+      ],
+      "displayOrientation": "raw",
+      "unit": "0.01mm",
+      "origin": "upper-left"
+    }
+  },
+  "streams": [
+    {
+      "streamId": "ink.points",
+      "source": "ink",
+      "format": "inklab.ink.points.v1",
+      "path": "ink.points.bin",
+      "startedMonoNs": 2252757615644672,
+      "endedMonoNs": 2254711564707520,
+      "byteOrder": "little_endian",
+      "headerBytes": 8,
+      "recordBytes": 33,
+      "fields": [
+        {
+          "name": "tMonoNs",
+          "type": "int64",
+          "bytes": 8
+        },
+        {
+          "name": "tUnixMs",
+          "type": "int64",
+          "bytes": 8
+        },
+        {
+          "name": "deviceType",
+          "type": "int32",
+          "bytes": 4
+        },
+        {
+          "name": "x",
+          "type": "int32",
+          "bytes": 4
+        },
+        {
+          "name": "y",
+          "type": "int32",
+          "bytes": 4
+        },
+        {
+          "name": "pressure",
+          "type": "int32",
+          "bytes": 4
+        },
+        {
+          "name": "state",
+          "type": "uint8",
+          "bytes": 1
+        }
+      ],
+      "deviceName": "T8C-ZM_0c12c1",
+      "deviceAddress": "C1:12:0C:00:6B:1B"
+    },
+    {
+      "streamId": "audio.mic",
+      "source": "microphone",
+      "format": "audio/mp4; codecs=mp4a.40.2",
+      "path": "audio.m4a",
+      "sampleRateHz": 44100,
+      "bitRateBps": 96000,
+      "channels": 1,
+      "mediaTimebase": "presentationTimeUs_zero_starts_at_startedMonoNs",
+      "startedMonoNs": 2252754130938000,
+      "endedMonoNs": 2254748887581000
+    },
+    {
+      "streamId": "video.camera.front",
+      "source": "camera",
+      "format": "video/mp4; codecs=avc1",
+      "path": "video-front.mp4",
+      "width": 1280,
+      "height": 720,
+      "frameRate": 30,
+      "bitRateBps": 4000000,
+      "mediaTimebase": "presentationTimeUs_zero_starts_at_startedMonoNs",
+      "cameraFacing": "front",
+      "cameraId": 1,
+      "camera2Id": "1",
+      "sensorOrientationDegrees": 270,
+      "startedMonoNs": 2252753919335323,
+      "endedMonoNs": 2254748852668323
+    }
+  ]
+}
