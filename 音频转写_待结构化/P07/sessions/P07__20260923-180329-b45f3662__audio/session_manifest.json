@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "source": {
+    "student_folder": "3",
+    "participant_id": "P07",
+    "source_relative_path": "学生素材\\3\\20260923-180329-b45f3662\\audio.m4a",
+    "source_type": "audio",
+    "group_hint": null,
+    "question_hint": null,
+    "lfs_pointer": false
+  },
+  "duration_sec": 1994.78,
+  "audio_path": "audio\\normalized_16k_mono.flac",
+  "chunks": [
+    {
+      "index": 0,
+      "start_sec": 0.0,
+      "end_sec": 480.0,
+      "path": "chunks\\chunk_000.flac"
+    },
+    {
+      "index": 1,
+      "start_sec": 477.0,
+      "end_sec": 957.0,
+      "path": "chunks\\chunk_001.flac"
+    },
+    {
+      "index": 2,
+      "start_sec": 954.0,
+      "end_sec": 1434.0,
+      "path": "chunks\\chunk_002.flac"
+    },
+    {
+      "index": 3,
+      "start_sec": 1431.0,
+      "end_sec": 1911.0,
+      "path": "chunks\\chunk_003.flac"
+    },
+    {
+      "index": 4,
+      "start_sec": 1908.0,
+      "end_sec": 1994.779875,
+      "path": "chunks\\chunk_004.flac"
+    }
+  ],
+  "asr": {
+    "provider": "Groq",
+    "model": "whisper-large-v3",
+    "language": "zh",
+    "timestamp_granularities": [
+      "segment"
+    ],
+    "segment_count": 156,
+    "review_required_count": 52
+  }
+}

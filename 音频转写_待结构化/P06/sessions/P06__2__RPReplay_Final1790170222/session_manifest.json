@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "source": {
+    "student_folder": "2",
+    "participant_id": "P06",
+    "source_relative_path": "学生素材\\2\\RPReplay_Final1790170222.MP4",
+    "source_type": "video",
+    "group_hint": null,
+    "question_hint": null,
+    "lfs_pointer": false
+  },
+  "duration_sec": 1287.777,
+  "audio_path": "audio\\normalized_16k_mono.flac",
+  "chunks": [
+    {
+      "index": 0,
+      "start_sec": 0.0,
+      "end_sec": 480.0,
+      "path": "chunks\\chunk_000.flac"
+    },
+    {
+      "index": 1,
+      "start_sec": 477.0,
+      "end_sec": 957.0,
+      "path": "chunks\\chunk_001.flac"
+    },
+    {
+      "index": 2,
+      "start_sec": 954.0,
+      "end_sec": 1287.77725,
+      "path": "chunks\\chunk_002.flac"
+    }
+  ],
+  "asr": {
+    "provider": "Groq",
+    "model": "whisper-large-v3",
+    "language": "zh",
+    "timestamp_granularities": [
+      "segment"
+    ],
+    "segment_count": 126,
+    "review_required_count": 21
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "schema_version": "1.0",
+  "participant_id": "P07",
+  "input_group": "COMB_A",
+  "target_group": "COMB_B",
+  "blindness_note": "This file contains no current-participant B transcript, B trace, or B outcome.",
+  "a_group_observations": [
+    {
+      "question_id": "COMB_A1",
+      "first_attention": {
+        "signal_refs": [
+          "C2"
+        ],
+        "operation": "REPRESENT",
+        "evidence": "M 女生形成一个整体,那你把 M 女生看成是一个",
+        "confidence": 0.68
+      },
+      "strategy": "bundle_and_complement_fragments",
+      "path_signature": [
+        "REPRESENT(bundle-girls)",
+        "CALCULATE(bundle-formula-uncertain)",
+        "ANSWER(complement-formula-uncertain)"
+      ],
+      "observed_steps": [
+        {
+          "start_sec": 60,
+          "end_sec": 73,
+          "evidence_text": "M 女生形成一个整体,那你把 M 女生看成是一个",
+          "signal_refs": [
+            "C2"
+          ],
+          "action_type": "REPRESENT",
+          "content": "观察到女生整体小问，并采用捆绑。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.68,
+          "representation": null,
+          "result": null,
+          "step_id": "s01",
+          "order": 1,
+          "clean_text": "M 女生形成一个整体,那你把 M 女生看成是一个"
+        },
+        {
+          "start_sec": 65,
+          "end_sec": 84,
+          "evidence_text": "M 就是 M 加 1 的阶层,然后再看 M 女生本身是 M 阶层。",
+          "signal_refs": [
+            "C2"
+          ],
+          "action_type": "CALCULATE",
+          "content": "尝试写出整体排列乘内部排列；m/n在ASR中混淆。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.5,
+          "representation": null,
+          "result": "[ASR_UNCERTAIN: m/n indices]",
+          "step_id": "s02",
+          "order": 2,
+          "clean_text": "M 就是 M 加 1 的阶层,然后再看 M 女生本身是 M 阶层。"
+        },
+        {
+          "start_sec": 114,
+          "end_sec": 126,
+          "evidence_text": "M加n的介绍解析,两倍的M加n-e的介绍。对。",
+          "signal_refs": [
+            "C3"
+          ],
+          "action_type": "ANSWER",
+          "content": "似乎口述总数减两倍相邻数，但公式严重损坏。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.42,
+          "representation": null,
+          "result": "[ASR_UNCERTAIN: likely total minus adjacent count]",
+          "step_id": "s03",
+          "order": 3,
+          "clean_text": "M加n的介绍解析,两倍的M加n-e的介绍。对。"
+        }
+      ],
+      "analyst_inferences": [
+        {
+          "content": "A1第一小问未从ASR中恢复；不能据第二周标准路径补写。",
+          "status": "ANALYST_INFERENCE",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "question_id": "COMB_A2",
+      "first_attention": {
+        "signal_refs": [
+          "S2"
+        ],
+        "operation": "ATTEND",
+        "evidence": "然后到第二步的时候,它就可以往右也可以往上。",
+        "confidence": 0.68
+      },
+      "strategy": "symmetry_attempt_then_total_paths",
+      "path_signature": [
+        "ATTEND(step-directions)",
+        "PLAN(symmetry-attempt)",
+        "CALCULATE(total-paths)",
+        "PLAN(mapping-uncertain)"
+      ],
+      "observed_steps": [
+        {
+          "start_sec": 200,
+          "end_sec": 206.12,
+          "evidence_text": "然后到第二步的时候,它就可以往右也可以往上。",
+          "signal_refs": [
+            "S2"
+          ],
+          "action_type": "ATTEND",
+          "content": "注意每步可向右或向上。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.68,
+          "representation": null,
+          "result": null,
+          "step_id": "s01",
+          "order": 1,
+          "clean_text": "然后到第二步的时候,它就可以往右也可以往上。"
+        },
+        {
+          "start_sec": 291.86,
+          "end_sec": 316.94,
+          "evidence_text": "如果有一种走法是不接触这条直线的对称的话",
+          "signal_refs": [
+            "S3"
+          ],
+          "action_type": "PLAN",
+          "content": "尝试用关于直线的对称建立路径对应。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.55,
+          "representation": null,
+          "result": null,
+          "step_id": "s02",
+          "order": 2,
+          "clean_text": "如果有一种走法是不接触这条直线的对称的话"
+        },
+        {
+          "start_sec": 317,
+          "end_sec": 338,
+          "evidence_text": "恒常要走m个,数值要走n减一个,Cm加n减一个取m。",
+          "signal_refs": [
+            "S1",
+            "S2"
+          ],
+          "action_type": "CALCULATE",
+          "content": "计算忽略约束时需走m步向右、n-1步向上。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.69,
+          "representation": null,
+          "result": "C(m+n-1,m)",
+          "step_id": "s03",
+          "order": 3,
+          "clean_text": "恒常要走m个,数值要走n减一个,Cm加n减一个取m。"
+        },
+        {
+          "start_sec": 475,
+          "end_sec": 479.28,
+          "evidence_text": "我给大家映射了一条合法的录音室。",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "PLAN",
+          "content": "疑似提到映射合法路径，但ASR语义不可靠。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.35,
+          "representation": null,
+          "result": null,
+          "step_id": "s04",
+          "order": 4,
+          "clean_text": "我给大家映射了一条合法的录音室。"
+        }
+      ],
+      "analyst_inferences": [
+        {
+          "content": "A2中338–475秒主要为提示回声，无法确认反射映射是否真正完成。",
+          "status": "ANALYST_INFERENCE",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "question_id": "COMB_A3",
+      "first_attention": {
+        "signal_refs": [
+          "S1"
+        ],
+        "operation": "ATTEND",
+        "evidence": "OK,重要的是7个不同的正等数。",
+        "confidence": 0.55
+      },
+      "strategy": "noisy_mod10_pairing_attempt",
+      "path_signature": [
+        "ATTEND(seven-distinct)",
+        "REPRESENT(mod10)",
+        "REPRESENT(residue-pairs-uncertain)",
+        "DERIVE(case-pigeonhole)",
+        "ANSWER(proof-uncertain)"
+      ],
+      "observed_steps": [
+        {
+          "start_sec": 559,
+          "end_sec": 561,
+          "evidence_text": "OK,重要的是7个不同的正等数。",
+          "signal_refs": [
+            "S1"
+          ],
+          "action_type": "ATTEND",
+          "content": "先关注七个数互不相同。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.55,
+          "representation": null,
+          "result": null,
+          "step_id": "s01",
+          "order": 1,
+          "clean_text": "OK,重要的是7个不同的正等数。"
+        },
+        {
+          "start_sec": 682,
+          "end_sec": 690.88,
+          "evidence_text": "模10以下呼应。",
+          "signal_refs": [
+            "S3"
+          ],
+          "action_type": "REPRESENT",
+          "content": "转向模10余数。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.45,
+          "representation": null,
+          "result": null,
+          "step_id": "s02",
+          "order": 2,
+          "clean_text": "模10以下呼应。"
+        },
+        {
+          "start_sec": 701.26,
+          "end_sec": 731,
+          "evidence_text": "在这五个队作为模10的语书的意义下,那么这七个里面必定有两个位于同一队的。",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "REPRESENT",
+          "content": "尝试构造余数配对并用鸽巢原理；配对口述严重失真。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.38,
+          "representation": null,
+          "result": null,
+          "step_id": "s03",
+          "order": 3,
+          "clean_text": "在这五个队作为模10的语书的意义下,那么这七个里面必定有两个位于同一队的。"
+        },
+        {
+          "start_sec": 791,
+          "end_sec": 823,
+          "evidence_text": "前四组如果任意有有两个是同一组,直接整理。",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "DERIVE",
+          "content": "按余数组讨论七个数落组情况。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.45,
+          "representation": null,
+          "result": null,
+          "step_id": "s04",
+          "order": 4,
+          "clean_text": "前四组如果任意有有两个是同一组,直接整理。"
+        },
+        {
+          "start_sec": 823,
+          "end_sec": 862,
+          "evidence_text": "只有两个数可以选了。所以这会就是我们的一次这样的证明了。",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "ANSWER",
+          "content": "宣告完成证明，但末段ASR不足以还原严格论证。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.4,
+          "representation": null,
+          "result": null,
+          "step_id": "s05",
+          "order": 5,
+          "clean_text": "只有两个数可以选了。所以这会就是我们的一次这样的证明了。"
+        }
+      ],
+      "analyst_inferences": [
+        {
+          "content": "余数配对内容必须人工听音，不能据标准六类自动修正。",
+          "status": "ANALYST_INFERENCE",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ]
+}

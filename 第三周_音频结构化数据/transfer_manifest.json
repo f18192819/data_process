@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-23T17:12:46.319873+00:00",
+  "source_repo": "C:\\data\\research\\第三周交流与产出",
+  "counts": {
+    "participants": 5,
+    "traces": 21,
+    "questions_covered": 6,
+    "observed_steps": 136,
+    "low_confidence_steps": 52,
+    "evidence_lookup_failures": 0,
+    "schema_failures": 0,
+    "prediction_inputs": 4
+  },
+  "participants": [
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09"
+  ],
+  "prediction_input_participants": [
+    "P05",
+    "P07",
+    "P08",
+    "P09"
+  ],
+  "files": [
+    {
+      "path": "DATA_QUALITY_REPORT.md",
+      "size_bytes": 7821,
+      "sha256": "8472594b2a36c61af8f6fbde9b059bbe64f659fc6fadda4f543d1b0d3275a107"
+    },
+    {
+      "path": "participant_traces_combinatorics.jsonl",
+      "size_bytes": 80479,
+      "sha256": "4ddd1c76dac0832419ea926734e29b45313e6e169c3bc6b1cd0794002d985926"
+    },
+    {
+      "path": "prediction_inputs/P05_from_A.json",
+      "size_bytes": 21912,
+      "sha256": "c5e8ace6021e66d9b80707a4820b427013ececc04ba8799dd408db7c70dc49be"
+    },
+    {
+      "path": "prediction_inputs/P07_from_A.json",
+      "size_bytes": 10586,
+      "sha256": "24a6d135b9e223aba67e14afaa15fc7a7cdcb9085bc1da678a8db1290242edd9"
+    },
+    {
+      "path": "prediction_inputs/P08_from_A.json",
+      "size_bytes": 15714,
+      "sha256": "24103d41eb9a6c7b7823821c7a446ec61d295fb7d0c9a3807b66baa3ed53a437"
+    },
+    {
+      "path": "prediction_inputs/P09_from_A.json",
+      "size_bytes": 17933,
+      "sha256": "a3b632e4468d1bd2f4d690f580695731e07aab5db792076b949b0a7d581360ab"
+    },
+    {
+      "path": "question_metadata_combinatorics.json",
+      "size_bytes": 6855,
+      "sha256": "a52b7c3da5c098534ac379b080b14cb87eb3c0b6514ff57a08ed4d91ce920dbb"
+    },
+    {
+      "path": "question_trace_variants_combinatorics.json",
+      "size_bytes": 138349,
+      "sha256": "9d3bc427685caa3234e1b196ff946b8681bcdbaf561539a75d8f79543fd63785"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 626,
+      "sha256": "b4967d4914f02e842885a481d08337244b3b23fdc3f171596b7508252666bf4d"
+    },
+    {
+      "path": "reviewed_trace_annotations_combinatorics.json",
+      "size_bytes": 138144,
+      "sha256": "ff724c5d34ac202d9161fd8121a8131280bd08979b0451f2b7dc92626640287f"
+    }
+  ]
+}

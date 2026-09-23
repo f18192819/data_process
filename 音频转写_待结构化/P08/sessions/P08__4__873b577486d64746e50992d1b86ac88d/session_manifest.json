@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "source": {
+    "student_folder": "4",
+    "participant_id": "P08",
+    "source_relative_path": "学生素材\\4\\873b577486d64746e50992d1b86ac88d.mp4",
+    "source_type": "video",
+    "group_hint": null,
+    "question_hint": null,
+    "lfs_pointer": false
+  },
+  "duration_sec": 1585.923,
+  "audio_path": "audio\\normalized_16k_mono.flac",
+  "chunks": [
+    {
+      "index": 0,
+      "start_sec": 0.0,
+      "end_sec": 480.0,
+      "path": "chunks\\chunk_000.flac"
+    },
+    {
+      "index": 1,
+      "start_sec": 477.0,
+      "end_sec": 957.0,
+      "path": "chunks\\chunk_001.flac"
+    },
+    {
+      "index": 2,
+      "start_sec": 954.0,
+      "end_sec": 1434.0,
+      "path": "chunks\\chunk_002.flac"
+    },
+    {
+      "index": 3,
+      "start_sec": 1431.0,
+      "end_sec": 1585.922938,
+      "path": "chunks\\chunk_003.flac"
+    }
+  ],
+  "asr": {
+    "provider": "Groq",
+    "model": "whisper-large-v3",
+    "language": "zh",
+    "timestamp_granularities": [
+      "segment"
+    ],
+    "segment_count": 128,
+    "review_required_count": 36
+  }
+}

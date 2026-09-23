@@ -1,0 +1,54 @@
+{
+  "generated_at_unix": 1790182104.2280672,
+  "model": "whisper-large-v3",
+  "results": [
+    {
+      "status": "complete",
+      "participant_id": "P06",
+      "source": "学生素材\\2\\RPReplay_Final1790170222.MP4",
+      "duration_sec": 1287.777,
+      "segment_count": 126,
+      "session_dir": "P06\\sessions\\P06__2__RPReplay_Final1790170222"
+    },
+    {
+      "status": "complete",
+      "participant_id": "P07",
+      "source": "学生素材\\3\\20260923-180329-b45f3662\\audio.m4a",
+      "duration_sec": 1994.78,
+      "segment_count": 156,
+      "session_dir": "P07\\sessions\\P07__20260923-180329-b45f3662__audio"
+    },
+    {
+      "status": "complete",
+      "participant_id": "P08",
+      "source": "学生素材\\4\\873b577486d64746e50992d1b86ac88d.mp4",
+      "duration_sec": 1585.923,
+      "segment_count": 128,
+      "session_dir": "P08\\sessions\\P08__4__873b577486d64746e50992d1b86ac88d"
+    },
+    {
+      "status": "complete",
+      "participant_id": "P09",
+      "source": "学生素材\\5\\A1.m4a",
+      "duration_sec": 602.752,
+      "segment_count": 38,
+      "session_dir": "P09\\sessions\\P09__5__A1"
+    },
+    {
+      "status": "complete",
+      "participant_id": "P09",
+      "source": "学生素材\\5\\A2.m4a",
+      "duration_sec": 550.016,
+      "segment_count": 43,
+      "session_dir": "P09\\sessions\\P09__5__A2"
+    },
+    {
+      "status": "complete",
+      "participant_id": "P09",
+      "source": "学生素材\\5\\A3.m4a",
+      "duration_sec": 601.6,
+      "segment_count": 33,
+      "session_dir": "P09\\sessions\\P09__5__A3"
+    }
+  ]
+}

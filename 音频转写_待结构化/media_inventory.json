@@ -1,0 +1,72 @@
+{
+  "note": "Student 1 media intentionally skipped; use 学生素材/1/A组/原文.md and B组/原文.md.",
+  "students_processed_by_asr": [
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "participant_map": {
+    "1": "P05",
+    "2": "P06",
+    "3": "P07",
+    "4": "P08",
+    "5": "P09"
+  },
+  "records": [
+    {
+      "student_folder": "2",
+      "participant_id": "P06",
+      "source_relative_path": "学生素材\\2\\RPReplay_Final1790170222.MP4",
+      "source_type": "video",
+      "group_hint": null,
+      "question_hint": null,
+      "lfs_pointer": false
+    },
+    {
+      "student_folder": "3",
+      "participant_id": "P07",
+      "source_relative_path": "学生素材\\3\\20260923-180329-b45f3662\\audio.m4a",
+      "source_type": "audio",
+      "group_hint": null,
+      "question_hint": null,
+      "lfs_pointer": false
+    },
+    {
+      "student_folder": "4",
+      "participant_id": "P08",
+      "source_relative_path": "学生素材\\4\\873b577486d64746e50992d1b86ac88d.mp4",
+      "source_type": "video",
+      "group_hint": null,
+      "question_hint": null,
+      "lfs_pointer": false
+    },
+    {
+      "student_folder": "5",
+      "participant_id": "P09",
+      "source_relative_path": "学生素材\\5\\A1.m4a",
+      "source_type": "audio",
+      "group_hint": "COMB_A",
+      "question_hint": "COMB_A1",
+      "lfs_pointer": false
+    },
+    {
+      "student_folder": "5",
+      "participant_id": "P09",
+      "source_relative_path": "学生素材\\5\\A2.m4a",
+      "source_type": "audio",
+      "group_hint": "COMB_A",
+      "question_hint": "COMB_A2",
+      "lfs_pointer": false
+    },
+    {
+      "student_folder": "5",
+      "participant_id": "P09",
+      "source_relative_path": "学生素材\\5\\A3.m4a",
+      "source_type": "audio",
+      "group_hint": "COMB_A",
+      "question_hint": "COMB_A3",
+      "lfs_pointer": false
+    }
+  ]
+}
