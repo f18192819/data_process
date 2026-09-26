@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "participant_id": "P05",
+  "assigned_group": "TRIG_A",
+  "confidence": 0.99,
+  "candidates": [
+    {
+      "group_id": "TRIG_A",
+      "score": 0.99
+    },
+    {
+      "group_id": "TRIG_B",
+      "score": 0.08
+    }
+  ],
+  "evidence": [
+    "Q1 explicitly mentions y=tan x, adding 2π, and α=1+2π, β=1.",
+    "Q2 explicitly states minimum positive period π and ω=2.",
+    "Q3 explicitly says the student cannot proceed because formulas were forgotten."
+  ],
+  "method": "reviewed joint three-slot evidence; no one-to-one assignment constraint"
+}

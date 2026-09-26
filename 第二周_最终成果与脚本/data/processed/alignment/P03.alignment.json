@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "participant_id": "P03",
+  "assigned_group": "COMB_B",
+  "confidence": 0.99,
+  "candidates": [
+    {
+      "group_id": "COMB_B",
+      "score": 0.99
+    },
+    {
+      "group_id": "COMB_C",
+      "score": 0.12
+    }
+  ],
+  "evidence": [
+    "Q1 contains square-size counts and 45×28 for the 10-by-8 point grid.",
+    "Q2 explicitly mentions six entrances and nine people and enumerates occupancy partitions.",
+    "Q3 explicitly announces the third question and attempts a pigeonhole construction."
+  ],
+  "method": "reviewed joint three-slot evidence; no one-to-one assignment constraint"
+}

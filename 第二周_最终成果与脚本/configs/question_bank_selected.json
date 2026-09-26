@@ -1,0 +1,508 @@
+{
+  "schema_version": "1.0",
+  "note": "Pilot question bank for trace alignment. Each participant is known to have answered exactly one 3-question group. Multiple participants may answer the same group; do not enforce one-to-one assignment across participants.",
+  "groups": [
+    {
+      "group_id": "TRIG_A",
+      "domain": "trigonometry",
+      "questions": [
+        {
+          "question_id": "TRIG_A1",
+          "title": "角关系 / 构造反例",
+          "canonical_text": "命题：若 α,β 为第一象限角，且 α>β，则 tan α>tan β。给出一组具体 α,β 说明命题为假。",
+          "source": "2023 北京高考数学第13题（实验版开放作答）",
+          "answer_key": "答案不唯一；核心是利用 tan 的周期性或跨周期非全局单调性构造反例。",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "α,β 均为第一象限角"
+            },
+            {
+              "signal_id": "S2",
+              "text": "α>β"
+            },
+            {
+              "signal_id": "S3",
+              "text": "比较 tan α 与 tan β"
+            },
+            {
+              "signal_id": "G",
+              "text": "构造反例"
+            }
+          ]
+        },
+        {
+          "question_id": "TRIG_A2",
+          "title": "周期 / 极值位置关系",
+          "canonical_text": "f(x)=sin(ωx), ω>0；f(x1)=-1, f(x2)=1，且所有满足条件者中 |x1-x2| 最小值为 π/2。求 ω。",
+          "source": "2024 北京高考数学第6题（实验版去选项）",
+          "answer_key": "ω=2",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "f(x)=sin(ωx)"
+            },
+            {
+              "signal_id": "S2",
+              "text": "函数分别达到 -1 与 1"
+            },
+            {
+              "signal_id": "S3",
+              "text": "两点最小间距为 π/2"
+            },
+            {
+              "signal_id": "G",
+              "text": "反推出 ω"
+            }
+          ]
+        },
+        {
+          "question_id": "TRIG_A3",
+          "title": "解三角形 / 边角转化",
+          "canonical_text": "△ABC 中 b sin C + √3 c cos B = 2c。(1)求 B；(2)若 a=2√3, b+c=4，求面积。",
+          "source": "2024 北京海淀高三一模第16题",
+          "answer_key": "需按标准解复核；重点用于路径而非仅最终答案。",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "b sin C + √3 c cos B = 2c"
+            },
+            {
+              "signal_id": "S2",
+              "text": "a=2√3"
+            },
+            {
+              "signal_id": "S3",
+              "text": "b+c=4"
+            },
+            {
+              "signal_id": "G1",
+              "text": "求 B"
+            },
+            {
+              "signal_id": "G2",
+              "text": "求三角形面积"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "TRIG_B",
+      "domain": "trigonometry",
+      "questions": [
+        {
+          "question_id": "TRIG_B1",
+          "title": "终边几何 / 三角函数最值",
+          "canonical_text": "角 α,β 终边关于原点对称；α∈[π/6,π/3]，求 cosβ 最大值。",
+          "source": "2024 北京高考数学第12题",
+          "answer_key": "-1/2",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "α,β 终边关于原点对称"
+            },
+            {
+              "signal_id": "S2",
+              "text": "α∈[π/6,π/3]"
+            },
+            {
+              "signal_id": "G",
+              "text": "求 cosβ 最大值"
+            }
+          ]
+        },
+        {
+          "question_id": "TRIG_B2",
+          "title": "周期 + 零点 / 多条件约束",
+          "canonical_text": "f(x)=sin(ωx)+cos(ωx), ω>0；f(x+π)=f(x) 恒成立，且 f 在 [0,π/4] 上存在零点。求 ω 最小值。",
+          "source": "2025 北京高考数学第8题（实验版去选项）",
+          "answer_key": "ω=4",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "sin(ωx)+cos(ωx)"
+            },
+            {
+              "signal_id": "S2",
+              "text": "π 是函数的一个周期"
+            },
+            {
+              "signal_id": "S3",
+              "text": "[0,π/4] 内存在零点"
+            },
+            {
+              "signal_id": "G",
+              "text": "求最小 ω"
+            }
+          ]
+        },
+        {
+          "question_id": "TRIG_B3",
+          "title": "解三角形 / 条件选择",
+          "canonical_text": "△ABC 中 A 为钝角，a=7，sin2B=(√3/7)b cosB。(1)求A；(2)从 b=7、cosB=13/14、c sinA=5√3/2 中选一条件使三角形存在并求面积。",
+          "source": "2024 北京高考数学第16题",
+          "answer_key": "A=2π/3；条件②或③可行；面积=15√3/4",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "A 为钝角"
+            },
+            {
+              "signal_id": "S2",
+              "text": "a=7"
+            },
+            {
+              "signal_id": "S3",
+              "text": "sin2B=(√3/7)b cosB"
+            },
+            {
+              "signal_id": "C1",
+              "text": "候选条件① b=7"
+            },
+            {
+              "signal_id": "C2",
+              "text": "候选条件② cosB=13/14"
+            },
+            {
+              "signal_id": "C3",
+              "text": "候选条件③ c sinA=5√3/2"
+            },
+            {
+              "signal_id": "G1",
+              "text": "求 A"
+            },
+            {
+              "signal_id": "G2",
+              "text": "选条件并求面积"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "TRIG_C",
+      "domain": "trigonometry",
+      "questions": [
+        {
+          "question_id": "TRIG_C1",
+          "title": "和差公式 / 开放构造",
+          "canonical_text": "α,β∈[0,2π]，sin(α+β)=sin(α-β)，且 cos(α+β)≠cos(α-β)。写一组满足条件的 (α,β)。",
+          "source": "2025 北京高考数学第13题",
+          "answer_key": "答案不唯一；例如 (π/2, π/6)",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "sin(α+β)=sin(α-β)"
+            },
+            {
+              "signal_id": "S2",
+              "text": "cos(α+β)≠cos(α-β)"
+            },
+            {
+              "signal_id": "S3",
+              "text": "α,β∈[0,2π]"
+            },
+            {
+              "signal_id": "G",
+              "text": "构造一组解"
+            }
+          ]
+        },
+        {
+          "question_id": "TRIG_C2",
+          "title": "图象平移 / 对称 / 参数枚举",
+          "canonical_text": "f(x)=sin(x+φ), 0<φ<2π；图象沿 x 轴正方向平移 3φ 后与原图象关于 x 轴对称。求所有 φ。",
+          "source": "现有题库标注 2026 北京高考数学第8题；正式分析前复核原卷",
+          "answer_key": "φ=π/3, π, 5π/3",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "f(x)=sin(x+φ)"
+            },
+            {
+              "signal_id": "S2",
+              "text": "向右平移 3φ"
+            },
+            {
+              "signal_id": "S3",
+              "text": "新旧图象关于 x 轴对称"
+            },
+            {
+              "signal_id": "S4",
+              "text": "0<φ<2π"
+            },
+            {
+              "signal_id": "G",
+              "text": "枚举所有 φ"
+            }
+          ]
+        },
+        {
+          "question_id": "TRIG_C3",
+          "title": "解三角形 / 条件选择",
+          "canonical_text": "△ABC 中 cosA=-1/3，a sinC=4√2。(1)求c；(2)从 a=6、b sinC=10√2/3、面积=10√2 中选一条件使三角形存在并求 BC 边上的高。",
+          "source": "2025 北京高考数学第16题",
+          "answer_key": "c=6；条件②或③可行；②时高=10√2/3，③时高=20√2/9",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "cosA=-1/3"
+            },
+            {
+              "signal_id": "S2",
+              "text": "a sinC=4√2"
+            },
+            {
+              "signal_id": "C1",
+              "text": "候选条件① a=6"
+            },
+            {
+              "signal_id": "C2",
+              "text": "候选条件② b sinC=10√2/3"
+            },
+            {
+              "signal_id": "C3",
+              "text": "候选条件③ 面积=10√2"
+            },
+            {
+              "signal_id": "G1",
+              "text": "求 c"
+            },
+            {
+              "signal_id": "G2",
+              "text": "选条件并求 BC 边上的高"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "COMB_A",
+      "domain": "combinatorics",
+      "questions": [
+        {
+          "question_id": "COMB_A1",
+          "title": "排列约束 / 分类与补集",
+          "canonical_text": "m 个男生和 n 个女生排成一行：(1)男生互不相邻；(2)n 个女生形成整体；(3)指定男A与女B不相邻。求方案数。",
+          "source": "Homework 1, 1.3",
+          "answer_key": "(1) n! C(n+1,m) m!；(2)(m+1)!n!；(3)(m+n)!-2(m+n-1)!",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "m 个男生、n 个女生排一行"
+            },
+            {
+              "signal_id": "C1",
+              "text": "男生互不相邻"
+            },
+            {
+              "signal_id": "C2",
+              "text": "女生形成整体"
+            },
+            {
+              "signal_id": "C3",
+              "text": "指定 A,B 不相邻"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_A2",
+          "title": "格路 / 反射模型",
+          "canonical_text": "从 (0,1) 到 (m,n), m<n，每步向右或向上一个单位，求不接触 x=y 的格路数（接触含穿过）。",
+          "source": "2025秋-C1-3_PC.pdf 格路例题",
+          "answer_key": "C(m+n-1,m)-C(m+n-1,m-1)",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "起点(0,1)，终点(m,n)，m<n"
+            },
+            {
+              "signal_id": "S2",
+              "text": "只能向右/向上"
+            },
+            {
+              "signal_id": "S3",
+              "text": "不能接触 x=y"
+            },
+            {
+              "signal_id": "G",
+              "text": "计数"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_A3",
+          "title": "鸽巢 / 余数配对",
+          "canonical_text": "7 个互不相同正整数，证明存在 a,b，使 a+b 或 a-b 被10整除。",
+          "source": "Homework 2, 2.1",
+          "answer_key": "按 mod 10 余数族 {0},{5},{1,9},{2,8},{3,7},{4,6} 构造 6 个鸽巢。",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "7 个互不相同正整数"
+            },
+            {
+              "signal_id": "S2",
+              "text": "a+b 或 a-b"
+            },
+            {
+              "signal_id": "S3",
+              "text": "被10整除"
+            },
+            {
+              "signal_id": "G",
+              "text": "证明必存在"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "COMB_B",
+      "domain": "combinatorics",
+      "questions": [
+        {
+          "question_id": "COMB_B1",
+          "title": "格点 / 长方形与正方形",
+          "canonical_text": "A={(a,b):a,b∈Z,0≤a≤9,0≤b≤7}。(1)轴平行长方形数；(2)正方形数。",
+          "source": "Homework 1, 1.4",
+          "answer_key": "长方形1260；正方形196",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "10 个横坐标、8 个纵坐标的格点集"
+            },
+            {
+              "signal_id": "G1",
+              "text": "数轴平行长方形"
+            },
+            {
+              "signal_id": "G2",
+              "text": "数正方形"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_B2",
+          "title": "进站方案 / 多种编码",
+          "canonical_text": "车站有6个入口，每个入口每次只能进1人，9个不同的人进站，共多少种不同方案？同一入口内进入顺序也属于方案。",
+          "source": "2025秋-C1-3_PC.pdf 排列与组合例题",
+          "answer_key": "14!/5! = C(14,5)·9!",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "6 个入口"
+            },
+            {
+              "signal_id": "S2",
+              "text": "9 个不同的人"
+            },
+            {
+              "signal_id": "S3",
+              "text": "同一入口有先后顺序"
+            },
+            {
+              "signal_id": "G",
+              "text": "计数"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_B3",
+          "title": "鸽巢 / 规范化奇数部分",
+          "canonical_text": "从1到2n中任取n+1个数，证明至少有一对其中一个是另一个的倍数。",
+          "source": "2025秋-C2-0_pigeon-class.pdf",
+          "answer_key": "把每个数除去所有2的因子，按剩余奇数分类；只有n种奇数部分。",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "从1..2n取n+1个"
+            },
+            {
+              "signal_id": "S2",
+              "text": "要找整除/倍数关系"
+            },
+            {
+              "signal_id": "G",
+              "text": "证明必存在"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "COMB_C",
+      "domain": "combinatorics",
+      "questions": [
+        {
+          "question_id": "COMB_C1",
+          "title": "数字计数 / 前导零陷阱",
+          "canonical_text": "(1)小于10000且十进制表示含数字1的正整数有多少？(2)含数字0的有多少？",
+          "source": "2025秋-C1-2_permutation.pdf",
+          "answer_key": "含1：3439；含0：2619",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "小于10000的正整数"
+            },
+            {
+              "signal_id": "G1",
+              "text": "含数字1计数"
+            },
+            {
+              "signal_id": "G2",
+              "text": "含数字0计数"
+            },
+            {
+              "signal_id": "TRAP",
+              "text": "前导零不能直接与数字1完全对称处理"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_C2",
+          "title": "二进制串 / Catalan 型约束",
+          "canonical_text": "n个0和n个1组成2n位串；任意前k位中0的个数不少于1的个数。求串数。",
+          "source": "Homework 1, 1.5",
+          "answer_key": "C(2n,n)-C(2n,n-1)=1/(n+1) C(2n,n)",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "n个0和n个1"
+            },
+            {
+              "signal_id": "S2",
+              "text": "任意前缀0数≥1数"
+            },
+            {
+              "signal_id": "G",
+              "text": "计数"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_C3",
+          "title": "鸽巢 + 同余 / 重复数字",
+          "canonical_text": "证明或证伪：23,2323,232323,... 中存在一个数能被233整除。",
+          "source": "Homework 2, 2.5",
+          "answer_key": "命题为真；用前若干项模233的余数鸽巢及差的结构证明。",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "重复拼接23形成序列"
+            },
+            {
+              "signal_id": "S2",
+              "text": "模233整除"
+            },
+            {
+              "signal_id": "G",
+              "text": "证明或证伪"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

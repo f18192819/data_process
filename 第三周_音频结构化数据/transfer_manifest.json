@@ -1,15 +1,13 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-23T17:12:46.319873+00:00",
+  "generated_at": "2026-09-23T18:45:06.738932+00:00",
   "source_repo": "C:\\data\\research\\第三周交流与产出",
   "counts": {
     "participants": 5,
     "traces": 21,
     "questions_covered": 6,
     "observed_steps": 136,
-    "low_confidence_steps": 52,
-    "evidence_lookup_failures": 0,
-    "schema_failures": 0,
+    "low_confidence_steps": 34,
     "prediction_inputs": 4
   },
   "participants": [
@@ -33,8 +31,8 @@
     },
     {
       "path": "participant_traces_combinatorics.jsonl",
-      "size_bytes": 80479,
-      "sha256": "4ddd1c76dac0832419ea926734e29b45313e6e169c3bc6b1cd0794002d985926"
+      "size_bytes": 90319,
+      "sha256": "d8dfbefe3a005736019df6258cb3b7ee904732cae179d45a93bf8847a082bda0"
     },
     {
       "path": "prediction_inputs/P05_from_A.json",
@@ -43,8 +41,8 @@
     },
     {
       "path": "prediction_inputs/P07_from_A.json",
-      "size_bytes": 10586,
-      "sha256": "24a6d135b9e223aba67e14afaa15fc7a7cdcb9085bc1da678a8db1290242edd9"
+      "size_bytes": 12424,
+      "sha256": "09efcda72708f1a01dafc6830e1280f16aefe41d635c663631b61d9bfada75dc"
     },
     {
       "path": "prediction_inputs/P08_from_A.json",
@@ -63,8 +61,8 @@
     },
     {
       "path": "question_trace_variants_combinatorics.json",
-      "size_bytes": 138349,
-      "sha256": "9d3bc427685caa3234e1b196ff946b8681bcdbaf561539a75d8f79543fd63785"
+      "size_bytes": 140799,
+      "sha256": "8d374f6c2d744f604781207766c1386aa3dcb6cfeefe8805aeb781c45ca3bfe3"
     },
     {
       "path": "README.md",
@@ -73,8 +71,13 @@
     },
     {
       "path": "reviewed_trace_annotations_combinatorics.json",
-      "size_bytes": 138144,
-      "sha256": "ff724c5d34ac202d9161fd8121a8131280bd08979b0451f2b7dc92626640287f"
+      "size_bytes": 153976,
+      "sha256": "88c33b903cd30ac8c260915a7fddf28bb6688bf5d36d034342e9b397f36a5017"
+    },
+    {
+      "path": "VIDEO_REVIEW_LOG.jsonl",
+      "size_bytes": 5572,
+      "sha256": "49b4d4a60ea2af9da6010a2ed8cfa814b024166a39745a7f3fa961621aa92f91"
     }
   ]
 }

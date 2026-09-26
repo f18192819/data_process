@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-23T17:12:46.304789+00:00",
+  "generated_at": "2026-09-23T18:45:06.707506+00:00",
   "questions": [
     {
       "question_id": "COMB_A1",
       "group_id": "COMB_A",
       "n_participants": 4,
       "valid_traces": 4,
-      "low_confidence_traces": 3,
+      "low_confidence_traces": 2,
       "participants": [
         "P05",
         "P07",
@@ -243,64 +243,64 @@
             ]
           },
           "core_steps": [
-            "观察到女生整体小问，并采用捆绑。",
-            "尝试写出整体排列乘内部排列；m/n在ASR中混淆。",
-            "似乎口述总数减两倍相邻数，但公式严重损坏。"
+            "处理第(2)问时，把 n 个女生捆绑成一个整体。",
+            "将女生整体与 m 个男生排列，再乘女生内部排列，写出 (m+1)!n!。",
+            "处理指定男生 A 与指定女生 B 不相邻时，用总排列减去相邻排列，写出 (m+n)!-2(m+n-1)!。"
           ],
           "core_step_evidence": [
             {
               "participant_id": "P07",
-              "content": "观察到女生整体小问，并采用捆绑。",
+              "content": "处理第(2)问时，把 n 个女生捆绑成一个整体。",
               "evidence_text": "M 女生形成一个整体,那你把 M 女生看成是一个",
               "start_sec": 60,
               "end_sec": 73,
-              "status": "VERBALIZED",
-              "confidence": 0.68
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.96
             },
             {
               "participant_id": "P07",
-              "content": "尝试写出整体排列乘内部排列；m/n在ASR中混淆。",
+              "content": "将女生整体与 m 个男生排列，再乘女生内部排列，写出 (m+1)!n!。",
               "evidence_text": "M 就是 M 加 1 的阶层,然后再看 M 女生本身是 M 阶层。",
               "start_sec": 65,
               "end_sec": 84,
-              "status": "VERBALIZED",
-              "confidence": 0.5
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.92
             },
             {
               "participant_id": "P07",
-              "content": "似乎口述总数减两倍相邻数，但公式严重损坏。",
+              "content": "处理指定男生 A 与指定女生 B 不相邻时，用总排列减去相邻排列，写出 (m+n)!-2(m+n-1)!。",
               "evidence_text": "M加n的介绍解析,两倍的M加n-e的介绍。对。",
               "start_sec": 114,
               "end_sec": 126,
-              "status": "VERBALIZED",
-              "confidence": 0.42
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.91
             }
           ],
           "participant_paths": {
             "P07": [
               {
-                "content": "观察到女生整体小问，并采用捆绑。",
+                "content": "处理第(2)问时，把 n 个女生捆绑成一个整体。",
                 "evidence_text": "M 女生形成一个整体,那你把 M 女生看成是一个",
                 "start_sec": 60,
                 "end_sec": 73,
-                "status": "VERBALIZED",
-                "confidence": 0.68
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.96
               },
               {
-                "content": "尝试写出整体排列乘内部排列；m/n在ASR中混淆。",
+                "content": "将女生整体与 m 个男生排列，再乘女生内部排列，写出 (m+1)!n!。",
                 "evidence_text": "M 就是 M 加 1 的阶层,然后再看 M 女生本身是 M 阶层。",
                 "start_sec": 65,
                 "end_sec": 84,
-                "status": "VERBALIZED",
-                "confidence": 0.5
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.92
               },
               {
-                "content": "似乎口述总数减两倍相邻数，但公式严重损坏。",
+                "content": "处理指定男生 A 与指定女生 B 不相邻时，用总排列减去相邻排列，写出 (m+n)!-2(m+n-1)!。",
                 "evidence_text": "M加n的介绍解析,两倍的M加n-e的介绍。对。",
                 "start_sec": 114,
                 "end_sec": 126,
-                "status": "VERBALIZED",
-                "confidence": 0.42
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.91
               }
             ]
           },
@@ -895,9 +895,9 @@
           },
           "core_steps": [
             "注意每步可向右或向上。",
-            "尝试用关于直线的对称建立路径对应。",
+            "画出阶梯格路和对角边界，尝试用关于边界的反射建立路径对应。",
             "计算忽略约束时需走m步向右、n-1步向上。",
-            "疑似提到映射合法路径，但ASR语义不可靠。"
+            "口头疑似宣称已建立合法路径映射；画面只有路径图，仍不足以恢复映射对象和最终公式。"
           ],
           "core_step_evidence": [
             {
@@ -911,12 +911,12 @@
             },
             {
               "participant_id": "P07",
-              "content": "尝试用关于直线的对称建立路径对应。",
+              "content": "画出阶梯格路和对角边界，尝试用关于边界的反射建立路径对应。",
               "evidence_text": "如果有一种走法是不接触这条直线的对称的话",
               "start_sec": 291.86,
               "end_sec": 316.94,
-              "status": "VERBALIZED",
-              "confidence": 0.55
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.86
             },
             {
               "participant_id": "P07",
@@ -929,12 +929,12 @@
             },
             {
               "participant_id": "P07",
-              "content": "疑似提到映射合法路径，但ASR语义不可靠。",
+              "content": "口头疑似宣称已建立合法路径映射；画面只有路径图，仍不足以恢复映射对象和最终公式。",
               "evidence_text": "我给大家映射了一条合法的录音室。",
               "start_sec": 475,
               "end_sec": 479.28,
               "status": "VERBALIZED",
-              "confidence": 0.35
+              "confidence": 0.38
             }
           ],
           "participant_paths": {
@@ -948,12 +948,12 @@
                 "confidence": 0.68
               },
               {
-                "content": "尝试用关于直线的对称建立路径对应。",
+                "content": "画出阶梯格路和对角边界，尝试用关于边界的反射建立路径对应。",
                 "evidence_text": "如果有一种走法是不接触这条直线的对称的话",
                 "start_sec": 291.86,
                 "end_sec": 316.94,
-                "status": "VERBALIZED",
-                "confidence": 0.55
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.86
               },
               {
                 "content": "计算忽略约束时需走m步向右、n-1步向上。",
@@ -964,12 +964,12 @@
                 "confidence": 0.69
               },
               {
-                "content": "疑似提到映射合法路径，但ASR语义不可靠。",
+                "content": "口头疑似宣称已建立合法路径映射；画面只有路径图，仍不足以恢复映射对象和最终公式。",
                 "evidence_text": "我给大家映射了一条合法的录音室。",
                 "start_sec": 475,
                 "end_sec": 479.28,
                 "status": "VERBALIZED",
-                "confidence": 0.35
+                "confidence": 0.38
               }
             ]
           },
@@ -2094,7 +2094,7 @@
       "group_id": "COMB_B",
       "n_participants": 3,
       "valid_traces": 3,
-      "low_confidence_traces": 2,
+      "low_confidence_traces": 0,
       "participants": [
         "P05",
         "P06",
@@ -2260,10 +2260,10 @@
             "认为长方形由横纵坐标选择决定。",
             "先尝试枚举左下角、长和宽。",
             "枚举可作左下角的点；中间大量ASR缺失。",
-            "转而用选择两个横坐标和两个纵坐标，给出28×45=756。",
+            "写出 C(8,2)·C(10,2)=28·45，同时口头报出756；手写乘积与口头数值不一致。",
             "转入正方形计数。",
             "按边长分类并尝试找求和规律。",
-            "口述一个递减求和片段，但完整公式无法从ASR恢复。"
+            "口述递减求和的同时在画面写绿色加法，最终写出42；完整加数序列仍有部分笔迹无法可靠辨认。"
           ],
           "core_step_evidence": [
             {
@@ -2272,8 +2272,8 @@
               "evidence_text": "那长方形不就是四个,四个坐标,四个坐标来决定这个长方形吗?",
               "start_sec": 50,
               "end_sec": 62,
-              "status": "VERBALIZED",
-              "confidence": 0.91
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.97
             },
             {
               "participant_id": "P06",
@@ -2281,8 +2281,8 @@
               "evidence_text": "你只要确定某个顶点以及长和宽",
               "start_sec": 62,
               "end_sec": 99,
-              "status": "VERBALIZED",
-              "confidence": 0.88
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.95
             },
             {
               "participant_id": "P06",
@@ -2290,17 +2290,17 @@
               "evidence_text": "比如说我规定了,就规定左下角的顶点就行了",
               "start_sec": 99,
               "end_sec": 183,
-              "status": "VERBALIZED",
-              "confidence": 0.6
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.88
             },
             {
               "participant_id": "P06",
-              "content": "转而用选择两个横坐标和两个纵坐标，给出28×45=756。",
+              "content": "写出 C(8,2)·C(10,2)=28·45，同时口头报出756；手写乘积与口头数值不一致。",
               "evidence_text": "那就是756,28乘以45。",
               "start_sec": 339,
               "end_sec": 346,
-              "status": "VERBALIZED",
-              "confidence": 0.91
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.98
             },
             {
               "participant_id": "P06",
@@ -2317,17 +2317,17 @@
               "evidence_text": "长为1长为2",
               "start_sec": 391,
               "end_sec": 428,
-              "status": "VERBALIZED",
-              "confidence": 0.78
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.92
             },
             {
               "participant_id": "P06",
-              "content": "口述一个递减求和片段，但完整公式无法从ASR恢复。",
+              "content": "口述递减求和的同时在画面写绿色加法，最终写出42；完整加数序列仍有部分笔迹无法可靠辨认。",
               "evidence_text": "6加5加4加3加2加1。",
               "start_sec": 477,
-              "end_sec": 495,
-              "status": "VERBALIZED",
-              "confidence": 0.62
+              "end_sec": 520,
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.86
             }
           ],
           "participant_paths": {
@@ -2337,32 +2337,32 @@
                 "evidence_text": "那长方形不就是四个,四个坐标,四个坐标来决定这个长方形吗?",
                 "start_sec": 50,
                 "end_sec": 62,
-                "status": "VERBALIZED",
-                "confidence": 0.91
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.97
               },
               {
                 "content": "先尝试枚举左下角、长和宽。",
                 "evidence_text": "你只要确定某个顶点以及长和宽",
                 "start_sec": 62,
                 "end_sec": 99,
-                "status": "VERBALIZED",
-                "confidence": 0.88
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.95
               },
               {
                 "content": "枚举可作左下角的点；中间大量ASR缺失。",
                 "evidence_text": "比如说我规定了,就规定左下角的顶点就行了",
                 "start_sec": 99,
                 "end_sec": 183,
-                "status": "VERBALIZED",
-                "confidence": 0.6
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.88
               },
               {
-                "content": "转而用选择两个横坐标和两个纵坐标，给出28×45=756。",
+                "content": "写出 C(8,2)·C(10,2)=28·45，同时口头报出756；手写乘积与口头数值不一致。",
                 "evidence_text": "那就是756,28乘以45。",
                 "start_sec": 339,
                 "end_sec": 346,
-                "status": "VERBALIZED",
-                "confidence": 0.91
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.98
               },
               {
                 "content": "转入正方形计数。",
@@ -2377,16 +2377,16 @@
                 "evidence_text": "长为1长为2",
                 "start_sec": 391,
                 "end_sec": 428,
-                "status": "VERBALIZED",
-                "confidence": 0.78
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.92
               },
               {
-                "content": "口述一个递减求和片段，但完整公式无法从ASR恢复。",
+                "content": "口述递减求和的同时在画面写绿色加法，最终写出42；完整加数序列仍有部分笔迹无法可靠辨认。",
                 "evidence_text": "6加5加4加3加2加1。",
                 "start_sec": 477,
-                "end_sec": 495,
-                "status": "VERBALIZED",
-                "confidence": 0.62
+                "end_sec": 520,
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.86
               }
             ]
           },
@@ -2424,11 +2424,11 @@
           },
           "core_steps": [
             "先计算格点总数为80。",
-            "尝试从点对总数中排除无效点对，再除以对角线重复；组合数ASR不清。",
+            "从 80 个格点任取两点，减去同行或同列的点对，再除以 2 消除一对对角点对应同一长方形的重复。",
             "以左下角和边长枚举正方形。",
             "认为当前按坐标分类过于麻烦并回退。",
             "改为用较小规模寻找规律。",
-            "按边长逐项口述横纵可放位置；若干乘积被ASR破坏。"
+            "按正方形边长 x=1 到 7 枚举横纵可放位置，依次写出 9×7、8×6、7×5、6×4、5×3、4×2、3×1。"
           ],
           "core_step_evidence": [
             {
@@ -2437,17 +2437,17 @@
               "evidence_text": "一共有80个点。",
               "start_sec": 892,
               "end_sec": 899,
-              "status": "VERBALIZED",
-              "confidence": 0.86
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.97
             },
             {
               "participant_id": "P07",
-              "content": "尝试从点对总数中排除无效点对，再除以对角线重复；组合数ASR不清。",
+              "content": "从 80 个格点任取两点，减去同行或同列的点对，再除以 2 消除一对对角点对应同一长方形的重复。",
               "evidence_text": "首先,C812是80个点里,认取两个点的各数中,它们要减去。",
               "start_sec": 899,
               "end_sec": 945.88,
-              "status": "VERBALIZED",
-              "confidence": 0.48
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.98
             },
             {
               "participant_id": "P07",
@@ -2455,8 +2455,8 @@
               "evidence_text": "正方形就要求选一个左下角的点,然后往外扩展。",
               "start_sec": 964,
               "end_sec": 983,
-              "status": "VERBALIZED",
-              "confidence": 0.72
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.9
             },
             {
               "participant_id": "P07",
@@ -2478,12 +2478,12 @@
             },
             {
               "participant_id": "P07",
-              "content": "按边长逐项口述横纵可放位置；若干乘积被ASR破坏。",
+              "content": "按正方形边长 x=1 到 7 枚举横纵可放位置，依次写出 9×7、8×6、7×5、6×4、5×3、4×2、3×1。",
               "evidence_text": "在横向上可以有9个数学生规划,有7种不同的系统。",
               "start_sec": 1099,
               "end_sec": 1149.68,
-              "status": "VERBALIZED",
-              "confidence": 0.5
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.99
             }
           ],
           "participant_paths": {
@@ -2493,24 +2493,24 @@
                 "evidence_text": "一共有80个点。",
                 "start_sec": 892,
                 "end_sec": 899,
-                "status": "VERBALIZED",
-                "confidence": 0.86
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.97
               },
               {
-                "content": "尝试从点对总数中排除无效点对，再除以对角线重复；组合数ASR不清。",
+                "content": "从 80 个格点任取两点，减去同行或同列的点对，再除以 2 消除一对对角点对应同一长方形的重复。",
                 "evidence_text": "首先,C812是80个点里,认取两个点的各数中,它们要减去。",
                 "start_sec": 899,
                 "end_sec": 945.88,
-                "status": "VERBALIZED",
-                "confidence": 0.48
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.98
               },
               {
                 "content": "以左下角和边长枚举正方形。",
                 "evidence_text": "正方形就要求选一个左下角的点,然后往外扩展。",
                 "start_sec": 964,
                 "end_sec": 983,
-                "status": "VERBALIZED",
-                "confidence": 0.72
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.9
               },
               {
                 "content": "认为当前按坐标分类过于麻烦并回退。",
@@ -2529,12 +2529,12 @@
                 "confidence": 0.7
               },
               {
-                "content": "按边长逐项口述横纵可放位置；若干乘积被ASR破坏。",
+                "content": "按正方形边长 x=1 到 7 枚举横纵可放位置，依次写出 9×7、8×6、7×5、6×4、5×3、4×2、3×1。",
                 "evidence_text": "在横向上可以有9个数学生规划,有7种不同的系统。",
                 "start_sec": 1099,
                 "end_sec": 1149.68,
-                "status": "VERBALIZED",
-                "confidence": 0.5
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.99
               }
             ]
           },
@@ -2554,7 +2554,7 @@
       "group_id": "COMB_B",
       "n_participants": 3,
       "valid_traces": 3,
-      "low_confidence_traces": 2,
+      "low_confidence_traces": 1,
       "participants": [
         "P05",
         "P06",
@@ -2791,8 +2791,8 @@
         },
         {
           "family_id": "T2",
-          "label": "occupancy composition attempt then stuck",
-          "strategy": "occupancy_composition_attempt_then_stuck",
+          "label": "occupancy composition then distribution case enumeration incomplete",
+          "strategy": "occupancy_composition_then_distribution_case_enumeration_incomplete",
           "participants": [
             "P06"
           ],
@@ -2800,21 +2800,21 @@
             "HESITATE(problem-meaning)",
             "REPRESENT(occupancy-sum)",
             "CALCULATE(sum-over-used-entrances)",
-            "STUCK(distribution)"
+            "ENUMERATE(distribution-cases)"
           ],
           "participant_signatures": {
             "P06": [
               "HESITATE(problem-meaning)",
               "REPRESENT(occupancy-sum)",
               "CALCULATE(sum-over-used-entrances)",
-              "STUCK(distribution)"
+              "ENUMERATE(distribution-cases)"
             ]
           },
           "core_steps": [
             "首先不确定‘进站方案’是否包含进入顺序。",
-            "尝试用各入口人数之和为9表示方案。",
-            "尝试按使用入口数写求和式，但符号无法可靠恢复。",
-            "回到9个人如何分配的问题，未形成可验证的计数。"
+            "令各入口人数为 x_i，并写出 x_1+⋯+x_n=9 及 x_i≤6。",
+            "对每个入口写排列数 A_6^{x_i}，并尝试把各项相加；右侧写出 A_6^{x_i}=6!/(6-x_i)!。",
+            "提出9个人如何分配后，在画面尝试列举人数分配情况；可见‘1,2,2’和‘6A_6^1’等残片，但未形成完整计数。"
           ],
           "core_step_evidence": [
             {
@@ -2828,30 +2828,30 @@
             },
             {
               "participant_id": "P06",
-              "content": "尝试用各入口人数之和为9表示方案。",
+              "content": "令各入口人数为 x_i，并写出 x_1+⋯+x_n=9 及 x_i≤6。",
               "evidence_text": "那如果我的X,SE加什么什么加X,最后应该是等我9个人进站。",
               "start_sec": 577,
               "end_sec": 594,
-              "status": "VERBALIZED",
-              "confidence": 0.55
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.96
             },
             {
               "participant_id": "P06",
-              "content": "尝试按使用入口数写求和式，但符号无法可靠恢复。",
+              "content": "对每个入口写排列数 A_6^{x_i}，并尝试把各项相加；右侧写出 A_6^{x_i}=6!/(6-x_i)!。",
               "evidence_text": "1加6s2加a6s3,1加到a6si",
               "start_sec": 652,
-              "end_sec": 683,
-              "status": "VERBALIZED",
-              "confidence": 0.48
+              "end_sec": 706,
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.94
             },
             {
               "participant_id": "P06",
-              "content": "回到9个人如何分配的问题，未形成可验证的计数。",
+              "content": "提出9个人如何分配后，在画面尝试列举人数分配情况；可见‘1,2,2’和‘6A_6^1’等残片，但未形成完整计数。",
               "evidence_text": "然后我9个怎么分配,对吧?",
               "start_sec": 706,
               "end_sec": 740,
-              "status": "VERBALIZED",
-              "confidence": 0.72
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.86
             }
           ],
           "participant_paths": {
@@ -2865,28 +2865,28 @@
                 "confidence": 0.95
               },
               {
-                "content": "尝试用各入口人数之和为9表示方案。",
+                "content": "令各入口人数为 x_i，并写出 x_1+⋯+x_n=9 及 x_i≤6。",
                 "evidence_text": "那如果我的X,SE加什么什么加X,最后应该是等我9个人进站。",
                 "start_sec": 577,
                 "end_sec": 594,
-                "status": "VERBALIZED",
-                "confidence": 0.55
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.96
               },
               {
-                "content": "尝试按使用入口数写求和式，但符号无法可靠恢复。",
+                "content": "对每个入口写排列数 A_6^{x_i}，并尝试把各项相加；右侧写出 A_6^{x_i}=6!/(6-x_i)!。",
                 "evidence_text": "1加6s2加a6s3,1加到a6si",
                 "start_sec": 652,
-                "end_sec": 683,
-                "status": "VERBALIZED",
-                "confidence": 0.48
+                "end_sec": 706,
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.94
               },
               {
-                "content": "回到9个人如何分配的问题，未形成可验证的计数。",
+                "content": "提出9个人如何分配后，在画面尝试列举人数分配情况；可见‘1,2,2’和‘6A_6^1’等残片，但未形成完整计数。",
                 "evidence_text": "然后我9个怎么分配,对吧?",
                 "start_sec": 706,
                 "end_sec": 740,
-                "status": "VERBALIZED",
-                "confidence": 0.72
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.86
               }
             ]
           },
@@ -2913,28 +2913,28 @@
             ]
           },
           "core_steps": [
-            "把九个人进入六个入口表示成球入盒。"
+            "把 9 个不同的人进入 6 个入口表示成球入盒模型；画面继续用九个圆点和分隔记号作图，但没有留下可辨认的完整计数式。"
           ],
           "core_step_evidence": [
             {
               "participant_id": "P07",
-              "content": "把九个人进入六个入口表示成球入盒。",
+              "content": "把 9 个不同的人进入 6 个入口表示成球入盒模型；画面继续用九个圆点和分隔记号作图，但没有留下可辨认的完整计数式。",
               "evidence_text": "这九个球变成一样的状态是把九个球放到六个盒子里",
               "start_sec": 1212.56,
               "end_sec": 1220.76,
-              "status": "VERBALIZED",
-              "confidence": 0.52
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.88
             }
           ],
           "participant_paths": {
             "P07": [
               {
-                "content": "把九个人进入六个入口表示成球入盒。",
+                "content": "把 9 个不同的人进入 6 个入口表示成球入盒模型；画面继续用九个圆点和分隔记号作图，但没有留下可辨认的完整计数式。",
                 "evidence_text": "这九个球变成一样的状态是把九个球放到六个盒子里",
                 "start_sec": 1212.56,
                 "end_sec": 1220.76,
-                "status": "VERBALIZED",
-                "confidence": 0.52
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.88
               }
             ]
           },
@@ -2954,7 +2954,7 @@
       "group_id": "COMB_B",
       "n_participants": 3,
       "valid_traces": 3,
-      "low_confidence_traces": 2,
+      "low_confidence_traces": 1,
       "participants": [
         "P05",
         "P06",
@@ -3138,12 +3138,12 @@
           },
           "core_steps": [
             "第一反应是反设任意两数不存在倍数关系。",
-            "开始把1到2n中的数写成2的幂乘另一因子；该段ASR需复核。",
-            "用1、2、3等例子探索2进赋值分解。",
-            "修正为每个数可持续提出2的因子，余下q为奇数。",
-            "按奇数部分q分类，并认为q落在不超过2n的n个奇数中。",
+            "把正整数写成 2^kq，并明确标注 q 为奇数。",
+            "列出1至6的 2^k×奇数 分解作为例子。",
+            "把一般数写成 2^kq 的形式，并用2n继续讨论指数与奇数因子。",
+            "按奇数因子 q_i 分类，并写下 q_i 最大只能到 n。",
             "调用鸽巢原理得到两个数具有相同奇数部分。",
-            "以相同奇数部分的两个数之比为2的幂，推出倍数关系；公式ASR不清。"
+            "若两数的奇数因子相同，写出 a_m=2^m q_m、a_n=2^n q_n，并由比值得到二者相差2的整数次幂。"
           ],
           "core_step_evidence": [
             {
@@ -3157,39 +3157,39 @@
             },
             {
               "participant_id": "P06",
-              "content": "开始把1到2n中的数写成2的幂乘另一因子；该段ASR需复核。",
+              "content": "把正整数写成 2^kq，并明确标注 q 为奇数。",
               "evidence_text": "把所有的写成",
               "start_sec": 920.34,
               "end_sec": 940,
-              "status": "VERBALIZED",
-              "confidence": 0.55
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.98
             },
             {
               "participant_id": "P06",
-              "content": "用1、2、3等例子探索2进赋值分解。",
+              "content": "列出1至6的 2^k×奇数 分解作为例子。",
               "evidence_text": "1就等于2的0次方乘以1,2就等于2的1次方乘以1,3就等于2的0。",
               "start_sec": 946,
               "end_sec": 973,
-              "status": "VERBALIZED",
-              "confidence": 0.7
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.98
             },
             {
               "participant_id": "P06",
-              "content": "修正为每个数可持续提出2的因子，余下q为奇数。",
+              "content": "把一般数写成 2^kq 的形式，并用2n继续讨论指数与奇数因子。",
               "evidence_text": "比如说,2的某个次方,可以次方,乘以一个q。",
               "start_sec": 1066.444,
               "end_sec": 1088.444,
-              "status": "VERBALIZED",
-              "confidence": 0.79
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.94
             },
             {
               "participant_id": "P06",
-              "content": "按奇数部分q分类，并认为q落在不超过2n的n个奇数中。",
+              "content": "按奇数因子 q_i 分类，并写下 q_i 最大只能到 n。",
               "evidence_text": "2的k字方式是q,q从1到n中便利。",
               "start_sec": 1175.889,
               "end_sec": 1216.333,
-              "status": "VERBALIZED",
-              "confidence": 0.68
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.93
             },
             {
               "participant_id": "P06",
@@ -3202,12 +3202,12 @@
             },
             {
               "participant_id": "P06",
-              "content": "以相同奇数部分的两个数之比为2的幂，推出倍数关系；公式ASR不清。",
+              "content": "若两数的奇数因子相同，写出 a_m=2^m q_m、a_n=2^n q_n，并由比值得到二者相差2的整数次幂。",
               "evidence_text": "必然存在某两个数",
               "start_sec": 1228.333,
               "end_sec": 1262.493,
-              "status": "VERBALIZED",
-              "confidence": 0.63
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.98
             }
           ],
           "participant_paths": {
@@ -3221,36 +3221,36 @@
                 "confidence": 0.86
               },
               {
-                "content": "开始把1到2n中的数写成2的幂乘另一因子；该段ASR需复核。",
+                "content": "把正整数写成 2^kq，并明确标注 q 为奇数。",
                 "evidence_text": "把所有的写成",
                 "start_sec": 920.34,
                 "end_sec": 940,
-                "status": "VERBALIZED",
-                "confidence": 0.55
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.98
               },
               {
-                "content": "用1、2、3等例子探索2进赋值分解。",
+                "content": "列出1至6的 2^k×奇数 分解作为例子。",
                 "evidence_text": "1就等于2的0次方乘以1,2就等于2的1次方乘以1,3就等于2的0。",
                 "start_sec": 946,
                 "end_sec": 973,
-                "status": "VERBALIZED",
-                "confidence": 0.7
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.98
               },
               {
-                "content": "修正为每个数可持续提出2的因子，余下q为奇数。",
+                "content": "把一般数写成 2^kq 的形式，并用2n继续讨论指数与奇数因子。",
                 "evidence_text": "比如说,2的某个次方,可以次方,乘以一个q。",
                 "start_sec": 1066.444,
                 "end_sec": 1088.444,
-                "status": "VERBALIZED",
-                "confidence": 0.79
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.94
               },
               {
-                "content": "按奇数部分q分类，并认为q落在不超过2n的n个奇数中。",
+                "content": "按奇数因子 q_i 分类，并写下 q_i 最大只能到 n。",
                 "evidence_text": "2的k字方式是q,q从1到n中便利。",
                 "start_sec": 1175.889,
                 "end_sec": 1216.333,
-                "status": "VERBALIZED",
-                "confidence": 0.68
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.93
               },
               {
                 "content": "调用鸽巢原理得到两个数具有相同奇数部分。",
@@ -3261,12 +3261,12 @@
                 "confidence": 0.72
               },
               {
-                "content": "以相同奇数部分的两个数之比为2的幂，推出倍数关系；公式ASR不清。",
+                "content": "若两数的奇数因子相同，写出 a_m=2^m q_m、a_n=2^n q_n，并由比值得到二者相差2的整数次幂。",
                 "evidence_text": "必然存在某两个数",
                 "start_sec": 1228.333,
                 "end_sec": 1262.493,
-                "status": "VERBALIZED",
-                "confidence": 0.63
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.98
               }
             ]
           },
@@ -3301,7 +3301,7 @@
             ]
           },
           "core_steps": [
-            "首先尝试数学归纳法。",
+            "首先尝试数学归纳法，并从 n=1 开始写。",
             "枚举3与6、4与8、5与10等倍数对。",
             "似乎尝试把1到2n分组，但ASR无法恢复分组规则。",
             "估计存在n个组，但q的定义听不清。",
@@ -3310,12 +3310,12 @@
           "core_step_evidence": [
             {
               "participant_id": "P07",
-              "content": "首先尝试数学归纳法。",
+              "content": "首先尝试数学归纳法，并从 n=1 开始写。",
               "evidence_text": "这个归纳法,第一种情况,n等于1",
               "start_sec": 1369,
               "end_sec": 1407,
-              "status": "VERBALIZED",
-              "confidence": 0.62
+              "status": "MULTIMODAL_CONFIRMED",
+              "confidence": 0.86
             },
             {
               "participant_id": "P07",
@@ -3357,12 +3357,12 @@
           "participant_paths": {
             "P07": [
               {
-                "content": "首先尝试数学归纳法。",
+                "content": "首先尝试数学归纳法，并从 n=1 开始写。",
                 "evidence_text": "这个归纳法,第一种情况,n等于1",
                 "start_sec": 1369,
                 "end_sec": 1407,
-                "status": "VERBALIZED",
-                "confidence": 0.62
+                "status": "MULTIMODAL_CONFIRMED",
+                "confidence": 0.86
               },
               {
                 "content": "枚举3与6、4与8、5与10等倍数对。",

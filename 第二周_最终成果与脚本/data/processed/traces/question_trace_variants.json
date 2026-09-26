@@ -1,0 +1,2795 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-20T17:08:20.256289+00:00",
+  "questions": [
+    {
+      "question_id": "TRIG_A1",
+      "group_id": "TRIG_A",
+      "n_participants": 2,
+      "valid_traces": 2,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P05",
+        "P06"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "周期性构造反例",
+          "strategy": "periodicity_counterexample",
+          "participants": [
+            "P05"
+          ],
+          "signature": [
+            "ATTEND(S3)",
+            "RECALL(tan-periodicity)",
+            "ENUMERATE(α=1+2π,β=1)",
+            "ANSWER(counterexample)"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "ATTEND(S3)",
+              "RECALL(tan-periodicity)",
+              "ENUMERATE(α=1+2π,β=1)",
+              "ANSWER(counterexample)"
+            ]
+          },
+          "core_steps": [
+            "关注 tan 函数图像与函数值比较。",
+            "回忆 tan 的周期性，用相差 2π 保持函数值相同。",
+            "给出一组具体角作为反例。",
+            "以周期性构造完成反例。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P05",
+              "content": "关注 tan 函数图像与函数值比较。",
+              "evidence_text": "根据那个 y=tan x 那个图像",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "VERBALIZED",
+              "confidence": 0.94
+            },
+            {
+              "participant_id": "P05",
+              "content": "回忆 tan 的周期性，用相差 2π 保持函数值相同。",
+              "evidence_text": "在周期里面随便加二派，然后它就会相等",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "VERBALIZED",
+              "confidence": 0.98
+            },
+            {
+              "participant_id": "P05",
+              "content": "给出一组具体角作为反例。",
+              "evidence_text": "A1 α=1+2Π，β＝1",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P05",
+              "content": "以周期性构造完成反例。",
+              "evidence_text": "因为根据 y=tanx 那个图像随便举一个相等的就行反正是周期函数",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "VERBALIZED",
+              "confidence": 0.96
+            }
+          ],
+          "participant_paths": {
+            "P05": [
+              {
+                "content": "关注 tan 函数图像与函数值比较。",
+                "evidence_text": "根据那个 y=tan x 那个图像",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "VERBALIZED",
+                "confidence": 0.94
+              },
+              {
+                "content": "回忆 tan 的周期性，用相差 2π 保持函数值相同。",
+                "evidence_text": "在周期里面随便加二派，然后它就会相等",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "VERBALIZED",
+                "confidence": 0.98
+              },
+              {
+                "content": "给出一组具体角作为反例。",
+                "evidence_text": "A1 α=1+2Π，β＝1",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              },
+              {
+                "content": "以周期性构造完成反例。",
+                "evidence_text": "因为根据 y=tanx 那个图像随便举一个相等的就行反正是周期函数",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "VERBALIZED",
+                "confidence": 0.96
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P05",
+              "evidence": "根据那个 y=tan x 那个图像"
+            }
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "先误用锐角单调性，再发现周期条件并修正",
+          "strategy": "acute_interval_monotonicity_then_domain_correction",
+          "participants": [
+            "P06"
+          ],
+          "signature": [
+            "HESITATE(counterexample-exists?)",
+            "RECALL(tan-monotonic)",
+            "ERROR(first-quadrant-as-acute-angle)",
+            "BACKTRACK(没事了)",
+            "ATTEND(first-quadrant)",
+            "RECALL(+2kπ)",
+            "CORRECT(periodic-domain)"
+          ],
+          "participant_signatures": {
+            "P06": [
+              "HESITATE(counterexample-exists?)",
+              "RECALL(tan-monotonic)",
+              "ERROR(first-quadrant-as-acute-angle)",
+              "BACKTRACK(没事了)",
+              "ATTEND(first-quadrant)",
+              "RECALL(+2kπ)",
+              "CORRECT(periodic-domain)"
+            ]
+          },
+          "core_steps": [
+            "对题目要求构造反例表现出强烈疑惑，并暂时否认反例存在。",
+            "调用 tan 的单调性来支持命题应成立的判断。",
+            "把当前考虑范围限定为锐角主值，并据此处理所有第一象限角。",
+            "撤回前面的否认判断，表明已经发现需要重新解释条件。",
+            "重新检查‘第一象限角’这一条件。",
+            "注意第一象限角可以跨越整周期表示。",
+            "显著反应表明已识别隐藏的周期条件并修正最初模型；仍未写出具体反例。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P06",
+              "content": "对题目要求构造反例表现出强烈疑惑，并暂时否认反例存在。",
+              "evidence_text": "不是。这个还有反例？有没有搞错",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "调用 tan 的单调性来支持命题应成立的判断。",
+              "evidence_text": "这个不是单调函数吗",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "把当前考虑范围限定为锐角主值，并据此处理所有第一象限角。",
+              "evidence_text": "锐角情况下",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.96
+            },
+            {
+              "participant_id": "P06",
+              "content": "撤回前面的否认判断，表明已经发现需要重新解释条件。",
+              "evidence_text": "没事了",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.92
+            },
+            {
+              "participant_id": "P06",
+              "content": "重新检查‘第一象限角’这一条件。",
+              "evidence_text": "第一象限",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "注意第一象限角可以跨越整周期表示。",
+              "evidence_text": "+2kπ",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "显著反应表明已识别隐藏的周期条件并修正最初模型；仍未写出具体反例。",
+              "evidence_text": "卧槽。这个真是坑",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "STRONGLY_IMPLIED",
+              "confidence": 0.9
+            }
+          ],
+          "participant_paths": {
+            "P06": [
+              {
+                "content": "对题目要求构造反例表现出强烈疑惑，并暂时否认反例存在。",
+                "evidence_text": "不是。这个还有反例？有没有搞错",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "调用 tan 的单调性来支持命题应成立的判断。",
+                "evidence_text": "这个不是单调函数吗",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "把当前考虑范围限定为锐角主值，并据此处理所有第一象限角。",
+                "evidence_text": "锐角情况下",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.96
+              },
+              {
+                "content": "撤回前面的否认判断，表明已经发现需要重新解释条件。",
+                "evidence_text": "没事了",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.92
+              },
+              {
+                "content": "重新检查‘第一象限角’这一条件。",
+                "evidence_text": "第一象限",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "注意第一象限角可以跨越整周期表示。",
+                "evidence_text": "+2kπ",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "显著反应表明已识别隐藏的周期条件并修正最初模型；仍未写出具体反例。",
+                "evidence_text": "卧槽。这个真是坑",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "STRONGLY_IMPLIED",
+                "confidence": 0.9
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P06",
+              "evidence": "不是。这个还有反例？有没有搞错"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [],
+      "first_meaningful_divergence": "入口即分叉：P05 进入 ATTEND(S3)；P06 进入 HESITATE(counterexample-exists?)。"
+    },
+    {
+      "question_id": "TRIG_A2",
+      "group_id": "TRIG_A",
+      "n_participants": 2,
+      "valid_traces": 2,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P05",
+        "P06"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "先推出周期再反推频率",
+          "strategy": "infer_period_then_frequency",
+          "participants": [
+            "P05",
+            "P06"
+          ],
+          "signature": [
+            "DERIVE(T=π)",
+            "RECALL(T=2π/ω)",
+            "ANSWER(ω=2)"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "DERIVE(T=π)",
+              "RECALL(T=2π/ω)",
+              "ANSWER(ω=2)"
+            ],
+            "P06": [
+              "DERIVE(T=π)",
+              "ANSWER(ω=2)"
+            ]
+          },
+          "core_steps": [
+            "直接陈述由题得到最小正周期 T=π；中间推导未口述。",
+            "使用正弦函数周期与 ω 的关系。",
+            "给出参数值。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P05",
+              "content": "直接陈述由题得到最小正周期 T=π；中间推导未口述。",
+              "evidence_text": "由题可知 f(x) 最小正周期为 Π",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "VERBALIZED",
+              "confidence": 0.88
+            },
+            {
+              "participant_id": "P05",
+              "content": "使用正弦函数周期与 ω 的关系。",
+              "evidence_text": "故 Ω=2",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "STRONGLY_IMPLIED",
+              "confidence": 0.8
+            },
+            {
+              "participant_id": "P05",
+              "content": "给出参数值。",
+              "evidence_text": "故 Ω=2",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            }
+          ],
+          "participant_paths": {
+            "P05": [
+              {
+                "content": "直接陈述由题得到最小正周期 T=π；中间推导未口述。",
+                "evidence_text": "由题可知 f(x) 最小正周期为 Π",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "VERBALIZED",
+                "confidence": 0.88
+              },
+              {
+                "content": "使用正弦函数周期与 ω 的关系。",
+                "evidence_text": "故 Ω=2",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "STRONGLY_IMPLIED",
+                "confidence": 0.8
+              },
+              {
+                "content": "给出参数值。",
+                "evidence_text": "故 Ω=2",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              }
+            ],
+            "P06": [
+              {
+                "content": "直接给出最小正周期 T=π；由哪些题内信号推出未被口述。",
+                "evidence_text": "这个周期是π",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "给出 ω=2，语气带有轻微不确定。",
+                "evidence_text": "w=2吧",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P05",
+              "evidence": "由题可知 f(x) 最小正周期为 Π"
+            },
+            {
+              "participant_id": "P06",
+              "evidence": "这个周期是π"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [
+        "DERIVE(T=π)"
+      ],
+      "first_meaningful_divergence": "共同前缀 DERIVE(T=π) 之后分叉：P05 进入 RECALL(T=2π/ω)；P06 进入 ANSWER(ω=2)。"
+    },
+    {
+      "question_id": "TRIG_A3",
+      "group_id": "TRIG_A",
+      "n_participants": 2,
+      "valid_traces": 2,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P05",
+        "P06"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "未形成可口述策略并停止",
+          "strategy": "no_strategy_verbalized",
+          "participants": [
+            "P05"
+          ],
+          "signature": [
+            "STUCK(no-entry)",
+            "RECALL(failed-formula-retrieval)",
+            "ABANDON"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "STUCK(no-entry)",
+              "RECALL(failed-formula-retrieval)",
+              "ABANDON"
+            ]
+          },
+          "core_steps": [
+            "没有口述可执行的切入步骤。",
+            "明确报告无法回忆所需公式。",
+            "因无法回忆公式而停止。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P05",
+              "content": "没有口述可执行的切入步骤。",
+              "evidence_text": "第3题我不会做",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P05",
+              "content": "明确报告无法回忆所需公式。",
+              "evidence_text": "我公式全忘了",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P05",
+              "content": "因无法回忆公式而停止。",
+              "evidence_text": "第3题我不会做，我公式全忘了",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "STRONGLY_IMPLIED",
+              "confidence": 0.9
+            }
+          ],
+          "participant_paths": {
+            "P05": [
+              {
+                "content": "没有口述可执行的切入步骤。",
+                "evidence_text": "第3题我不会做",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              },
+              {
+                "content": "明确报告无法回忆所需公式。",
+                "evidence_text": "我公式全忘了",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              },
+              {
+                "content": "因无法回忆公式而停止。",
+                "evidence_text": "第3题我不会做，我公式全忘了",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "STRONGLY_IMPLIED",
+                "confidence": 0.9
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P05",
+              "evidence": "第3题我不会做"
+            }
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "正弦定理定角，再用余弦定理和面积公式",
+          "strategy": "sine_law_then_cosine_law_area",
+          "participants": [
+            "P06"
+          ],
+          "signature": [
+            "TRANSFORM(sine-law-edge-to-angle)",
+            "CHECK(sinC>0)",
+            "TRANSFORM(cancel-sinC)",
+            "TRANSFORM(auxiliary-angle)",
+            "CHECK(angle-range)",
+            "ANSWER(B=π/6)",
+            "TRANSFORM(b=4-c)",
+            "DERIVE(cosine-law)",
+            "CALCULATE(c=2,b=2)",
+            "CALCULATE(area)",
+            "ANSWER(S=√3)"
+          ],
+          "participant_signatures": {
+            "P06": [
+              "TRANSFORM(sine-law-edge-to-angle)",
+              "CHECK(sinC>0)",
+              "TRANSFORM(cancel-sinC)",
+              "TRANSFORM(auxiliary-angle)",
+              "CHECK(angle-range)",
+              "ANSWER(B=π/6)",
+              "TRANSFORM(b=4-c)",
+              "DERIVE(cosine-law)",
+              "CALCULATE(c=2,b=2)",
+              "CALCULATE(area)",
+              "ANSWER(S=√3)"
+            ]
+          },
+          "core_steps": [
+            "用正弦定理把边 b、c 转成对应角的正弦。",
+            "检查三角形内角范围，确认 sinC 可约去。",
+            "两边约去 sinC。",
+            "把线性三角式改写成辅助角形式。",
+            "用三角形内角范围限制辅助角的取值。",
+            "在限定范围内确定唯一角 B。",
+            "进入第二问并把 b 用 c 表示，同时沿用第一问的 B=π/6。",
+            "把 b=4-c、a=2√3、B=π/6 代入余弦定理。",
+            "展开并解一元方程得到 c=2。",
+            "由和约束得到 b=2。",
+            "使用两边及夹角的面积公式。",
+            "给出面积结论。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P06",
+              "content": "用正弦定理把边 b、c 转成对应角的正弦。",
+              "evidence_text": "sin B sin C + √3 cos B sin C = 2 sin C",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.96
+            },
+            {
+              "participant_id": "P06",
+              "content": "检查三角形内角范围，确认 sinC 可约去。",
+              "evidence_text": "C∈(0,π)，sin C>0",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "两边约去 sinC。",
+              "evidence_text": "sin B + √3 cos B = 2",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "把线性三角式改写成辅助角形式。",
+              "evidence_text": "sin B cos(π/3) + cos B sin(π/3) = 1",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "用三角形内角范围限制辅助角的取值。",
+              "evidence_text": "B+π/3∈(π/3,4π/3)",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.98
+            },
+            {
+              "participant_id": "P06",
+              "content": "在限定范围内确定唯一角 B。",
+              "evidence_text": "B+π/3=π/2，B=π/6",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "进入第二问并把 b 用 c 表示，同时沿用第一问的 B=π/6。",
+              "evidence_text": "b+c=4，b=4-c",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "把 b=4-c、a=2√3、B=π/6 代入余弦定理。",
+              "evidence_text": "(4-c)^2=(2√3)^2+c^2-2(2√3)c cos(π/6)",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "展开并解一元方程得到 c=2。",
+              "evidence_text": "c²-8c+16=12+c²-6c……c=2",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "由和约束得到 b=2。",
+              "evidence_text": "b=4-c=2",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "使用两边及夹角的面积公式。",
+              "evidence_text": "S=1/2·ac·sinB=1/2·(2√3)·2·sin(π/6)",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P06",
+              "content": "给出面积结论。",
+              "evidence_text": "S=√3",
+              "start_sec": null,
+              "end_sec": null,
+              "status": "WRITTEN_OBSERVED",
+              "confidence": 0.99
+            }
+          ],
+          "participant_paths": {
+            "P06": [
+              {
+                "content": "用正弦定理把边 b、c 转成对应角的正弦。",
+                "evidence_text": "sin B sin C + √3 cos B sin C = 2 sin C",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.96
+              },
+              {
+                "content": "检查三角形内角范围，确认 sinC 可约去。",
+                "evidence_text": "C∈(0,π)，sin C>0",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "两边约去 sinC。",
+                "evidence_text": "sin B + √3 cos B = 2",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "把线性三角式改写成辅助角形式。",
+                "evidence_text": "sin B cos(π/3) + cos B sin(π/3) = 1",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "用三角形内角范围限制辅助角的取值。",
+                "evidence_text": "B+π/3∈(π/3,4π/3)",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.98
+              },
+              {
+                "content": "在限定范围内确定唯一角 B。",
+                "evidence_text": "B+π/3=π/2，B=π/6",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "进入第二问并把 b 用 c 表示，同时沿用第一问的 B=π/6。",
+                "evidence_text": "b+c=4，b=4-c",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "把 b=4-c、a=2√3、B=π/6 代入余弦定理。",
+                "evidence_text": "(4-c)^2=(2√3)^2+c^2-2(2√3)c cos(π/6)",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "展开并解一元方程得到 c=2。",
+                "evidence_text": "c²-8c+16=12+c²-6c……c=2",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "由和约束得到 b=2。",
+                "evidence_text": "b=4-c=2",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "使用两边及夹角的面积公式。",
+                "evidence_text": "S=1/2·ac·sinB=1/2·(2√3)·2·sin(π/6)",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              },
+              {
+                "content": "给出面积结论。",
+                "evidence_text": "S=√3",
+                "start_sec": null,
+                "end_sec": null,
+                "status": "WRITTEN_OBSERVED",
+                "confidence": 0.99
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P06",
+              "evidence": "sin B sin C + √3 cos B sin C = 2 sin C"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [],
+      "first_meaningful_divergence": "入口即分叉：P05 进入 STUCK(no-entry)；P06 进入 TRANSFORM(sine-law-edge-to-angle)。"
+    },
+    {
+      "question_id": "COMB_A1",
+      "group_id": "COMB_A",
+      "n_participants": 2,
+      "valid_traces": 2,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P01",
+        "P02"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "递归、捆绑与插入的多小问路线",
+          "strategy": "multi_subpart_recursive_and_insertion",
+          "participants": [
+            "P01"
+          ],
+          "signature": [
+            "ATTEND(C1)",
+            "PLAN(recursion-by-gaps)",
+            "ATTEND(C2)",
+            "REPRESENT(bundle-girls)",
+            "ATTEND(C3)",
+            "BRANCH(two-insertion-plans)",
+            "PLAN(arrange-rest-then-insert-A-B)",
+            "PLAN(place-A-B-first)",
+            "BACKTRACK(second-plan-too-complex)"
+          ],
+          "participant_signatures": {
+            "P01": [
+              "ATTEND(C1)",
+              "PLAN(recursion-by-gaps)",
+              "ATTEND(C2)",
+              "REPRESENT(bundle-girls)",
+              "ATTEND(C3)",
+              "BRANCH(two-insertion-plans)",
+              "PLAN(arrange-rest-then-insert-A-B)",
+              "PLAN(place-A-B-first)",
+              "BACKTRACK(second-plan-too-complex)"
+            ]
+          },
+          "core_steps": [
+            "先关注男生互不相邻，并把约束表述为男生间女生数量。",
+            "提出按男生之间间隔递归，但没有给出递推式。",
+            "把全部女生捆绑成一个整体。",
+            "对指定 A、B 不相邻产生两条候选路线。",
+            "先排列其余人，再依次插入 A、B 并限制二者不相邻。",
+            "尝试先放 A、B，再把其余人放入三个空。",
+            "因分类过多而放弃第二条路线。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P01",
+              "content": "先关注男生互不相邻，并把约束表述为男生间女生数量。",
+              "evidence_text": "问两个男生都不相邻，那就是每个男生之间差几个女生的问题",
+              "start_sec": 11.0,
+              "end_sec": 19.0,
+              "status": "VERBALIZED",
+              "confidence": 0.94
+            },
+            {
+              "participant_id": "P01",
+              "content": "提出按男生之间间隔递归，但没有给出递推式。",
+              "evidence_text": "可以通过一个递归……两个男生之间差一个女生、差两个女生，这样都会影响后面的排列组合方式",
+              "start_sec": 19.0,
+              "end_sec": 28.0,
+              "status": "VERBALIZED",
+              "confidence": 0.88
+            },
+            {
+              "participant_id": "P01",
+              "content": "把全部女生捆绑成一个整体。",
+              "evidence_text": "女生形成一个整体……把N个女生打包成一个",
+              "start_sec": 58.4,
+              "end_sec": 70.52,
+              "status": "VERBALIZED",
+              "confidence": 0.92
+            },
+            {
+              "participant_id": "P01",
+              "content": "对指定 A、B 不相邻产生两条候选路线。",
+              "evidence_text": "指定男生A和指定女生B不相邻……两个方法冒在我脑子里",
+              "start_sec": 72.52,
+              "end_sec": 84.52,
+              "status": "VERBALIZED",
+              "confidence": 0.96
+            },
+            {
+              "participant_id": "P01",
+              "content": "先排列其余人，再依次插入 A、B 并限制二者不相邻。",
+              "evidence_text": "先把m-1个男生和n-1个女生……排列组合好……再把男生A和女生B给插进去，让这两个不相邻",
+              "start_sec": 84.86,
+              "end_sec": 107.86,
+              "status": "VERBALIZED",
+              "confidence": 0.82
+            },
+            {
+              "participant_id": "P01",
+              "content": "尝试先放 A、B，再把其余人放入三个空。",
+              "evidence_text": "第二个思路就是，把男生A和女生B这两个先排好，相当于一共有三个空",
+              "start_sec": 111.38,
+              "end_sec": 126.26,
+              "status": "VERBALIZED",
+              "confidence": 0.88
+            },
+            {
+              "participant_id": "P01",
+              "content": "因分类过多而放弃第二条路线。",
+              "evidence_text": "感觉太麻烦了……整体讨论情况要比较多……所以就作罢了这个思路",
+              "start_sec": 126.26,
+              "end_sec": 133.36,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            }
+          ],
+          "participant_paths": {
+            "P01": [
+              {
+                "content": "先关注男生互不相邻，并把约束表述为男生间女生数量。",
+                "evidence_text": "问两个男生都不相邻，那就是每个男生之间差几个女生的问题",
+                "start_sec": 11.0,
+                "end_sec": 19.0,
+                "status": "VERBALIZED",
+                "confidence": 0.94
+              },
+              {
+                "content": "提出按男生之间间隔递归，但没有给出递推式。",
+                "evidence_text": "可以通过一个递归……两个男生之间差一个女生、差两个女生，这样都会影响后面的排列组合方式",
+                "start_sec": 19.0,
+                "end_sec": 28.0,
+                "status": "VERBALIZED",
+                "confidence": 0.88
+              },
+              {
+                "content": "把全部女生捆绑成一个整体。",
+                "evidence_text": "女生形成一个整体……把N个女生打包成一个",
+                "start_sec": 58.4,
+                "end_sec": 70.52,
+                "status": "VERBALIZED",
+                "confidence": 0.92
+              },
+              {
+                "content": "对指定 A、B 不相邻产生两条候选路线。",
+                "evidence_text": "指定男生A和指定女生B不相邻……两个方法冒在我脑子里",
+                "start_sec": 72.52,
+                "end_sec": 84.52,
+                "status": "VERBALIZED",
+                "confidence": 0.96
+              },
+              {
+                "content": "先排列其余人，再依次插入 A、B 并限制二者不相邻。",
+                "evidence_text": "先把m-1个男生和n-1个女生……排列组合好……再把男生A和女生B给插进去，让这两个不相邻",
+                "start_sec": 84.86,
+                "end_sec": 107.86,
+                "status": "VERBALIZED",
+                "confidence": 0.82
+              },
+              {
+                "content": "尝试先放 A、B，再把其余人放入三个空。",
+                "evidence_text": "第二个思路就是，把男生A和女生B这两个先排好，相当于一共有三个空",
+                "start_sec": 111.38,
+                "end_sec": 126.26,
+                "status": "VERBALIZED",
+                "confidence": 0.88
+              },
+              {
+                "content": "因分类过多而放弃第二条路线。",
+                "evidence_text": "感觉太麻烦了……整体讨论情况要比较多……所以就作罢了这个思路",
+                "start_sec": 126.26,
+                "end_sec": 133.36,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P01",
+              "evidence": "问两个男生都不相邻，那就是每个男生之间差几个女生的问题"
+            }
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "先用间隔法并修正，再用捆绑与补集完成三个小问",
+          "strategy": "boys_gap_then_girls_block_then_complement",
+          "participants": [
+            "P02"
+          ],
+          "signature": [
+            "ATTEND(C1)",
+            "HESITATE",
+            "PLAN(arrange-boys-first)",
+            "REPRESENT(m-1-internal-gaps)",
+            "CALCULATE(first-gap-count-uncertain)",
+            "BACKTRACK",
+            "CALCULATE(revised-gap-count-uncertain)",
+            "CLASSIFY(C2-girls-as-block)",
+            "CALCULATE(block-permutation)",
+            "ATTEND(C3)",
+            "PLAN(complement-adjacent-AB)",
+            "ANSWER(total-minus-adjacent)"
+          ],
+          "participant_signatures": {
+            "P02": [
+              "ATTEND(C1)",
+              "HESITATE",
+              "PLAN(arrange-boys-first)",
+              "REPRESENT(m-1-internal-gaps)",
+              "CALCULATE(first-gap-count-uncertain)",
+              "BACKTRACK",
+              "CALCULATE(revised-gap-count-uncertain)",
+              "CLASSIFY(C2-girls-as-block)",
+              "CALCULATE(block-permutation)",
+              "ATTEND(C3)",
+              "PLAN(complement-adjacent-AB)",
+              "ANSWER(total-minus-adjacent)"
+            ]
+          },
+          "core_steps": [
+            "先锁定第一小问中‘任意两个男生不相邻’的限制。",
+            "尚未形成计数方案，出现连续停顿和试探。",
+            "决定先排列男生；原文中的‘AMM’按上下文对应男生全排列记号，但下标转写不清。",
+            "把相邻男生之间表示为 m-1 个内部间隔，并要求每个内部间隔至少放一名女生。",
+            "尝试先选出填满内部间隔的女生，再把剩余女生分配到可用位置；具体排列数公式在原文中无法可靠恢复。",
+            "明确否定上一版计数，返回重新处理剩余女生。",
+            "改为让剩余女生重新排列并尝试写出乘积公式；下标和完整公式仍受转写干扰，不能确定最终第一小问表达式。",
+            "转入第二小问，把全部女生捆绑为一个整体，同时保留女生内部全排列。",
+            "把女生整体与 m 名男生作为 m+1 个对象排列，并与女生内部排列相乘。",
+            "转入第三小问，关注指定男生 A 与指定女生 B 不相邻。",
+            "采用补集法：先把 A、B 相邻视为可交换的二元块，并排列该块与其余人。",
+            "用全部排列数减去 A、B 相邻的排列数，得到指定二人不相邻的方案数。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P02",
+              "content": "先锁定第一小问中‘任意两个男生不相邻’的限制。",
+              "evidence_text": "第一题是需要看这个排列如何，任何两个男生都不相邻",
+              "start_sec": 3.0,
+              "end_sec": 32.0,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P02",
+              "content": "尚未形成计数方案，出现连续停顿和试探。",
+              "evidence_text": "所以相当于把这个。呃。应该。",
+              "start_sec": 32.0,
+              "end_sec": 51.0,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P02",
+              "content": "决定先排列男生；原文中的‘AMM’按上下文对应男生全排列记号，但下标转写不清。",
+              "evidence_text": "对，应该把男生放好……男生的排法应该是AMM",
+              "start_sec": 51.0,
+              "end_sec": 75.0,
+              "status": "VERBALIZED",
+              "confidence": 0.84
+            },
+            {
+              "participant_id": "P02",
+              "content": "把相邻男生之间表示为 m-1 个内部间隔，并要求每个内部间隔至少放一名女生。",
+              "evidence_text": "男生放好之后……所有男生之间的间隔是有M减一个间隔……里面至少都得有一个女生",
+              "start_sec": 75.0,
+              "end_sec": 114.0,
+              "status": "VERBALIZED",
+              "confidence": 0.96
+            },
+            {
+              "participant_id": "P02",
+              "content": "尝试先选出填满内部间隔的女生，再把剩余女生分配到可用位置；具体排列数公式在原文中无法可靠恢复。",
+              "evidence_text": "NN减1……剩下的女生相当于有M加一种选择方法。所以每个女生都可以选这样的一个方法",
+              "start_sec": 114.0,
+              "end_sec": 180.0,
+              "status": "VERBALIZED",
+              "confidence": 0.58
+            },
+            {
+              "participant_id": "P02",
+              "content": "明确否定上一版计数，返回重新处理剩余女生。",
+              "evidence_text": "那不对",
+              "start_sec": 180.0,
+              "end_sec": 190.0,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P02",
+              "content": "改为让剩余女生重新排列并尝试写出乘积公式；下标和完整公式仍受转写干扰，不能确定最终第一小问表达式。",
+              "evidence_text": "那这样的话应该剩下的女生重新排一遍序……AN减N加1，AN减M加1，然后再乘上",
+              "start_sec": 190.0,
+              "end_sec": 251.0,
+              "status": "VERBALIZED",
+              "confidence": 0.55
+            },
+            {
+              "participant_id": "P02",
+              "content": "转入第二小问，把全部女生捆绑为一个整体，同时保留女生内部全排列。",
+              "evidence_text": "N个女生为一个整体的话，女生内部还是ANN，然后女生就看成一个整体了",
+              "start_sec": 251.0,
+              "end_sec": 270.0,
+              "status": "VERBALIZED",
+              "confidence": 0.95
+            },
+            {
+              "participant_id": "P02",
+              "content": "把女生整体与 m 名男生作为 m+1 个对象排列，并与女生内部排列相乘。",
+              "evidence_text": "然后只需要再乘上AM加1M加一就行",
+              "start_sec": 270.0,
+              "end_sec": 284.0,
+              "status": "VERBALIZED",
+              "confidence": 0.91
+            },
+            {
+              "participant_id": "P02",
+              "content": "转入第三小问，关注指定男生 A 与指定女生 B 不相邻。",
+              "evidence_text": "第三个是指定A和B不相邻",
+              "start_sec": 284.0,
+              "end_sec": 296.0,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P02",
+              "content": "采用补集法：先把 A、B 相邻视为可交换的二元块，并排列该块与其余人。",
+              "evidence_text": "可以先算AB相邻的情况。AB如果一定相邻的话，应该是A22乘上AM加N减1M加N减1",
+              "start_sec": 296.0,
+              "end_sec": 315.0,
+              "status": "VERBALIZED",
+              "confidence": 0.94
+            },
+            {
+              "participant_id": "P02",
+              "content": "用全部排列数减去 A、B 相邻的排列数，得到指定二人不相邻的方案数。",
+              "evidence_text": "再用总总方法，就是AM加NM加N去减就行",
+              "start_sec": 315.0,
+              "end_sec": 329.0,
+              "status": "VERBALIZED",
+              "confidence": 0.93
+            }
+          ],
+          "participant_paths": {
+            "P02": [
+              {
+                "content": "先锁定第一小问中‘任意两个男生不相邻’的限制。",
+                "evidence_text": "第一题是需要看这个排列如何，任何两个男生都不相邻",
+                "start_sec": 3.0,
+                "end_sec": 32.0,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              },
+              {
+                "content": "尚未形成计数方案，出现连续停顿和试探。",
+                "evidence_text": "所以相当于把这个。呃。应该。",
+                "start_sec": 32.0,
+                "end_sec": 51.0,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              },
+              {
+                "content": "决定先排列男生；原文中的‘AMM’按上下文对应男生全排列记号，但下标转写不清。",
+                "evidence_text": "对，应该把男生放好……男生的排法应该是AMM",
+                "start_sec": 51.0,
+                "end_sec": 75.0,
+                "status": "VERBALIZED",
+                "confidence": 0.84
+              },
+              {
+                "content": "把相邻男生之间表示为 m-1 个内部间隔，并要求每个内部间隔至少放一名女生。",
+                "evidence_text": "男生放好之后……所有男生之间的间隔是有M减一个间隔……里面至少都得有一个女生",
+                "start_sec": 75.0,
+                "end_sec": 114.0,
+                "status": "VERBALIZED",
+                "confidence": 0.96
+              },
+              {
+                "content": "尝试先选出填满内部间隔的女生，再把剩余女生分配到可用位置；具体排列数公式在原文中无法可靠恢复。",
+                "evidence_text": "NN减1……剩下的女生相当于有M加一种选择方法。所以每个女生都可以选这样的一个方法",
+                "start_sec": 114.0,
+                "end_sec": 180.0,
+                "status": "VERBALIZED",
+                "confidence": 0.58
+              },
+              {
+                "content": "明确否定上一版计数，返回重新处理剩余女生。",
+                "evidence_text": "那不对",
+                "start_sec": 180.0,
+                "end_sec": 190.0,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              },
+              {
+                "content": "改为让剩余女生重新排列并尝试写出乘积公式；下标和完整公式仍受转写干扰，不能确定最终第一小问表达式。",
+                "evidence_text": "那这样的话应该剩下的女生重新排一遍序……AN减N加1，AN减M加1，然后再乘上",
+                "start_sec": 190.0,
+                "end_sec": 251.0,
+                "status": "VERBALIZED",
+                "confidence": 0.55
+              },
+              {
+                "content": "转入第二小问，把全部女生捆绑为一个整体，同时保留女生内部全排列。",
+                "evidence_text": "N个女生为一个整体的话，女生内部还是ANN，然后女生就看成一个整体了",
+                "start_sec": 251.0,
+                "end_sec": 270.0,
+                "status": "VERBALIZED",
+                "confidence": 0.95
+              },
+              {
+                "content": "把女生整体与 m 名男生作为 m+1 个对象排列，并与女生内部排列相乘。",
+                "evidence_text": "然后只需要再乘上AM加1M加一就行",
+                "start_sec": 270.0,
+                "end_sec": 284.0,
+                "status": "VERBALIZED",
+                "confidence": 0.91
+              },
+              {
+                "content": "转入第三小问，关注指定男生 A 与指定女生 B 不相邻。",
+                "evidence_text": "第三个是指定A和B不相邻",
+                "start_sec": 284.0,
+                "end_sec": 296.0,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              },
+              {
+                "content": "采用补集法：先把 A、B 相邻视为可交换的二元块，并排列该块与其余人。",
+                "evidence_text": "可以先算AB相邻的情况。AB如果一定相邻的话，应该是A22乘上AM加N减1M加N减1",
+                "start_sec": 296.0,
+                "end_sec": 315.0,
+                "status": "VERBALIZED",
+                "confidence": 0.94
+              },
+              {
+                "content": "用全部排列数减去 A、B 相邻的排列数，得到指定二人不相邻的方案数。",
+                "evidence_text": "再用总总方法，就是AM加NM加N去减就行",
+                "start_sec": 315.0,
+                "end_sec": 329.0,
+                "status": "VERBALIZED",
+                "confidence": 0.93
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P02",
+              "evidence": "第一题是需要看这个排列如何，任何两个男生都不相邻"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [
+        "ATTEND(C1)"
+      ],
+      "first_meaningful_divergence": "共同前缀 ATTEND(C1) 之后分叉：P01 进入 PLAN(recursion-by-gaps)；P02 进入 HESITATE。"
+    },
+    {
+      "question_id": "COMB_A2",
+      "group_id": "COMB_A",
+      "n_participants": 2,
+      "valid_traces": 2,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P01",
+        "P02"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "动态规划/递推分解",
+          "strategy": "dynamic_programming_recurrence",
+          "participants": [
+            "P01"
+          ],
+          "signature": [
+            "REPRESENT(grid-above-x=y)",
+            "PLAN(dynamic-programming)",
+            "DERIVE(subproblem-at-(1,2))",
+            "PLAN(general-state-recurrence)"
+          ],
+          "participant_signatures": {
+            "P01": [
+              "REPRESENT(grid-above-x=y)",
+              "PLAN(dynamic-programming)",
+              "DERIVE(subproblem-at-(1,2))",
+              "PLAN(general-state-recurrence)"
+            ]
+          },
+          "core_steps": [
+            "把约束表示为在对角线上方行走的格路。",
+            "从 (0,1) 出发，选择动态规划/递推。",
+            "把到达 (1,2) 后的剩余路径视为参数缩小的子问题。",
+            "尝试把一般状态 (x0,y0) 分解成剩余子问题。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P01",
+              "content": "把约束表示为在对角线上方行走的格路。",
+              "evidence_text": "相当于是一个在X等于Y这条直线上方去走",
+              "start_sec": 133.96,
+              "end_sec": 143.6,
+              "status": "VERBALIZED",
+              "confidence": 0.91
+            },
+            {
+              "participant_id": "P01",
+              "content": "从 (0,1) 出发，选择动态规划/递推。",
+              "evidence_text": "它初始是0到1……一个很明显的一个DV的想法",
+              "start_sec": 143.6,
+              "end_sec": 148.58,
+              "status": "VERBALIZED",
+              "confidence": 0.78
+            },
+            {
+              "participant_id": "P01",
+              "content": "把到达 (1,2) 后的剩余路径视为参数缩小的子问题。",
+              "evidence_text": "走到1-2的话……那就是m-1和n-2这个",
+              "start_sec": 190.0,
+              "end_sec": 212.66,
+              "status": "VERBALIZED",
+              "confidence": 0.74
+            },
+            {
+              "participant_id": "P01",
+              "content": "尝试把一般状态 (x0,y0) 分解成剩余子问题。",
+              "evidence_text": "走到了x0和y0这个位置……等效于从0到1走到m-x0和n-y0……可以做一个递归",
+              "start_sec": 236.4,
+              "end_sec": 262.84,
+              "status": "VERBALIZED",
+              "confidence": 0.76
+            }
+          ],
+          "participant_paths": {
+            "P01": [
+              {
+                "content": "把约束表示为在对角线上方行走的格路。",
+                "evidence_text": "相当于是一个在X等于Y这条直线上方去走",
+                "start_sec": 133.96,
+                "end_sec": 143.6,
+                "status": "VERBALIZED",
+                "confidence": 0.91
+              },
+              {
+                "content": "从 (0,1) 出发，选择动态规划/递推。",
+                "evidence_text": "它初始是0到1……一个很明显的一个DV的想法",
+                "start_sec": 143.6,
+                "end_sec": 148.58,
+                "status": "VERBALIZED",
+                "confidence": 0.78
+              },
+              {
+                "content": "把到达 (1,2) 后的剩余路径视为参数缩小的子问题。",
+                "evidence_text": "走到1-2的话……那就是m-1和n-2这个",
+                "start_sec": 190.0,
+                "end_sec": 212.66,
+                "status": "VERBALIZED",
+                "confidence": 0.74
+              },
+              {
+                "content": "尝试把一般状态 (x0,y0) 分解成剩余子问题。",
+                "evidence_text": "走到了x0和y0这个位置……等效于从0到1走到m-x0和n-y0……可以做一个递归",
+                "start_sec": 236.4,
+                "end_sec": 262.84,
+                "status": "VERBALIZED",
+                "confidence": 0.76
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P01",
+              "evidence": "相当于是一个在X等于Y这条直线上方去走"
+            }
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "Catalan 类比后回查，转用总路径减反射坏路径",
+          "strategy": "catalan_check_then_total_minus_reflection",
+          "participants": [
+            "P02"
+          ],
+          "signature": [
+            "REPRESENT(lattice-path)",
+            "ATTEND(no-contact-x=y)",
+            "RECALL(Catalan)",
+            "REPRESENT(shifted-origin)",
+            "CHECK",
+            "BACKTRACK",
+            "PLAN(total-minus-crossing)",
+            "CALCULATE(total-paths)",
+            "REPRESENT(reflect-from-1-0)",
+            "ANSWER(combination-difference)"
+          ],
+          "participant_signatures": {
+            "P02": [
+              "REPRESENT(lattice-path)",
+              "ATTEND(no-contact-x=y)",
+              "RECALL(Catalan)",
+              "REPRESENT(shifted-origin)",
+              "CHECK",
+              "BACKTRACK",
+              "PLAN(total-minus-crossing)",
+              "CALCULATE(total-paths)",
+              "REPRESENT(reflect-from-1-0)",
+              "ANSWER(combination-difference)"
+            ]
+          },
+          "core_steps": [
+            "把问题识别为经过轻微变形的格点路径计数。",
+            "关注路径不能接触 x=y，并尝试把限制改写到 y=x-1 一侧。",
+            "调用 Catalan/受限格路作为候选模型。",
+            "尝试把起点平移到 (0,0) 并保留终点参数；中间坐标口述不完整。",
+            "主动检查刚才的 Catalan/坐标转换是否成立，并判断可能有问题。",
+            "暂时撤回直接套 Catalan 的结论，重新寻找计数方法。",
+            "改用‘全部路径减去穿过边界的坏路径’。",
+            "写出总路径数的组合数；原文字母与上下标粘连，按可辨部分记录为 C(m+n-1,m)。",
+            "对穿过 y=x 的路径使用反射思路，并把坏路径对应到从 (1,0) 出发的路径。",
+            "从总路径数组合数中减去反射后坏路径的组合数，给出两个组合数之差。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P02",
+              "content": "把问题识别为经过轻微变形的格点路径计数。",
+              "evidence_text": "第二题应该是一个。稍微变形的格点问题",
+              "start_sec": 329.0,
+              "end_sec": 353.0,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P02",
+              "content": "关注路径不能接触 x=y，并尝试把限制改写到 y=x-1 一侧。",
+              "evidence_text": "这个东西要求不接触X等于Y……不能高于Y等于X减一这条线",
+              "start_sec": 372.0,
+              "end_sec": 397.0,
+              "status": "VERBALIZED",
+              "confidence": 0.85
+            },
+            {
+              "participant_id": "P02",
+              "content": "调用 Catalan/受限格路作为候选模型。",
+              "evidence_text": "其实这个东西和卡特兰数没有本质上的区别",
+              "start_sec": 397.0,
+              "end_sec": 420.0,
+              "status": "VERBALIZED",
+              "confidence": 0.92
+            },
+            {
+              "participant_id": "P02",
+              "content": "尝试把起点平移到 (0,0) 并保留终点参数；中间坐标口述不完整。",
+              "evidence_text": "相当于是从00走到……是从00走到MN",
+              "start_sec": 420.0,
+              "end_sec": 446.0,
+              "status": "VERBALIZED",
+              "confidence": 0.72
+            },
+            {
+              "participant_id": "P02",
+              "content": "主动检查刚才的 Catalan/坐标转换是否成立，并判断可能有问题。",
+              "evidence_text": "对吗？好像不太对",
+              "start_sec": 446.0,
+              "end_sec": 470.0,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P02",
+              "content": "暂时撤回直接套 Catalan 的结论，重新寻找计数方法。",
+              "evidence_text": "卡特兰数是啥？……如果不是卡特兰数的话。我想一想",
+              "start_sec": 470.0,
+              "end_sec": 486.0,
+              "status": "VERBALIZED",
+              "confidence": 0.98
+            },
+            {
+              "participant_id": "P02",
+              "content": "改用‘全部路径减去穿过边界的坏路径’。",
+              "evidence_text": "那应该先算总……总路径数",
+              "start_sec": 565.0,
+              "end_sec": 587.0,
+              "status": "VERBALIZED",
+              "confidence": 0.96
+            },
+            {
+              "participant_id": "P02",
+              "content": "写出总路径数的组合数；原文字母与上下标粘连，按可辨部分记录为 C(m+n-1,m)。",
+              "evidence_text": "总路径数是为CN减1CM加减1M",
+              "start_sec": 587.0,
+              "end_sec": 607.0,
+              "status": "VERBALIZED",
+              "confidence": 0.76
+            },
+            {
+              "participant_id": "P02",
+              "content": "对穿过 y=x 的路径使用反射思路，并把坏路径对应到从 (1,0) 出发的路径。",
+              "evidence_text": "然后再去找穿过的，穿过Y等于X那应该是从10去看",
+              "start_sec": 607.0,
+              "end_sec": 625.0,
+              "status": "VERBALIZED",
+              "confidence": 0.87
+            },
+            {
+              "participant_id": "P02",
+              "content": "从总路径数组合数中减去反射后坏路径的组合数，给出两个组合数之差。",
+              "evidence_text": "如果从10去看的话，那就应该是减掉CM加N减1N……这两个东西做差都可以",
+              "start_sec": 625.0,
+              "end_sec": 657.0,
+              "status": "VERBALIZED",
+              "confidence": 0.82
+            }
+          ],
+          "participant_paths": {
+            "P02": [
+              {
+                "content": "把问题识别为经过轻微变形的格点路径计数。",
+                "evidence_text": "第二题应该是一个。稍微变形的格点问题",
+                "start_sec": 329.0,
+                "end_sec": 353.0,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              },
+              {
+                "content": "关注路径不能接触 x=y，并尝试把限制改写到 y=x-1 一侧。",
+                "evidence_text": "这个东西要求不接触X等于Y……不能高于Y等于X减一这条线",
+                "start_sec": 372.0,
+                "end_sec": 397.0,
+                "status": "VERBALIZED",
+                "confidence": 0.85
+              },
+              {
+                "content": "调用 Catalan/受限格路作为候选模型。",
+                "evidence_text": "其实这个东西和卡特兰数没有本质上的区别",
+                "start_sec": 397.0,
+                "end_sec": 420.0,
+                "status": "VERBALIZED",
+                "confidence": 0.92
+              },
+              {
+                "content": "尝试把起点平移到 (0,0) 并保留终点参数；中间坐标口述不完整。",
+                "evidence_text": "相当于是从00走到……是从00走到MN",
+                "start_sec": 420.0,
+                "end_sec": 446.0,
+                "status": "VERBALIZED",
+                "confidence": 0.72
+              },
+              {
+                "content": "主动检查刚才的 Catalan/坐标转换是否成立，并判断可能有问题。",
+                "evidence_text": "对吗？好像不太对",
+                "start_sec": 446.0,
+                "end_sec": 470.0,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              },
+              {
+                "content": "暂时撤回直接套 Catalan 的结论，重新寻找计数方法。",
+                "evidence_text": "卡特兰数是啥？……如果不是卡特兰数的话。我想一想",
+                "start_sec": 470.0,
+                "end_sec": 486.0,
+                "status": "VERBALIZED",
+                "confidence": 0.98
+              },
+              {
+                "content": "改用‘全部路径减去穿过边界的坏路径’。",
+                "evidence_text": "那应该先算总……总路径数",
+                "start_sec": 565.0,
+                "end_sec": 587.0,
+                "status": "VERBALIZED",
+                "confidence": 0.96
+              },
+              {
+                "content": "写出总路径数的组合数；原文字母与上下标粘连，按可辨部分记录为 C(m+n-1,m)。",
+                "evidence_text": "总路径数是为CN减1CM加减1M",
+                "start_sec": 587.0,
+                "end_sec": 607.0,
+                "status": "VERBALIZED",
+                "confidence": 0.76
+              },
+              {
+                "content": "对穿过 y=x 的路径使用反射思路，并把坏路径对应到从 (1,0) 出发的路径。",
+                "evidence_text": "然后再去找穿过的，穿过Y等于X那应该是从10去看",
+                "start_sec": 607.0,
+                "end_sec": 625.0,
+                "status": "VERBALIZED",
+                "confidence": 0.87
+              },
+              {
+                "content": "从总路径数组合数中减去反射后坏路径的组合数，给出两个组合数之差。",
+                "evidence_text": "如果从10去看的话，那就应该是减掉CM加N减1N……这两个东西做差都可以",
+                "start_sec": 625.0,
+                "end_sec": 657.0,
+                "status": "VERBALIZED",
+                "confidence": 0.82
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P02",
+              "evidence": "第二题应该是一个。稍微变形的格点问题"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [],
+      "first_meaningful_divergence": "入口即分叉：P01 进入 REPRESENT(grid-above-x=y)；P02 进入 REPRESENT(lattice-path)。"
+    },
+    {
+      "question_id": "COMB_A3",
+      "group_id": "COMB_A",
+      "n_participants": 2,
+      "valid_traces": 2,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P01",
+        "P02"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "直接构造配对余数类",
+          "strategy": "direct_paired_residue_bins",
+          "participants": [
+            "P01"
+          ],
+          "signature": [
+            "ATTEND(S1)",
+            "REPRESENT(last-digits-mod-10)",
+            "CLASSIFY(equal-residues-for-difference)",
+            "CLASSIFY(complementary-residues-for-sum)",
+            "REPRESENT(six-paired-bins)",
+            "DERIVE(pigeonhole)"
+          ],
+          "participant_signatures": {
+            "P01": [
+              "ATTEND(S1)",
+              "REPRESENT(last-digits-mod-10)",
+              "CLASSIFY(equal-residues-for-difference)",
+              "CLASSIFY(complementary-residues-for-sum)",
+              "REPRESENT(six-paired-bins)",
+              "DERIVE(pigeonhole)"
+            ]
+          },
+          "core_steps": [
+            "先抓住七个互不相同正整数。",
+            "把整除条件转成末位余数关系。",
+            "相同余数的两个数之差可被 10 整除。",
+            "把互补余数配对以处理两数之和。",
+            "形成 {0},{5},{1,9},{2,8},{3,7},{4,6} 六类。",
+            "用七个数落入六类推出存在所需的一对。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P01",
+              "content": "先抓住七个互不相同正整数。",
+              "evidence_text": "最后一道题就是一个7个互相不同的正整数",
+              "start_sec": 268.84,
+              "end_sec": 279.84,
+              "status": "VERBALIZED",
+              "confidence": 0.98
+            },
+            {
+              "participant_id": "P01",
+              "content": "把整除条件转成末位余数关系。",
+              "evidence_text": "两个正整数的最后一位……大减小……A加B又规定了能凑成0的",
+              "start_sec": 279.84,
+              "end_sec": 299.81,
+              "status": "VERBALIZED",
+              "confidence": 0.91
+            },
+            {
+              "participant_id": "P01",
+              "content": "相同余数的两个数之差可被 10 整除。",
+              "evidence_text": "最后一位相同……大减小……它一定是10的倍数",
+              "start_sec": 280.1,
+              "end_sec": 292.9,
+              "status": "VERBALIZED",
+              "confidence": 0.94
+            },
+            {
+              "participant_id": "P01",
+              "content": "把互补余数配对以处理两数之和。",
+              "evidence_text": "A加B……能凑成0……从0,1,2,3,4,5",
+              "start_sec": 292.9,
+              "end_sec": 310.9,
+              "status": "VERBALIZED",
+              "confidence": 0.84
+            },
+            {
+              "participant_id": "P01",
+              "content": "形成 {0},{5},{1,9},{2,8},{3,7},{4,6} 六类。",
+              "evidence_text": "末位只能是0到9里面选……0到5一共是6个数……一和九、二和八这样的",
+              "start_sec": 314.81,
+              "end_sec": 366.03,
+              "status": "VERBALIZED",
+              "confidence": 0.9
+            },
+            {
+              "participant_id": "P01",
+              "content": "用七个数落入六类推出存在所需的一对。",
+              "evidence_text": "根据抽屉原理……再多选一个的话就会导致这个出问题",
+              "start_sec": 314.81,
+              "end_sec": 366.03,
+              "status": "VERBALIZED",
+              "confidence": 0.9
+            }
+          ],
+          "participant_paths": {
+            "P01": [
+              {
+                "content": "先抓住七个互不相同正整数。",
+                "evidence_text": "最后一道题就是一个7个互相不同的正整数",
+                "start_sec": 268.84,
+                "end_sec": 279.84,
+                "status": "VERBALIZED",
+                "confidence": 0.98
+              },
+              {
+                "content": "把整除条件转成末位余数关系。",
+                "evidence_text": "两个正整数的最后一位……大减小……A加B又规定了能凑成0的",
+                "start_sec": 279.84,
+                "end_sec": 299.81,
+                "status": "VERBALIZED",
+                "confidence": 0.91
+              },
+              {
+                "content": "相同余数的两个数之差可被 10 整除。",
+                "evidence_text": "最后一位相同……大减小……它一定是10的倍数",
+                "start_sec": 280.1,
+                "end_sec": 292.9,
+                "status": "VERBALIZED",
+                "confidence": 0.94
+              },
+              {
+                "content": "把互补余数配对以处理两数之和。",
+                "evidence_text": "A加B……能凑成0……从0,1,2,3,4,5",
+                "start_sec": 292.9,
+                "end_sec": 310.9,
+                "status": "VERBALIZED",
+                "confidence": 0.84
+              },
+              {
+                "content": "形成 {0},{5},{1,9},{2,8},{3,7},{4,6} 六类。",
+                "evidence_text": "末位只能是0到9里面选……0到5一共是6个数……一和九、二和八这样的",
+                "start_sec": 314.81,
+                "end_sec": 366.03,
+                "status": "VERBALIZED",
+                "confidence": 0.9
+              },
+              {
+                "content": "用七个数落入六类推出存在所需的一对。",
+                "evidence_text": "根据抽屉原理……再多选一个的话就会导致这个出问题",
+                "start_sec": 314.81,
+                "end_sec": 366.03,
+                "status": "VERBALIZED",
+                "confidence": 0.9
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P01",
+              "evidence": "最后一道题就是一个7个互相不同的正整数"
+            }
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "先分同余情形再构造配对余数类",
+          "strategy": "case_split_then_paired_residue_bins",
+          "participants": [
+            "P02"
+          ],
+          "signature": [
+            "ATTEND(why-seven)",
+            "REPRESENT(residues-mod-10)",
+            "CLASSIFY(equal-residue-case)",
+            "BRANCH(all-residues-distinct)",
+            "REPRESENT(six-paired-bins)",
+            "DERIVE(pigeonhole)",
+            "ANSWER"
+          ],
+          "participant_signatures": {
+            "P02": [
+              "ATTEND(why-seven)",
+              "REPRESENT(residues-mod-10)",
+              "CLASSIFY(equal-residue-case)",
+              "BRANCH(all-residues-distinct)",
+              "REPRESENT(six-paired-bins)",
+              "DERIVE(pigeonhole)",
+              "ANSWER"
+            ]
+          },
+          "core_steps": [
+            "先注意到题目特意给出七个互不相同的正整数，并追问数字七的作用。",
+            "把整除问题转写为模10余数关系，并枚举0至9。",
+            "第一种情况：若两数模10同余，则它们的差被10整除。",
+            "转入第二种情况：七个数的余数两两不同。",
+            "构造六个余数类 {0}、{5}、{1,9}、{2,8}、{3,7}、{4,6}。",
+            "用七个数进入六个余数类的抽屉原理，得到至少两个数落在同一类。",
+            "在余数互异的分支中，同落互补余数类的一对之和被10整除，完成证明。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P02",
+              "content": "先注意到题目特意给出七个互不相同的正整数，并追问数字七的作用。",
+              "evidence_text": "如果有七个互不相同的这种……为什么是七个不同的正整数呢？",
+              "start_sec": 657.0,
+              "end_sec": 675.0,
+              "status": "VERBALIZED",
+              "confidence": 0.94
+            },
+            {
+              "participant_id": "P02",
+              "content": "把整除问题转写为模10余数关系，并枚举0至9。",
+              "evidence_text": "A加B它模十的余数一共是012……456789",
+              "start_sec": 675.0,
+              "end_sec": 690.0,
+              "status": "VERBALIZED",
+              "confidence": 0.96
+            },
+            {
+              "participant_id": "P02",
+              "content": "第一种情况：若两数模10同余，则它们的差被10整除。",
+              "evidence_text": "如果这七个正整数里面有两个是同余的，那么显然它们的差是能被十整除的，所以这是第一种情况",
+              "start_sec": 690.0,
+              "end_sec": 706.0,
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "participant_id": "P02",
+              "content": "转入第二种情况：七个数的余数两两不同。",
+              "evidence_text": "第二种情况是这七个不同的正整数，它们模十的余数都互不相同",
+              "start_sec": 706.0,
+              "end_sec": 716.0,
+              "status": "VERBALIZED",
+              "confidence": 0.98
+            },
+            {
+              "participant_id": "P02",
+              "content": "构造六个余数类 {0}、{5}、{1,9}、{2,8}、{3,7}、{4,6}。",
+              "evidence_text": "一组零……一组19、一组28、一组37、一组46、一组五",
+              "start_sec": 716.0,
+              "end_sec": 735.0,
+              "status": "VERBALIZED",
+              "confidence": 0.98
+            },
+            {
+              "participant_id": "P02",
+              "content": "用七个数进入六个余数类的抽屉原理，得到至少两个数落在同一类。",
+              "evidence_text": "如果有七个数的话，根据抽屉原理来看的话，一定会有两个数，它会抽到一组",
+              "start_sec": 735.0,
+              "end_sec": 744.0,
+              "status": "VERBALIZED",
+              "confidence": 0.98
+            },
+            {
+              "participant_id": "P02",
+              "content": "在余数互异的分支中，同落互补余数类的一对之和被10整除，完成证明。",
+              "evidence_text": "肯定会有一组落在19、28、37、46……那他就是可以整除十的",
+              "start_sec": 744.0,
+              "end_sec": 750.19,
+              "status": "VERBALIZED",
+              "confidence": 0.96
+            }
+          ],
+          "participant_paths": {
+            "P02": [
+              {
+                "content": "先注意到题目特意给出七个互不相同的正整数，并追问数字七的作用。",
+                "evidence_text": "如果有七个互不相同的这种……为什么是七个不同的正整数呢？",
+                "start_sec": 657.0,
+                "end_sec": 675.0,
+                "status": "VERBALIZED",
+                "confidence": 0.94
+              },
+              {
+                "content": "把整除问题转写为模10余数关系，并枚举0至9。",
+                "evidence_text": "A加B它模十的余数一共是012……456789",
+                "start_sec": 675.0,
+                "end_sec": 690.0,
+                "status": "VERBALIZED",
+                "confidence": 0.96
+              },
+              {
+                "content": "第一种情况：若两数模10同余，则它们的差被10整除。",
+                "evidence_text": "如果这七个正整数里面有两个是同余的，那么显然它们的差是能被十整除的，所以这是第一种情况",
+                "start_sec": 690.0,
+                "end_sec": 706.0,
+                "status": "VERBALIZED",
+                "confidence": 0.99
+              },
+              {
+                "content": "转入第二种情况：七个数的余数两两不同。",
+                "evidence_text": "第二种情况是这七个不同的正整数，它们模十的余数都互不相同",
+                "start_sec": 706.0,
+                "end_sec": 716.0,
+                "status": "VERBALIZED",
+                "confidence": 0.98
+              },
+              {
+                "content": "构造六个余数类 {0}、{5}、{1,9}、{2,8}、{3,7}、{4,6}。",
+                "evidence_text": "一组零……一组19、一组28、一组37、一组46、一组五",
+                "start_sec": 716.0,
+                "end_sec": 735.0,
+                "status": "VERBALIZED",
+                "confidence": 0.98
+              },
+              {
+                "content": "用七个数进入六个余数类的抽屉原理，得到至少两个数落在同一类。",
+                "evidence_text": "如果有七个数的话，根据抽屉原理来看的话，一定会有两个数，它会抽到一组",
+                "start_sec": 735.0,
+                "end_sec": 744.0,
+                "status": "VERBALIZED",
+                "confidence": 0.98
+              },
+              {
+                "content": "在余数互异的分支中，同落互补余数类的一对之和被10整除，完成证明。",
+                "evidence_text": "肯定会有一组落在19、28、37、46……那他就是可以整除十的",
+                "start_sec": 744.0,
+                "end_sec": 750.19,
+                "status": "VERBALIZED",
+                "confidence": 0.96
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P02",
+              "evidence": "如果有七个互不相同的这种……为什么是七个不同的正整数呢？"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [],
+      "first_meaningful_divergence": "入口即分叉：P01 进入 ATTEND(S1)；P02 进入 ATTEND(why-seven)。"
+    },
+    {
+      "question_id": "COMB_B1",
+      "group_id": "COMB_B",
+      "n_participants": 1,
+      "valid_traces": 1,
+      "low_confidence_traces": 1,
+      "participants": [
+        "P03"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "先按边长枚举正方形，再选坐标计长方形",
+          "strategy": "direct_size_enumeration_then_coordinate_choices",
+          "participants": [
+            "P03"
+          ],
+          "signature": [
+            "CALCULATE(square-size-counts-partial)",
+            "CALCULATE(square-total-ASR-uncertain)",
+            "ATTEND(G1)",
+            "CALCULATE(C(10,2)×C(8,2))",
+            "ANSWER(45×28)"
+          ],
+          "participant_signatures": {
+            "P03": [
+              "CALCULATE(square-size-counts-partial)",
+              "CALCULATE(square-total-ASR-uncertain)",
+              "ATTEND(G1)",
+              "CALCULATE(C(10,2)×C(8,2))",
+              "ANSWER(45×28)"
+            ]
+          },
+          "core_steps": [
+            "按正方形大小列举数量；仅尾部可辨认。",
+            "把各类正方形相加；总数的 ASR 读数无法确认。",
+            "转向轴平行长方形计数。",
+            "得到纵坐标对数 28 与横坐标对数 45，写成 45×28。",
+            "保留精确乘积表达式，不继续做乘法。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P03",
+              "content": "按正方形大小列举数量；仅尾部可辨认。",
+              "evidence_text": "有24、6×6有15、7×7有8个、8×8有3个",
+              "start_sec": 90.0,
+              "end_sec": 104.06,
+              "status": "VERBALIZED",
+              "confidence": 0.58
+            },
+            {
+              "participant_id": "P03",
+              "content": "把各类正方形相加；总数的 ASR 读数无法确认。",
+              "evidence_text": "所以一共就是加起来……一共是276个正方形",
+              "start_sec": 104.06,
+              "end_sec": 136.76,
+              "status": "VERBALIZED",
+              "confidence": 0.5
+            },
+            {
+              "participant_id": "P03",
+              "content": "转向轴平行长方形计数。",
+              "evidence_text": "然后，长方形个数",
+              "start_sec": 137.8,
+              "end_sec": 142.4,
+              "status": "VERBALIZED",
+              "confidence": 0.92
+            },
+            {
+              "participant_id": "P03",
+              "content": "得到纵坐标对数 28 与横坐标对数 45，写成 45×28。",
+              "evidence_text": "1加2加3加4加5加6加7，45乘28",
+              "start_sec": 203.27,
+              "end_sec": 214.27,
+              "status": "VERBALIZED",
+              "confidence": 0.89
+            },
+            {
+              "participant_id": "P03",
+              "content": "保留精确乘积表达式，不继续做乘法。",
+              "evidence_text": "不想算了，应该是这个数",
+              "start_sec": 214.27,
+              "end_sec": 217.27,
+              "status": "VERBALIZED",
+              "confidence": 0.9
+            }
+          ],
+          "participant_paths": {
+            "P03": [
+              {
+                "content": "按正方形大小列举数量；仅尾部可辨认。",
+                "evidence_text": "有24、6×6有15、7×7有8个、8×8有3个",
+                "start_sec": 90.0,
+                "end_sec": 104.06,
+                "status": "VERBALIZED",
+                "confidence": 0.58
+              },
+              {
+                "content": "把各类正方形相加；总数的 ASR 读数无法确认。",
+                "evidence_text": "所以一共就是加起来……一共是276个正方形",
+                "start_sec": 104.06,
+                "end_sec": 136.76,
+                "status": "VERBALIZED",
+                "confidence": 0.5
+              },
+              {
+                "content": "转向轴平行长方形计数。",
+                "evidence_text": "然后，长方形个数",
+                "start_sec": 137.8,
+                "end_sec": 142.4,
+                "status": "VERBALIZED",
+                "confidence": 0.92
+              },
+              {
+                "content": "得到纵坐标对数 28 与横坐标对数 45，写成 45×28。",
+                "evidence_text": "1加2加3加4加5加6加7，45乘28",
+                "start_sec": 203.27,
+                "end_sec": 214.27,
+                "status": "VERBALIZED",
+                "confidence": 0.89
+              },
+              {
+                "content": "保留精确乘积表达式，不继续做乘法。",
+                "evidence_text": "不想算了，应该是这个数",
+                "start_sec": 214.27,
+                "end_sec": 217.27,
+                "status": "VERBALIZED",
+                "confidence": 0.9
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P03",
+              "evidence": "有24、6×6有15、7×7有8个、8×8有3个"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [
+        "CALCULATE(square-size-counts-partial)",
+        "CALCULATE(square-total-ASR-uncertain)",
+        "ATTEND(G1)",
+        "CALCULATE(C(10,2)×C(8,2))",
+        "ANSWER(45×28)"
+      ],
+      "first_meaningful_divergence": "少于两条 observed trace，无法估计分叉点。"
+    },
+    {
+      "question_id": "COMB_B2",
+      "group_id": "COMB_B",
+      "n_participants": 1,
+      "valid_traces": 1,
+      "low_confidence_traces": 1,
+      "participants": [
+        "P03"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "按入口人数拆分枚举",
+          "strategy": "occupancy_partition_enumeration",
+          "participants": [
+            "P03"
+          ],
+          "signature": [
+            "ATTEND(S1,S2)",
+            "PLAN(partition-9-by-entrance-loads)",
+            "ENUMERATE(6+3-cases)",
+            "ENUMERATE(5+4-cases)",
+            "CHECK(duplicate-partitions)"
+          ],
+          "participant_signatures": {
+            "P03": [
+              "ATTEND(S1,S2)",
+              "PLAN(partition-9-by-entrance-loads)",
+              "ENUMERATE(6+3-cases)",
+              "ENUMERATE(5+4-cases)",
+              "CHECK(duplicate-partitions)"
+            ]
+          },
+          "core_steps": [
+            "关注六个入口和九个人。",
+            "选择按入口人数拆分 9 的分类路线。",
+            "枚举 6+3、5+4 下剩余人数的整数拆分。",
+            "检查拆分是否重复，并补充 3+3+3。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P03",
+              "content": "关注六个入口和九个人。",
+              "evidence_text": "每个车站有六个入口，每个入口一次只能进一个人。一组九个人",
+              "start_sec": 220.27,
+              "end_sec": 229.27,
+              "status": "VERBALIZED",
+              "confidence": 0.93
+            },
+            {
+              "participant_id": "P03",
+              "content": "选择按入口人数拆分 9 的分类路线。",
+              "evidence_text": "那应该是，要把这个九进行一些分类",
+              "start_sec": 229.27,
+              "end_sec": 236.47,
+              "status": "VERBALIZED",
+              "confidence": 0.84
+            },
+            {
+              "participant_id": "P03",
+              "content": "枚举 6+3、5+4 下剩余人数的整数拆分。",
+              "evidence_text": "如果我第一次进六个，还剩三个……3可以3、1加2、1加1加1；如果第一次进五个，那么还有4……",
+              "start_sec": 342.07,
+              "end_sec": 382.25,
+              "status": "VERBALIZED",
+              "confidence": 0.87
+            },
+            {
+              "participant_id": "P03",
+              "content": "检查拆分是否重复，并补充 3+3+3。",
+              "evidence_text": "3可以再分，4也可以再分……3加1加5算过……3加2加4也算过……3加3加3没有算过",
+              "start_sec": 413.09,
+              "end_sec": 439.25,
+              "status": "VERBALIZED",
+              "confidence": 0.88
+            }
+          ],
+          "participant_paths": {
+            "P03": [
+              {
+                "content": "关注六个入口和九个人。",
+                "evidence_text": "每个车站有六个入口，每个入口一次只能进一个人。一组九个人",
+                "start_sec": 220.27,
+                "end_sec": 229.27,
+                "status": "VERBALIZED",
+                "confidence": 0.93
+              },
+              {
+                "content": "选择按入口人数拆分 9 的分类路线。",
+                "evidence_text": "那应该是，要把这个九进行一些分类",
+                "start_sec": 229.27,
+                "end_sec": 236.47,
+                "status": "VERBALIZED",
+                "confidence": 0.84
+              },
+              {
+                "content": "枚举 6+3、5+4 下剩余人数的整数拆分。",
+                "evidence_text": "如果我第一次进六个，还剩三个……3可以3、1加2、1加1加1；如果第一次进五个，那么还有4……",
+                "start_sec": 342.07,
+                "end_sec": 382.25,
+                "status": "VERBALIZED",
+                "confidence": 0.87
+              },
+              {
+                "content": "检查拆分是否重复，并补充 3+3+3。",
+                "evidence_text": "3可以再分，4也可以再分……3加1加5算过……3加2加4也算过……3加3加3没有算过",
+                "start_sec": 413.09,
+                "end_sec": 439.25,
+                "status": "VERBALIZED",
+                "confidence": 0.88
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P03",
+              "evidence": "每个车站有六个入口，每个入口一次只能进一个人。一组九个人"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [
+        "ATTEND(S1,S2)",
+        "PLAN(partition-9-by-entrance-loads)",
+        "ENUMERATE(6+3-cases)",
+        "ENUMERATE(5+4-cases)",
+        "CHECK(duplicate-partitions)"
+      ],
+      "first_meaningful_divergence": "少于两条 observed trace，无法估计分叉点。"
+    },
+    {
+      "question_id": "COMB_B3",
+      "group_id": "COMB_B",
+      "n_participants": 1,
+      "valid_traces": 1,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P03"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "先卡住，再尝试抽屉原理",
+          "strategy": "stuck_then_pigeonhole_attempt",
+          "participants": [
+            "P03"
+          ],
+          "signature": [
+            "STUCK(no-understanding)",
+            "PLAN(pigeonhole-attempt)"
+          ],
+          "participant_signatures": {
+            "P03": [
+              "STUCK(no-understanding)",
+              "PLAN(pigeonhole-attempt)"
+            ]
+          },
+          "core_steps": [
+            "明确报告无法理解。",
+            "仍尝试从抽屉原理切入，但没有可辨认的后续构造。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P03",
+              "content": "明确报告无法理解。",
+              "evidence_text": "完全无法理解",
+              "start_sec": 568.0,
+              "end_sec": 571.0,
+              "status": "VERBALIZED",
+              "confidence": 0.94
+            },
+            {
+              "participant_id": "P03",
+              "content": "仍尝试从抽屉原理切入，但没有可辨认的后续构造。",
+              "evidence_text": "第三题，还是想构造一下抽屉原理",
+              "start_sec": 571.0,
+              "end_sec": 580.0,
+              "status": "VERBALIZED",
+              "confidence": 0.9
+            }
+          ],
+          "participant_paths": {
+            "P03": [
+              {
+                "content": "明确报告无法理解。",
+                "evidence_text": "完全无法理解",
+                "start_sec": 568.0,
+                "end_sec": 571.0,
+                "status": "VERBALIZED",
+                "confidence": 0.94
+              },
+              {
+                "content": "仍尝试从抽屉原理切入，但没有可辨认的后续构造。",
+                "evidence_text": "第三题，还是想构造一下抽屉原理",
+                "start_sec": 571.0,
+                "end_sec": 580.0,
+                "status": "VERBALIZED",
+                "confidence": 0.9
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P03",
+              "evidence": "完全无法理解"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [
+        "STUCK(no-understanding)",
+        "PLAN(pigeonhole-attempt)"
+      ],
+      "first_meaningful_divergence": "少于两条 observed trace，无法估计分叉点。"
+    },
+    {
+      "question_id": "COMB_C1",
+      "group_id": "COMB_C",
+      "n_participants": 1,
+      "valid_traces": 1,
+      "low_confidence_traces": 1,
+      "participants": [
+        "P04"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "按位数和数位直接分类",
+          "strategy": "direct_classification_by_length_and_digit_position",
+          "participants": [
+            "P04"
+          ],
+          "signature": [
+            "ATTEND(S1,G1)",
+            "CLASSIFY(by-length-and-position)",
+            "CALCULATE(one-and-two-digit-cases)",
+            "CALCULATE(three-and-four-digit-cases-uncertain)",
+            "ATTEND(G2)",
+            "CLASSIFY(by-number-of-zeros)",
+            "CORRECT",
+            "ABANDON(arithmetic)"
+          ],
+          "participant_signatures": {
+            "P04": [
+              "ATTEND(S1,G1)",
+              "CLASSIFY(by-length-and-position)",
+              "CALCULATE(one-and-two-digit-cases)",
+              "CALCULATE(three-and-four-digit-cases-uncertain)",
+              "ATTEND(G2)",
+              "CLASSIFY(by-number-of-zeros)",
+              "CORRECT",
+              "ABANDON(arithmetic)"
+            ]
+          },
+          "core_steps": [
+            "先按一至四位数考虑含数字 1 的计数。",
+            "按位数和 1 所在位置分类，并尝试处理重复计数。",
+            "继续用位置分类与加减重复项统计三、四位数；多处数字受 ASR 影响。",
+            "转向含 0 计数，并把两位数的一个中间计数从 10 改为 9。",
+            "按位数和 0 的个数分类，并注意四位数不能全为 0。",
+            "停止具体求和，没有给出最终数值。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P04",
+              "content": "先按一至四位数考虑含数字 1 的计数。",
+              "evidence_text": "在小于一万的正整数里，一二三四位数，还有数字一的有几个",
+              "start_sec": 0.0,
+              "end_sec": 16.0,
+              "status": "VERBALIZED",
+              "confidence": 0.97
+            },
+            {
+              "participant_id": "P04",
+              "content": "按位数和 1 所在位置分类，并尝试处理重复计数。",
+              "evidence_text": "一位数里还有数字一的一个……数字一出现在十位……有十个……出现在末尾是有九个，然后跑掉一个是一",
+              "start_sec": 16.0,
+              "end_sec": 47.4,
+              "status": "VERBALIZED",
+              "confidence": 0.9
+            },
+            {
+              "participant_id": "P04",
+              "content": "继续用位置分类与加减重复项统计三、四位数；多处数字受 ASR 影响。",
+              "evidence_text": "三位数里面……四位数……再加回来……再减掉",
+              "start_sec": 47.4,
+              "end_sec": 159.8,
+              "status": "VERBALIZED",
+              "confidence": 0.56
+            },
+            {
+              "participant_id": "P04",
+              "content": "转向含 0 计数，并把两位数的一个中间计数从 10 改为 9。",
+              "evidence_text": "有几个数字是0的……两个数字有10个。嗯，对不起，两个数字有9个",
+              "start_sec": 194.04,
+              "end_sec": 207.64,
+              "status": "VERBALIZED",
+              "confidence": 0.88
+            },
+            {
+              "participant_id": "P04",
+              "content": "按位数和 0 的个数分类，并注意四位数不能全为 0。",
+              "evidence_text": "再看三个数字……如果只有一个0……如果有2个0……再看四位数，四位数不可能全是0",
+              "start_sec": 207.64,
+              "end_sec": 258.5,
+              "status": "VERBALIZED",
+              "confidence": 0.78
+            },
+            {
+              "participant_id": "P04",
+              "content": "停止具体求和，没有给出最终数值。",
+              "evidence_text": "对，这就够了。也不算了",
+              "start_sec": 262.5,
+              "end_sec": 266.5,
+              "status": "VERBALIZED",
+              "confidence": 0.96
+            }
+          ],
+          "participant_paths": {
+            "P04": [
+              {
+                "content": "先按一至四位数考虑含数字 1 的计数。",
+                "evidence_text": "在小于一万的正整数里，一二三四位数，还有数字一的有几个",
+                "start_sec": 0.0,
+                "end_sec": 16.0,
+                "status": "VERBALIZED",
+                "confidence": 0.97
+              },
+              {
+                "content": "按位数和 1 所在位置分类，并尝试处理重复计数。",
+                "evidence_text": "一位数里还有数字一的一个……数字一出现在十位……有十个……出现在末尾是有九个，然后跑掉一个是一",
+                "start_sec": 16.0,
+                "end_sec": 47.4,
+                "status": "VERBALIZED",
+                "confidence": 0.9
+              },
+              {
+                "content": "继续用位置分类与加减重复项统计三、四位数；多处数字受 ASR 影响。",
+                "evidence_text": "三位数里面……四位数……再加回来……再减掉",
+                "start_sec": 47.4,
+                "end_sec": 159.8,
+                "status": "VERBALIZED",
+                "confidence": 0.56
+              },
+              {
+                "content": "转向含 0 计数，并把两位数的一个中间计数从 10 改为 9。",
+                "evidence_text": "有几个数字是0的……两个数字有10个。嗯，对不起，两个数字有9个",
+                "start_sec": 194.04,
+                "end_sec": 207.64,
+                "status": "VERBALIZED",
+                "confidence": 0.88
+              },
+              {
+                "content": "按位数和 0 的个数分类，并注意四位数不能全为 0。",
+                "evidence_text": "再看三个数字……如果只有一个0……如果有2个0……再看四位数，四位数不可能全是0",
+                "start_sec": 207.64,
+                "end_sec": 258.5,
+                "status": "VERBALIZED",
+                "confidence": 0.78
+              },
+              {
+                "content": "停止具体求和，没有给出最终数值。",
+                "evidence_text": "对，这就够了。也不算了",
+                "start_sec": 262.5,
+                "end_sec": 266.5,
+                "status": "VERBALIZED",
+                "confidence": 0.96
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P04",
+              "evidence": "在小于一万的正整数里，一二三四位数，还有数字一的有几个"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [
+        "ATTEND(S1,G1)",
+        "CLASSIFY(by-length-and-position)",
+        "CALCULATE(one-and-two-digit-cases)",
+        "CALCULATE(three-and-four-digit-cases-uncertain)",
+        "ATTEND(G2)",
+        "CLASSIFY(by-number-of-zeros)",
+        "CORRECT",
+        "ABANDON(arithmetic)"
+      ],
+      "first_meaningful_divergence": "少于两条 observed trace，无法估计分叉点。"
+    },
+    {
+      "question_id": "COMB_C2",
+      "group_id": "COMB_C",
+      "n_participants": 1,
+      "valid_traces": 1,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P04"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "Catalan 格路与镜像",
+          "strategy": "catalan_grid_reflection",
+          "participants": [
+            "P04"
+          ],
+          "signature": [
+            "ATTEND(S2)",
+            "RECALL(Catalan)",
+            "REPRESENT(grid-(0,0)-to-(n,n))",
+            "ANSWER(Catalan-formula)",
+            "REPRESENT(reflection-at-y=x+1)"
+          ],
+          "participant_signatures": {
+            "P04": [
+              "ATTEND(S2)",
+              "RECALL(Catalan)",
+              "REPRESENT(grid-(0,0)-to-(n,n))",
+              "ANSWER(Catalan-formula)",
+              "REPRESENT(reflection-at-y=x+1)"
+            ]
+          },
+          "core_steps": [
+            "先抓住任意前缀中 0 数不少于 1 数。",
+            "识别为 Catalan 型计数。",
+            "把二进制串表示为从 (0,0) 到 (n,n) 且不越过对角线的格路。",
+            "给出 Catalan 总数公式。",
+            "用边界 y=x+1 的镜像法解释坏路径计数。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P04",
+              "content": "先抓住任意前缀中 0 数不少于 1 数。",
+              "evidence_text": "他要求前k位0不能比1少",
+              "start_sec": 285.0,
+              "end_sec": 295.0,
+              "status": "VERBALIZED",
+              "confidence": 0.98
+            },
+            {
+              "participant_id": "P04",
+              "content": "识别为 Catalan 型计数。",
+              "evidence_text": "这个东西应该和卡特兰数也是一样的",
+              "start_sec": 295.0,
+              "end_sec": 303.0,
+              "status": "VERBALIZED",
+              "confidence": 0.97
+            },
+            {
+              "participant_id": "P04",
+              "content": "把二进制串表示为从 (0,0) 到 (n,n) 且不越过对角线的格路。",
+              "evidence_text": "相当于他是从0 0走到n n……跨不过那条……线",
+              "start_sec": 303.0,
+              "end_sec": 317.94,
+              "status": "VERBALIZED",
+              "confidence": 0.88
+            },
+            {
+              "participant_id": "P04",
+              "content": "给出 Catalan 总数公式。",
+              "evidence_text": "n加1分之C 2n n",
+              "start_sec": 343.0,
+              "end_sec": 347.64,
+              "status": "VERBALIZED",
+              "confidence": 0.94
+            },
+            {
+              "participant_id": "P04",
+              "content": "用边界 y=x+1 的镜像法解释坏路径计数。",
+              "evidence_text": "不能跟y等于x加1走……再做一下镜像就行了",
+              "start_sec": 347.64,
+              "end_sec": 372.04,
+              "status": "VERBALIZED",
+              "confidence": 0.91
+            }
+          ],
+          "participant_paths": {
+            "P04": [
+              {
+                "content": "先抓住任意前缀中 0 数不少于 1 数。",
+                "evidence_text": "他要求前k位0不能比1少",
+                "start_sec": 285.0,
+                "end_sec": 295.0,
+                "status": "VERBALIZED",
+                "confidence": 0.98
+              },
+              {
+                "content": "识别为 Catalan 型计数。",
+                "evidence_text": "这个东西应该和卡特兰数也是一样的",
+                "start_sec": 295.0,
+                "end_sec": 303.0,
+                "status": "VERBALIZED",
+                "confidence": 0.97
+              },
+              {
+                "content": "把二进制串表示为从 (0,0) 到 (n,n) 且不越过对角线的格路。",
+                "evidence_text": "相当于他是从0 0走到n n……跨不过那条……线",
+                "start_sec": 303.0,
+                "end_sec": 317.94,
+                "status": "VERBALIZED",
+                "confidence": 0.88
+              },
+              {
+                "content": "给出 Catalan 总数公式。",
+                "evidence_text": "n加1分之C 2n n",
+                "start_sec": 343.0,
+                "end_sec": 347.64,
+                "status": "VERBALIZED",
+                "confidence": 0.94
+              },
+              {
+                "content": "用边界 y=x+1 的镜像法解释坏路径计数。",
+                "evidence_text": "不能跟y等于x加1走……再做一下镜像就行了",
+                "start_sec": 347.64,
+                "end_sec": 372.04,
+                "status": "VERBALIZED",
+                "confidence": 0.91
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P04",
+              "evidence": "他要求前k位0不能比1少"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [
+        "ATTEND(S2)",
+        "RECALL(Catalan)",
+        "REPRESENT(grid-(0,0)-to-(n,n))",
+        "ANSWER(Catalan-formula)",
+        "REPRESENT(reflection-at-y=x+1)"
+      ],
+      "first_meaningful_divergence": "少于两条 observed trace，无法估计分叉点。"
+    },
+    {
+      "question_id": "COMB_C3",
+      "group_id": "COMB_C",
+      "n_participants": 1,
+      "valid_traces": 1,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P04"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "几何级数化简后使用费马小定理",
+          "strategy": "geometric_series_then_fermat",
+          "participants": [
+            "P04"
+          ],
+          "signature": [
+            "ATTEND(233-prime)",
+            "DERIVE(gcd(23,233)=1)",
+            "TRANSFORM(repeated-23-to-base-100-series)",
+            "DERIVE(100^n≡1-mod-233)",
+            "CHECK(gcd(99,233)=1)",
+            "RECALL(Fermat)",
+            "ANSWER(true)"
+          ],
+          "participant_signatures": {
+            "P04": [
+              "ATTEND(233-prime)",
+              "DERIVE(gcd(23,233)=1)",
+              "TRANSFORM(repeated-23-to-base-100-series)",
+              "DERIVE(100^n≡1-mod-233)",
+              "CHECK(gcd(99,233)=1)",
+              "RECALL(Fermat)",
+              "ANSWER(true)"
+            ]
+          },
+          "core_steps": [
+            "先注意模数 233 为质数。",
+            "得到 23 与 233 互质。",
+            "把重复拼接 23 的结构化成公比 100 的几何级数。",
+            "利用 99 与 233 互质，把目标化为寻找 100^n≡1 (mod 233)。",
+            "用费马小定理保证存在所需指数。",
+            "接受命题为真并结束证明。"
+          ],
+          "core_step_evidence": [
+            {
+              "participant_id": "P04",
+              "content": "先注意模数 233 为质数。",
+              "evidence_text": "首先注意到这个233应该是个质数",
+              "start_sec": 378.41,
+              "end_sec": 382.07,
+              "status": "VERBALIZED",
+              "confidence": 0.98
+            },
+            {
+              "participant_id": "P04",
+              "content": "得到 23 与 233 互质。",
+              "evidence_text": "所以它跟23肯定是互质的",
+              "start_sec": 383.15,
+              "end_sec": 385.33,
+              "status": "VERBALIZED",
+              "confidence": 0.96
+            },
+            {
+              "participant_id": "P04",
+              "content": "把重复拼接 23 的结构化成公比 100 的几何级数。",
+              "evidence_text": "看233能不能整除这个1加一百加一万……等比数列公比是一百……一百的n次方减一再除个九十九",
+              "start_sec": 386.91,
+              "end_sec": 424.09,
+              "status": "VERBALIZED",
+              "confidence": 0.91
+            },
+            {
+              "participant_id": "P04",
+              "content": "利用 99 与 233 互质，把目标化为寻找 100^n≡1 (mod 233)。",
+              "evidence_text": "99跟233也是互质的……看100的n次方里面有没有模233余1的",
+              "start_sec": 425.09,
+              "end_sec": 435.49,
+              "status": "VERBALIZED",
+              "confidence": 0.94
+            },
+            {
+              "participant_id": "P04",
+              "content": "用费马小定理保证存在所需指数。",
+              "evidence_text": "这个肯定是有的，因为100和233也是互质的。我们可以用费马小定理去进行保证",
+              "start_sec": 435.49,
+              "end_sec": 449.49,
+              "status": "VERBALIZED",
+              "confidence": 0.95
+            },
+            {
+              "participant_id": "P04",
+              "content": "接受命题为真并结束证明。",
+              "evidence_text": "对，应该就是这样",
+              "start_sec": 449.49,
+              "end_sec": 454.77,
+              "status": "STRONGLY_IMPLIED",
+              "confidence": 0.86
+            }
+          ],
+          "participant_paths": {
+            "P04": [
+              {
+                "content": "先注意模数 233 为质数。",
+                "evidence_text": "首先注意到这个233应该是个质数",
+                "start_sec": 378.41,
+                "end_sec": 382.07,
+                "status": "VERBALIZED",
+                "confidence": 0.98
+              },
+              {
+                "content": "得到 23 与 233 互质。",
+                "evidence_text": "所以它跟23肯定是互质的",
+                "start_sec": 383.15,
+                "end_sec": 385.33,
+                "status": "VERBALIZED",
+                "confidence": 0.96
+              },
+              {
+                "content": "把重复拼接 23 的结构化成公比 100 的几何级数。",
+                "evidence_text": "看233能不能整除这个1加一百加一万……等比数列公比是一百……一百的n次方减一再除个九十九",
+                "start_sec": 386.91,
+                "end_sec": 424.09,
+                "status": "VERBALIZED",
+                "confidence": 0.91
+              },
+              {
+                "content": "利用 99 与 233 互质，把目标化为寻找 100^n≡1 (mod 233)。",
+                "evidence_text": "99跟233也是互质的……看100的n次方里面有没有模233余1的",
+                "start_sec": 425.09,
+                "end_sec": 435.49,
+                "status": "VERBALIZED",
+                "confidence": 0.94
+              },
+              {
+                "content": "用费马小定理保证存在所需指数。",
+                "evidence_text": "这个肯定是有的，因为100和233也是互质的。我们可以用费马小定理去进行保证",
+                "start_sec": 435.49,
+                "end_sec": 449.49,
+                "status": "VERBALIZED",
+                "confidence": 0.95
+              },
+              {
+                "content": "接受命题为真并结束证明。",
+                "evidence_text": "对，应该就是这样",
+                "start_sec": 449.49,
+                "end_sec": 454.77,
+                "status": "STRONGLY_IMPLIED",
+                "confidence": 0.86
+              }
+            ]
+          },
+          "representative_evidence": [
+            {
+              "participant_id": "P04",
+              "evidence": "首先注意到这个233应该是个质数"
+            }
+          ]
+        }
+      ],
+      "common_prefix": [
+        "ATTEND(233-prime)",
+        "DERIVE(gcd(23,233)=1)",
+        "TRANSFORM(repeated-23-to-base-100-series)",
+        "DERIVE(100^n≡1-mod-233)",
+        "CHECK(gcd(99,233)=1)",
+        "RECALL(Fermat)",
+        "ANSWER(true)"
+      ],
+      "first_meaningful_divergence": "少于两条 observed trace，无法估计分叉点。"
+    }
+  ]
+}

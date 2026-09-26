@@ -1,0 +1,47 @@
+﻿participant_id,question_slot,question_id,issue_type,evidence,suggested_action,priority
+P05,,UNKNOWN,RAW_LAYOUT_DIFFERENCE,The participant source exists in the collected-results directory but its content hash is absent from the original source ZIP.,Keep the original ZIP unchanged and track this participant as a post-ZIP addition; include the separate source when transferring the dataset.,low
+P06,,UNKNOWN,RAW_LAYOUT_DIFFERENCE,The participant source exists in the collected-results directory but its content hash is absent from the original source ZIP.,Keep the original ZIP unchanged and track this participant as a post-ZIP addition; include the separate source when transferring the dataset.,low
+P03,1,COMB_B1,TRACE_STEP_UNCERTAIN,有24、6×6有15、7×7有8个、8×8有3个,Review the entry point; the source does not identify a specific first-attended signal.,medium
+P05,3,TRIG_A3,QUESTION_BOUNDARY_UNCERTAIN,"The direct first-person statement identifies Q3, while the later third-person note is secondary and is not treated as verbatim student speech.",Review source document/audio boundary; keep non-chronological repeated notes separate.,medium
+P05,2,TRIG_A2,TRACE_STEP_UNCERTAIN,由题可知 f(x) 最小正周期为 Π,Review the entry point; the source does not identify a specific first-attended signal.,medium
+P06,,UNKNOWN,SOURCE_EVIDENCE_UNAVAILABLE,Only the curated Markdown is present in this workspace; the referenced original handwriting photo and three chat screenshots are not available for independent pixel-level verification.,"Retain the curated record, and attach the original screenshots/photo if independent source-level audit is required.",medium
+P06,2,TRIG_A2,TRACE_STEP_UNCERTAIN,这个周期是π,Review the entry point; the source does not identify a specific first-attended signal.,medium
+P01,,UNKNOWN,ASR_UNCERTAIN,Removed/marked 8 obvious prompt-echo or advertising-like ASR spans.,Audit critical evidence against source audio; do not restore boilerplate as student speech.,high
+P02,,UNKNOWN,ASR_UNCERTAIN,Removed/marked 18 obvious prompt-echo or advertising-like ASR spans.,Audit critical evidence against source audio; do not restore boilerplate as student speech.,high
+P03,,UNKNOWN,ASR_UNCERTAIN,Removed/marked 19 obvious prompt-echo or advertising-like ASR spans.,Audit critical evidence against source audio; do not restore boilerplate as student speech.,high
+P04,,UNKNOWN,ASR_UNCERTAIN,Removed/marked 7 obvious prompt-echo or advertising-like ASR spans.,Audit critical evidence against source audio; do not restore boilerplate as student speech.,high
+P05,,UNKNOWN,MATH_TERM_UNCERTAIN,阿尔FX,Check the original source; do not normalize until confirmed.,medium
+P05,,UNKNOWN,MATH_TERM_UNCERTAIN,阿尔法等于1+2派2贝塔等于1,Check the original source; do not normalize until confirmed.,medium
+P01,1,COMB_A1,CORRECTNESS_UNCERTAIN,可以通过一个递归……两个男生之间差一个女生、差两个女生，这样都会影响后面的排列组合方式,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P01,1,COMB_A1,TRACE_STEP_UNCERTAIN,先把m-1个男生和n-1个女生……排列组合好……再把男生A和女生B给插进去，让这两个不相邻,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P01,1,COMB_A1,CORRECTNESS_UNCERTAIN,先把m-1个男生和n-1个女生……排列组合好……再把男生A和女生B给插进去，让这两个不相邻,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P01,1,COMB_A1,CORRECTNESS_UNCERTAIN,第二个思路就是，把男生A和女生B这两个先排好，相当于一共有三个空,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P01,2,COMB_A2,TRACE_STEP_UNCERTAIN,它初始是0到1……一个很明显的一个DV的想法,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P01,2,COMB_A2,TRACE_STEP_UNCERTAIN,走到1-2的话……那就是m-1和n-2这个,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P01,2,COMB_A2,CORRECTNESS_UNCERTAIN,走到1-2的话……那就是m-1和n-2这个,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P01,2,COMB_A2,TRACE_STEP_UNCERTAIN,走到了x0和y0这个位置……等效于从0到1走到m-x0和n-y0……可以做一个递归,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P01,2,COMB_A2,CORRECTNESS_UNCERTAIN,走到了x0和y0这个位置……等效于从0到1走到m-x0和n-y0……可以做一个递归,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P01,3,COMB_A3,TRACE_STEP_UNCERTAIN,"A加B……能凑成0……从0,1,2,3,4,5",Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P02,1,COMB_A1,TRACE_STEP_UNCERTAIN,对，应该把男生放好……男生的排法应该是AMM,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P02,1,COMB_A1,TRACE_STEP_UNCERTAIN,NN减1……剩下的女生相当于有M加一种选择方法。所以每个女生都可以选这样的一个方法,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P02,1,COMB_A1,CORRECTNESS_UNCERTAIN,NN减1……剩下的女生相当于有M加一种选择方法。所以每个女生都可以选这样的一个方法,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P02,1,COMB_A1,TRACE_STEP_UNCERTAIN,那这样的话应该剩下的女生重新排一遍序……AN减N加1，AN减M加1，然后再乘上,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P02,1,COMB_A1,CORRECTNESS_UNCERTAIN,那这样的话应该剩下的女生重新排一遍序……AN减N加1，AN减M加1，然后再乘上,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P02,2,COMB_A2,TRACE_STEP_UNCERTAIN,相当于是从00走到……是从00走到MN,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P02,2,COMB_A2,CORRECTNESS_UNCERTAIN,相当于是从00走到……是从00走到MN,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P02,2,COMB_A2,TRACE_STEP_UNCERTAIN,总路径数是为CN减1CM加减1M,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P02,2,COMB_A2,TRACE_STEP_UNCERTAIN,如果从10去看的话，那就应该是减掉CM加N减1N……这两个东西做差都可以,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P03,1,COMB_B1,TRACE_STEP_UNCERTAIN,有24、6×6有15、7×7有8个、8×8有3个,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P03,1,COMB_B1,CORRECTNESS_UNCERTAIN,有24、6×6有15、7×7有8个、8×8有3个,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P03,1,COMB_B1,TRACE_STEP_UNCERTAIN,所以一共就是加起来……一共是276个正方形,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P03,1,COMB_B1,CORRECTNESS_UNCERTAIN,所以一共就是加起来……一共是276个正方形,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P03,2,COMB_B2,TRACE_STEP_UNCERTAIN,那应该是，要把这个九进行一些分类,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P03,2,COMB_B2,CORRECTNESS_UNCERTAIN,那应该是，要把这个九进行一些分类,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P03,2,COMB_B2,CORRECTNESS_UNCERTAIN,如果我第一次进六个，还剩三个……3可以3、1加2、1加1加1；如果第一次进五个，那么还有4……,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P03,2,COMB_B2,CORRECTNESS_UNCERTAIN,3可以再分，4也可以再分……3加1加5算过……3加2加4也算过……3加3加3没有算过,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P03,3,COMB_B3,CORRECTNESS_UNCERTAIN,第三题，还是想构造一下抽屉原理,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P04,1,COMB_C1,TRACE_STEP_UNCERTAIN,三位数里面……四位数……再加回来……再减掉,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P04,1,COMB_C1,CORRECTNESS_UNCERTAIN,三位数里面……四位数……再加回来……再减掉,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P04,1,COMB_C1,CORRECTNESS_UNCERTAIN,有几个数字是0的……两个数字有10个。嗯，对不起，两个数字有9个,Mathematically adjudicate the stated step without rewriting the trace.,medium
+P04,1,COMB_C1,TRACE_STEP_UNCERTAIN,再看三个数字……如果只有一个0……如果有2个0……再看四位数，四位数不可能全是0,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium
+P05,2,TRIG_A2,TRACE_STEP_UNCERTAIN,故 Ω=2,Review whether the operation is uniquely supported; otherwise downgrade to analyst inference.,medium

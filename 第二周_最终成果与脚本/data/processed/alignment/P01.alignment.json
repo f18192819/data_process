@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "participant_id": "P01",
+  "assigned_group": "COMB_A",
+  "confidence": 0.99,
+  "candidates": [
+    {
+      "group_id": "COMB_A",
+      "score": 0.99
+    },
+    {
+      "group_id": "COMB_C",
+      "score": 0.08
+    }
+  ],
+  "evidence": [
+    "Q1 mentions m boys, n girls, non-adjacency, bundling, and specified A/B.",
+    "Q2 mentions a lattice path from (0,1) constrained by x=y.",
+    "Q3 mentions seven distinct positive integers and pairing last digits modulo 10."
+  ],
+  "method": "reviewed joint three-slot evidence; no one-to-one assignment constraint"
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "participant_id": "P06",
+  "assigned_group": "TRIG_A",
+  "confidence": 1.0,
+  "candidates": [
+    {
+      "group_id": "TRIG_A",
+      "score": 1.0
+    },
+    {
+      "group_id": "TRIG_C",
+      "score": 0.05
+    }
+  ],
+  "evidence": [
+    "The source explicitly labels A1/A2/A3 and reproduces all three TRIG_A questions.",
+    "A1 contains first-quadrant angles and +2kπ; A2 states period π and ω=2; A3 begins from b sin C + √3 c cos B = 2c."
+  ],
+  "method": "reviewed joint three-slot evidence; no one-to-one assignment constraint"
+}

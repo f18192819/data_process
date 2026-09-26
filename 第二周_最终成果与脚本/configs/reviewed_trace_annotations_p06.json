@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.1",
+  "schema_change": "Adds WRITTEN_OBSERVED for directly visible chat utterances and handwritten mathematical steps.",
+  "annotation_policy": "The supplied Markdown is a curated derivative of chat screenshots and a handwritten solution. Quoted chat text and transcribed equations are direct written evidence; researcher explanations remain separate analyst inference.",
+  "participants": {
+    "P06": {
+      "source_type": "user_provided_curated_multimodal_text",
+      "source_limitations": "Only the curated Markdown is present in this workspace; the referenced original handwriting photo and three chat screenshots are not available for independent pixel-level verification.",
+      "assigned_group": "TRIG_A",
+      "alignment_confidence": 1.0,
+      "alignment_candidates": [
+        {"group_id": "TRIG_A", "score": 1.0},
+        {"group_id": "TRIG_C", "score": 0.05}
+      ],
+      "alignment_evidence": [
+        "The source explicitly labels A1/A2/A3 and reproduces all three TRIG_A questions.",
+        "A1 contains first-quadrant angles and +2kπ; A2 states period π and ω=2; A3 begins from b sin C + √3 c cos B = 2c."
+      ],
+      "segments": [
+        {"slot": 1, "question_id": "TRIG_A1", "start_sec": null, "end_sec": null, "boundary_confidence": 1.0, "boundary_rationale": "Explicit A1 heading and chat timestamps 18:39–18:40.", "text": "‘这还有反例？’‘这个不是单调函数吗’‘锐角情况下’；随后‘没事了’‘第一象限’‘+2kπ’‘这个真是坑’。"},
+        {"slot": 2, "question_id": "TRIG_A2", "start_sec": null, "end_sec": null, "boundary_confidence": 1.0, "boundary_rationale": "Explicit A2 heading and separate 18:41 chat reaction.", "text": "‘这个周期是π’；‘w=2吧’。"},
+        {"slot": 3, "question_id": "TRIG_A3", "start_sec": null, "end_sec": null, "boundary_confidence": 1.0, "boundary_rationale": "Explicit A3 heading and transcribed handwritten solution for both subquestions.", "text": "正弦定理换元并约去 sinC，辅助角与范围定出 B=π/6；再由 b+c=4、余弦定理解出 b=c=2，最后得到面积 √3。"}
+      ],
+      "traces": [
+        {
+          "trace_id": "P06_TRIG_A1", "question_id": "TRIG_A1", "question_slot": 1, "trace_confidence": 0.96,
+          "completion_status": "concept_corrected_but_no_explicit_counterexample",
+          "final_answer_observed": false,
+          "first_attention": {"signal_refs": ["G"], "operation": "HESITATE", "evidence": "这还有反例？有没有搞错", "confidence": 0.99},
+          "strategy": "acute_interval_monotonicity_then_domain_correction",
+          "path_signature": ["HESITATE(counterexample-exists?)", "RECALL(tan-monotonic)", "ERROR(first-quadrant-as-acute-angle)", "BACKTRACK(没事了)", "ATTEND(first-quadrant)", "RECALL(+2kπ)", "CORRECT(periodic-domain)"],
+          "steps": [
+            {"evidence_text": "不是。这个还有反例？有没有搞错", "signal_refs": ["G"], "action_type": "HESITATE", "content": "对题目要求构造反例表现出强烈疑惑，并暂时否认反例存在。", "correctness": "not_applicable", "status": "WRITTEN_OBSERVED", "confidence": 0.99, "affect": "surprise_and_disbelief"},
+            {"evidence_text": "这个不是单调函数吗", "signal_refs": ["S3"], "action_type": "RECALL", "representation": "monotonicity", "content": "调用 tan 的单调性来支持命题应成立的判断。", "correctness": "partially_correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "锐角情况下", "signal_refs": ["S1"], "action_type": "ERROR", "representation": "acute_principal_interval", "content": "把当前考虑范围限定为锐角主值，并据此处理所有第一象限角。", "result": "第一象限角被按 (0,π/2) 内角处理", "correctness": "incorrect", "status": "WRITTEN_OBSERVED", "confidence": 0.96},
+            {"evidence_text": "没事了", "signal_refs": [], "action_type": "BACKTRACK", "content": "撤回前面的否认判断，表明已经发现需要重新解释条件。", "correctness": "not_applicable", "status": "WRITTEN_OBSERVED", "confidence": 0.92},
+            {"evidence_text": "第一象限", "signal_refs": ["S1"], "action_type": "ATTEND", "content": "重新检查‘第一象限角’这一条件。", "correctness": "not_applicable", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "+2kπ", "signal_refs": ["S1", "S3"], "action_type": "RECALL", "representation": "coterminal_angles", "content": "注意第一象限角可以跨越整周期表示。", "result": "θ=θ₀+2kπ", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "卧槽。这个真是坑", "signal_refs": ["S1", "G"], "action_type": "CORRECT", "content": "显著反应表明已识别隐藏的周期条件并修正最初模型；仍未写出具体反例。", "correctness": "correct", "status": "STRONGLY_IMPLIED", "confidence": 0.9, "affect": "surprise_at_hidden_condition"}
+          ],
+          "analyst_inferences": [
+            {"content": "材料未出现具体 α、β；不能补造测试者最终会选取的反例。", "status": "ANALYST_INFERENCE", "confidence": 1.0}
+          ]
+        },
+        {
+          "trace_id": "P06_TRIG_A2", "question_id": "TRIG_A2", "question_slot": 2, "trace_confidence": 0.95,
+          "completion_status": "correct_answer_reasoning_partially_visible",
+          "final_answer_observed": true,
+          "first_attention": {"signal_refs": [], "operation": "DERIVE", "evidence": "这个周期是π", "confidence": 0.72},
+          "strategy": "infer_period_then_frequency",
+          "path_signature": ["DERIVE(T=π)", "ANSWER(ω=2)"],
+          "steps": [
+            {"evidence_text": "这个周期是π", "signal_refs": [], "action_type": "DERIVE", "representation": "period", "content": "直接给出最小正周期 T=π；由哪些题内信号推出未被口述。", "result": "T=π", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "w=2吧", "signal_refs": ["S1", "G"], "action_type": "ANSWER", "content": "给出 ω=2，语气带有轻微不确定。", "result": "ω=2", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99, "affect": "mild_uncertainty"}
+          ],
+          "analyst_inferences": [
+            {"content": "‘极大值与极小值最近相距半周期’以及 T=2π/ω 均未被显式写出，不能自动补为 observed steps。", "status": "ANALYST_INFERENCE", "confidence": 1.0}
+          ]
+        },
+        {
+          "trace_id": "P06_TRIG_A3", "question_id": "TRIG_A3", "question_slot": 3, "trace_confidence": 0.98,
+          "completion_status": "complete_correct_solution",
+          "final_answer_observed": true,
+          "first_attention": {"signal_refs": ["S1", "G1"], "operation": "TRANSFORM", "evidence": "sin B sin C + √3 cos B sin C = 2 sin C", "confidence": 0.96},
+          "strategy": "sine_law_then_cosine_law_area",
+          "path_signature": ["TRANSFORM(sine-law-edge-to-angle)", "CHECK(sinC>0)", "TRANSFORM(cancel-sinC)", "TRANSFORM(auxiliary-angle)", "CHECK(angle-range)", "ANSWER(B=π/6)", "TRANSFORM(b=4-c)", "DERIVE(cosine-law)", "CALCULATE(c=2,b=2)", "CALCULATE(area)", "ANSWER(S=√3)"],
+          "steps": [
+            {"evidence_text": "sin B sin C + √3 cos B sin C = 2 sin C", "signal_refs": ["S1", "G1"], "action_type": "TRANSFORM", "representation": "sine_law_substitution", "content": "用正弦定理把边 b、c 转成对应角的正弦。", "result": "sinB·sinC+√3cosB·sinC=2sinC", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.96},
+            {"evidence_text": "C∈(0,π)，sin C>0", "signal_refs": ["G1"], "action_type": "CHECK", "content": "检查三角形内角范围，确认 sinC 可约去。", "result": "sinC>0", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "sin B + √3 cos B = 2", "signal_refs": ["G1"], "action_type": "TRANSFORM", "content": "两边约去 sinC。", "result": "sinB+√3cosB=2", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "sin B cos(π/3) + cos B sin(π/3) = 1", "signal_refs": ["G1"], "action_type": "TRANSFORM", "representation": "auxiliary_angle", "content": "把线性三角式改写成辅助角形式。", "result": "sin(B+π/3)=1", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "B+π/3∈(π/3,4π/3)", "signal_refs": ["G1"], "action_type": "CHECK", "content": "用三角形内角范围限制辅助角的取值。", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.98},
+            {"evidence_text": "B+π/3=π/2，B=π/6", "signal_refs": ["G1"], "action_type": "ANSWER", "content": "在限定范围内确定唯一角 B。", "result": "B=π/6", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "b+c=4，b=4-c", "signal_refs": ["S3", "G2"], "action_type": "TRANSFORM", "content": "进入第二问并把 b 用 c 表示，同时沿用第一问的 B=π/6。", "result": "b=4-c", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "(4-c)^2=(2√3)^2+c^2-2(2√3)c cos(π/6)", "signal_refs": ["S2", "S3", "G2"], "action_type": "DERIVE", "representation": "cosine_law", "content": "把 b=4-c、a=2√3、B=π/6 代入余弦定理。", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "c²-8c+16=12+c²-6c……c=2", "signal_refs": ["G2"], "action_type": "CALCULATE", "content": "展开并解一元方程得到 c=2。", "result": "c=2", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "b=4-c=2", "signal_refs": ["S3", "G2"], "action_type": "DERIVE", "content": "由和约束得到 b=2。", "result": "b=2", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "S=1/2·ac·sinB=1/2·(2√3)·2·sin(π/6)", "signal_refs": ["G2"], "action_type": "CALCULATE", "representation": "triangle_area_formula", "content": "使用两边及夹角的面积公式。", "result": "S=√3", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99},
+            {"evidence_text": "S=√3", "signal_refs": ["G2"], "action_type": "ANSWER", "content": "给出面积结论。", "result": "S=√3", "correctness": "correct", "status": "WRITTEN_OBSERVED", "confidence": 0.99}
+          ],
+          "analyst_inferences": []
+        }
+      ]
+    }
+  }
+}

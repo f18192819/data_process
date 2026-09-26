@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "participant_id": "P02",
+  "assigned_group": "COMB_A",
+  "confidence": 1.0,
+  "candidates": [
+    {
+      "group_id": "COMB_A",
+      "score": 1.0
+    },
+    {
+      "group_id": "COMB_C",
+      "score": 0.05
+    }
+  ],
+  "evidence": [
+    "Q1逐一处理男生不相邻、女生整体、指定男女不相邻三个小问。",
+    "Q2明确讨论格点、x=y、Catalan、总路径减穿越路径。",
+    "Q3明确讨论七个整数、模10余数、配对余数类和抽屉原理。"
+  ],
+  "method": "reviewed joint three-slot evidence; no one-to-one assignment constraint"
+}

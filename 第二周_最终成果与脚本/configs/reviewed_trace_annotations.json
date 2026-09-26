@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0",
+  "annotation_policy": "Only direct statements and uniquely supported adjacent implications are included in observed steps. The final third-person paragraph in P05 is retained as a secondary note and excluded from observed trace steps.",
+  "participants": {
+    "P05": {
+      "source_type": "user_provided_text",
+      "assigned_group": "TRIG_A",
+      "alignment_confidence": 0.99,
+      "alignment_candidates": [
+        {"group_id": "TRIG_A", "score": 0.99},
+        {"group_id": "TRIG_B", "score": 0.08}
+      ],
+      "alignment_evidence": [
+        "Q1 explicitly mentions y=tan x, adding 2π, and α=1+2π, β=1.",
+        "Q2 explicitly states minimum positive period π and ω=2.",
+        "Q3 explicitly says the student cannot proceed because formulas were forgotten."
+      ],
+      "segments": [
+        {
+          "slot": 1,
+          "question_id": "TRIG_A1",
+          "start_sec": null,
+          "end_sec": null,
+          "boundary_confidence": 0.9,
+          "boundary_rationale": "Compiled text has explicit A1 labels and unique tan-periodicity content, but no timestamps and repeats the answer later.",
+          "text": "A1：根据 y=tan x 的图像，在周期里加 2π 后函数值相等。举 α=1+2π，β=1。因为是周期函数，这是一组反例。"
+        },
+        {
+          "slot": 2,
+          "question_id": "TRIG_A2",
+          "start_sec": null,
+          "end_sec": null,
+          "boundary_confidence": 0.9,
+          "boundary_rationale": "Compiled text has explicit A2/第二道题 labels and a repeated written answer, but no timestamps.",
+          "text": "A2：由题可知 f(x) 的最小正周期为 π，所以 ω=2。"
+        },
+        {
+          "slot": 3,
+          "question_id": "TRIG_A3",
+          "start_sec": null,
+          "end_sec": null,
+          "boundary_confidence": 0.82,
+          "boundary_rationale": "The direct first-person statement identifies Q3, while the later third-person note is secondary and is not treated as verbatim student speech.",
+          "text": "第3题我不会做，我公式全忘了。"
+        }
+      ],
+      "traces": [
+        {
+          "trace_id": "P05_TRIG_A1",
+          "question_id": "TRIG_A1",
+          "question_slot": 1,
+          "trace_confidence": 0.94,
+          "first_attention": {
+            "signal_refs": ["S3"],
+            "operation": "RECALL",
+            "evidence": "根据那个 y=tan x 那个图像",
+            "confidence": 0.94
+          },
+          "strategy": "periodicity_counterexample",
+          "path_signature": [
+            "ATTEND(S3)",
+            "RECALL(tan-periodicity)",
+            "ENUMERATE(α=1+2π,β=1)",
+            "ANSWER(counterexample)"
+          ],
+          "steps": [
+            {
+              "step_id": "s01",
+              "order": 1,
+              "start_sec": null,
+              "end_sec": null,
+              "evidence_text": "根据那个 y=tan x 那个图像",
+              "clean_text": "根据 y=tan x 的图像。",
+              "signal_refs": ["S3"],
+              "action_type": "ATTEND",
+              "representation": "function_graph",
+              "content": "关注 tan 函数图像与函数值比较。",
+              "result": null,
+              "correctness": "not_applicable",
+              "status": "VERBALIZED",
+              "confidence": 0.94
+            },
+            {
+              "step_id": "s02",
+              "order": 2,
+              "start_sec": null,
+              "end_sec": null,
+              "evidence_text": "在周期里面随便加二派，然后它就会相等",
+              "clean_text": "在周期内加 2π，函数值会相等。",
+              "signal_refs": ["S3"],
+              "action_type": "RECALL",
+              "representation": "periodicity",
+              "content": "回忆 tan 的周期性，用相差 2π 保持函数值相同。",
+              "result": "tan(β+2π)=tanβ",
+              "correctness": "correct",
+              "status": "VERBALIZED",
+              "confidence": 0.98
+            },
+            {
+              "step_id": "s03",
+              "order": 3,
+              "start_sec": null,
+              "end_sec": null,
+              "evidence_text": "A1 α=1+2Π，β＝1",
+              "clean_text": "取 α=1+2π，β=1。",
+              "signal_refs": ["S1", "S2", "G"],
+              "action_type": "ENUMERATE",
+              "representation": null,
+              "content": "给出一组具体角作为反例。",
+              "result": "α=1+2π，β=1",
+              "correctness": "correct",
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "step_id": "s04",
+              "order": 4,
+              "start_sec": null,
+              "end_sec": null,
+              "evidence_text": "因为根据 y=tanx 那个图像随便举一个相等的就行反正是周期函数",
+              "clean_text": "因为 tan 是周期函数，取函数值相等的一组即可。",
+              "signal_refs": ["G"],
+              "action_type": "ANSWER",
+              "representation": null,
+              "content": "以周期性构造完成反例。",
+              "result": "命题被该组反例否定",
+              "correctness": "correct",
+              "status": "VERBALIZED",
+              "confidence": 0.96
+            }
+          ],
+          "analyst_inferences": []
+        },
+        {
+          "trace_id": "P05_TRIG_A2",
+          "question_id": "TRIG_A2",
+          "question_slot": 2,
+          "trace_confidence": 0.88,
+          "first_attention": {
+            "signal_refs": [],
+            "operation": "DERIVE",
+            "evidence": "由题可知 f(x) 最小正周期为 Π",
+            "confidence": 0.58
+          },
+          "strategy": "infer_period_then_frequency",
+          "path_signature": [
+            "DERIVE(T=π)",
+            "RECALL(T=2π/ω)",
+            "ANSWER(ω=2)"
+          ],
+          "steps": [
+            {
+              "step_id": "s01",
+              "order": 1,
+              "start_sec": null,
+              "end_sec": null,
+              "evidence_text": "由题可知 f(x) 最小正周期为 Π",
+              "clean_text": "由题可知 f(x) 的最小正周期为 π。",
+              "signal_refs": [],
+              "action_type": "DERIVE",
+              "representation": "period",
+              "content": "直接陈述由题得到最小正周期 T=π；中间推导未口述。",
+              "result": "T=π",
+              "correctness": "correct",
+              "status": "VERBALIZED",
+              "confidence": 0.88
+            },
+            {
+              "step_id": "s02",
+              "order": 2,
+              "start_sec": null,
+              "end_sec": null,
+              "evidence_text": "故 Ω=2",
+              "clean_text": "所以 ω=2。",
+              "signal_refs": ["S1", "G"],
+              "action_type": "RECALL",
+              "representation": "period_formula",
+              "content": "使用正弦函数周期与 ω 的关系。",
+              "result": "ω=2",
+              "correctness": "correct",
+              "status": "STRONGLY_IMPLIED",
+              "confidence": 0.8
+            },
+            {
+              "step_id": "s03",
+              "order": 3,
+              "start_sec": null,
+              "end_sec": null,
+              "evidence_text": "故 Ω=2",
+              "clean_text": "答案为 ω=2。",
+              "signal_refs": ["G"],
+              "action_type": "ANSWER",
+              "representation": null,
+              "content": "给出参数值。",
+              "result": "ω=2",
+              "correctness": "correct",
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            }
+          ],
+          "analyst_inferences": [
+            {
+              "content": "学生可能以‘相反极值间距为半周期’得到 T=π，但原文未口述这一步。",
+              "status": "ANALYST_INFERENCE",
+              "confidence": 0.68
+            }
+          ]
+        },
+        {
+          "trace_id": "P05_TRIG_A3",
+          "question_id": "TRIG_A3",
+          "question_slot": 3,
+          "trace_confidence": 0.96,
+          "first_attention": {
+            "signal_refs": [],
+            "operation": "STUCK",
+            "evidence": "第3题我不会做",
+            "confidence": 0.99
+          },
+          "strategy": "no_strategy_verbalized",
+          "path_signature": [
+            "STUCK(no-entry)",
+            "RECALL(failed-formula-retrieval)",
+            "ABANDON"
+          ],
+          "steps": [
+            {
+              "step_id": "s01",
+              "order": 1,
+              "start_sec": null,
+              "end_sec": null,
+              "evidence_text": "第3题我不会做",
+              "clean_text": "第3题我不会做。",
+              "signal_refs": [],
+              "action_type": "STUCK",
+              "representation": null,
+              "content": "没有口述可执行的切入步骤。",
+              "result": null,
+              "correctness": "not_applicable",
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "step_id": "s02",
+              "order": 2,
+              "start_sec": null,
+              "end_sec": null,
+              "evidence_text": "我公式全忘了",
+              "clean_text": "我把公式全忘了。",
+              "signal_refs": [],
+              "action_type": "RECALL",
+              "representation": null,
+              "content": "明确报告无法回忆所需公式。",
+              "result": "formula_retrieval_failed",
+              "correctness": "not_applicable",
+              "status": "VERBALIZED",
+              "confidence": 0.99
+            },
+            {
+              "step_id": "s03",
+              "order": 3,
+              "start_sec": null,
+              "end_sec": null,
+              "evidence_text": "第3题我不会做，我公式全忘了",
+              "clean_text": "未继续作答。",
+              "signal_refs": [],
+              "action_type": "ABANDON",
+              "representation": null,
+              "content": "因无法回忆公式而停止。",
+              "result": "no_answer",
+              "correctness": "not_applicable",
+              "status": "STRONGLY_IMPLIED",
+              "confidence": 0.9
+            }
+          ],
+          "analyst_inferences": [
+            {
+              "content": "P05 文档末段以第三人称列出若干未想起或尝试过的公式；因其不是逐字学生口述且无时间戳，本轮不并入 observed steps。",
+              "status": "ANALYST_INFERENCE",
+              "confidence": 0.99
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

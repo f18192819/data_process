@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "participant_id": "P04",
+  "assigned_group": "COMB_C",
+  "confidence": 0.99,
+  "candidates": [
+    {
+      "group_id": "COMB_C",
+      "score": 0.99
+    },
+    {
+      "group_id": "COMB_B",
+      "score": 0.1
+    }
+  ],
+  "evidence": [
+    "Q1 explicitly mentions positive integers below 10000 and counting digits 1 and 0.",
+    "Q2 explicitly mentions the prefix zero/one constraint and the Catalan formula.",
+    "Q3 explicitly mentions 233, repeated 23 blocks, powers of 100, and Fermat's theorem."
+  ],
+  "method": "reviewed joint three-slot evidence; no one-to-one assignment constraint"
+}
