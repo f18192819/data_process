@@ -6,6 +6,8 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
+from trace_schema import migrate_prediction_input, migrate_trace, wrap_traces
+
 
 def load_jsonl(path: Path) -> list[dict]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
@@ -67,24 +69,28 @@ def main() -> int:
 
     week2 = load_jsonl(week2_path)
     week3 = load_jsonl(week3_path)
-    traces = week2 + week3
-    ids = [x["trace_id"] for x in traces]
+    legacy_traces = week2 + week3
+    ids = [x["trace_id"] for x in legacy_traces]
     if len(ids) != len(set(ids)):
         raise ValueError("duplicate trace_id across week2/week3")
-    traces.sort(key=lambda x: (x["participant_id"], x["question_id"]))
+    legacy_traces.sort(key=lambda x: (x["participant_id"], x["question_id"]))
 
-    (output / "participant_traces.jsonl").write_text(
-        "".join(json.dumps(x, ensure_ascii=False) + "\n" for x in traces), encoding="utf-8"
+    migrated = [migrate_trace(trace) for trace in legacy_traces]
+    (output / "participant_traces.json").write_text(
+        json.dumps(wrap_traces(migrated), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
     )
+
     (output / "question_trace_variants.json").write_text(
         json.dumps({
             "schema_version": "1.1",
             "generated_at": datetime.now(timezone.utc).isoformat(),
-            "source": "week2 + week3 canonical merge",
-            "questions": build_variants(traces),
+            "source": "week2 + week3 legacy traces; grouping remains strategy/path-signature based",
+            "questions": build_variants(legacy_traces),
         }, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+
     week2_ids = {x["trace_id"] for x in week2}
     index = [{
         "trace_id": x["trace_id"],
@@ -96,28 +102,41 @@ def main() -> int:
         "source_relative_path": x.get("source_relative_path"),
         "session_id": x.get("session_id"),
         "trace_confidence": x.get("trace_confidence"),
-    } for x in traces]
+    } for x in legacy_traces]
     (output / "trace_index.json").write_text(
         json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
+
+    source_pred = repo / "data/exports/week3_combinatorics/prediction_inputs"
+    target_pred = output / "prediction_inputs"
+    target_pred.mkdir(parents=True, exist_ok=True)
+    for path in sorted(source_pred.glob("*_from_A.json")):
+        value = json.loads(path.read_text(encoding="utf-8"))
+        (target_pred / path.name).write_text(
+            json.dumps(migrate_prediction_input(value), ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+
     manifest = {
-        "schema_version": "1.0",
+        "schema_version": "2.0",
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "canonical_trace_file": "data/combined/participant_traces.json",
+        "trace_schema": "multi_axis_student_trace_v2",
         "sources": {
             "week2": "data/processed/traces/participant_traces.jsonl",
             "week3": "data/exports/week3_combinatorics/participant_traces_combinatorics.jsonl",
         },
         "counts": {
-            "traces": len(traces),
+            "traces": len(legacy_traces),
             "week2_traces": len(week2),
             "week3_traces": len(week3),
-            "participants": len({x["participant_id"] for x in traces}),
-            "questions": len({x["question_id"] for x in traces}),
-            "observed_steps": sum(len(x.get("steps", [])) for x in traces),
+            "participants": len({x["participant_id"] for x in legacy_traces}),
+            "questions": len({x["question_id"] for x in legacy_traces}),
+            "observed_steps": sum(len(x.get("steps", [])) for x in legacy_traces),
         },
-        "participants": sorted({x["participant_id"] for x in traces}),
-        "questions": sorted({x["question_id"] for x in traces}),
-        "note": "P05 and P06 appear in both periods on different question domains; trace_id remains unique.",
+        "participants": sorted({x["participant_id"] for x in legacy_traces}),
+        "questions": sorted({x["question_id"] for x in legacy_traces}),
+        "note": "Historical week-specific exports remain in legacy schema for auditability. Canonical combined data uses schema v2.",
     }
     (output / "dataset_manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"

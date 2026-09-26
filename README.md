@@ -24,3 +24,7 @@ python script/merge_week2_week3.py
 ```
 
 重新生成。
+
+## Canonical trace schema
+
+后续训练与交互模块默认读取 `data/combined/participant_traces.json`。该文件使用可人工阅读的 pretty JSON，并采用多维 trace schema v2；字段定义见 `data/combined/SCHEMA.md`。
