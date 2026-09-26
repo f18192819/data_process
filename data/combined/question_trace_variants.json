@@ -1,0 +1,1035 @@
+{
+  "schema_version": "1.1",
+  "generated_at": "2026-09-26T16:10:50.002Z",
+  "source": "week2 + week3 canonical merge",
+  "questions": [
+    {
+      "question_id": "COMB_A1",
+      "group_id": "COMB_A",
+      "n_participants": 6,
+      "valid_traces": 6,
+      "low_confidence_traces": 2,
+      "participants": [
+        "P01",
+        "P02",
+        "P05",
+        "P07",
+        "P08",
+        "P09"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "multi subpart recursive and insertion",
+          "strategy": "multi_subpart_recursive_and_insertion",
+          "participants": [
+            "P01"
+          ],
+          "participant_signatures": {
+            "P01": [
+              "ATTEND(C1)",
+              "PLAN(recursion-by-gaps)",
+              "ATTEND(C2)",
+              "REPRESENT(bundle-girls)",
+              "ATTEND(C3)",
+              "BRANCH(two-insertion-plans)",
+              "PLAN(arrange-rest-then-insert-A-B)",
+              "PLAN(place-A-B-first)",
+              "BACKTRACK(second-plan-too-complex)"
+            ]
+          },
+          "trace_ids": [
+            "P01_COMB_A1"
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "boys gap then girls block then complement",
+          "strategy": "boys_gap_then_girls_block_then_complement",
+          "participants": [
+            "P02"
+          ],
+          "participant_signatures": {
+            "P02": [
+              "ATTEND(C1)",
+              "HESITATE",
+              "PLAN(arrange-boys-first)",
+              "REPRESENT(m-1-internal-gaps)",
+              "CALCULATE(first-gap-count-uncertain)",
+              "BACKTRACK",
+              "CALCULATE(revised-gap-count-uncertain)",
+              "CLASSIFY(C2-girls-as-block)",
+              "CALCULATE(block-permutation)",
+              "ATTEND(C3)",
+              "PLAN(complement-adjacent-AB)",
+              "ANSWER(total-minus-adjacent)"
+            ]
+          },
+          "trace_ids": [
+            "P02_COMB_A1"
+          ]
+        },
+        {
+          "family_id": "T3",
+          "label": "girls first gap insertion then complement",
+          "strategy": "girls_first_gap_insertion_then_complement",
+          "participants": [
+            "P05"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "ATTEND(C1)",
+              "REPRESENT(n+1-gaps)",
+              "CALCULATE(select-gaps-and-permute-boys)",
+              "HESITATE(formula-notation)",
+              "ATTEND(C2)",
+              "CALCULATE(bundle-girls)",
+              "PLAN(complement)",
+              "REPRESENT(adjacent-pair)",
+              "ANSWER(total-minus-adjacent)"
+            ]
+          },
+          "trace_ids": [
+            "P05_COMB_A1"
+          ]
+        },
+        {
+          "family_id": "T4",
+          "label": "bundle and complement fragments",
+          "strategy": "bundle_and_complement_fragments",
+          "participants": [
+            "P07"
+          ],
+          "participant_signatures": {
+            "P07": [
+              "REPRESENT(bundle-girls)",
+              "CALCULATE(bundle-formula-uncertain)",
+              "ANSWER(complement-formula-uncertain)"
+            ]
+          },
+          "trace_ids": [
+            "P07_COMB_A1"
+          ]
+        },
+        {
+          "family_id": "T5",
+          "label": "boys first internal gaps formula uncertain",
+          "strategy": "boys_first_internal_gaps_formula_uncertain",
+          "participants": [
+            "P08"
+          ],
+          "participant_signatures": {
+            "P08": [
+              "ATTEND(C1)",
+              "REPRESENT(m-1-internal-gaps)",
+              "ATTEND(end-gaps)",
+              "CALCULATE(combination-uncertain)",
+              "CALCULATE(permutation-factors-uncertain)"
+            ]
+          },
+          "trace_ids": [
+            "P08_COMB_A1"
+          ]
+        },
+        {
+          "family_id": "T6",
+          "label": "small example then gap insertion and two person insertion",
+          "strategy": "small_example_then_gap_insertion_and_two_person_insertion",
+          "participants": [
+            "P09"
+          ],
+          "participant_signatures": {
+            "P09": [
+              "REPRESENT(symbols)",
+              "PLAN(small-example)",
+              "CHECK(C-vs-A)",
+              "PLAN(gap-insertion)",
+              "CORRECT(n-factorial)",
+              "ATTEND(C3)",
+              "PLAN(arrange-rest-then-insert)",
+              "CALCULATE(two-person-gap-formula)"
+            ]
+          },
+          "trace_ids": [
+            "P09_COMB_A1"
+          ]
+        }
+      ],
+      "common_prefix": []
+    },
+    {
+      "question_id": "COMB_A2",
+      "group_id": "COMB_A",
+      "n_participants": 6,
+      "valid_traces": 6,
+      "low_confidence_traces": 3,
+      "participants": [
+        "P01",
+        "P02",
+        "P05",
+        "P07",
+        "P08",
+        "P09"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "dynamic programming recurrence",
+          "strategy": "dynamic_programming_recurrence",
+          "participants": [
+            "P01"
+          ],
+          "participant_signatures": {
+            "P01": [
+              "REPRESENT(grid-above-x=y)",
+              "PLAN(dynamic-programming)",
+              "DERIVE(subproblem-at-(1,2))",
+              "PLAN(general-state-recurrence)"
+            ]
+          },
+          "trace_ids": [
+            "P01_COMB_A2"
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "catalan check then total minus reflection",
+          "strategy": "catalan_check_then_total_minus_reflection",
+          "participants": [
+            "P02"
+          ],
+          "participant_signatures": {
+            "P02": [
+              "REPRESENT(lattice-path)",
+              "ATTEND(no-contact-x=y)",
+              "RECALL(Catalan)",
+              "REPRESENT(shifted-origin)",
+              "CHECK",
+              "BACKTRACK",
+              "PLAN(total-minus-crossing)",
+              "CALCULATE(total-paths)",
+              "REPRESENT(reflect-from-1-0)",
+              "ANSWER(combination-difference)"
+            ]
+          },
+          "trace_ids": [
+            "P02_COMB_A2"
+          ]
+        },
+        {
+          "family_id": "T3",
+          "label": "grid model then hint and abandon",
+          "strategy": "grid_model_then_hint_and_abandon",
+          "participants": [
+            "P05"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "REPRESENT(lattice-path)",
+              "CALCULATE(step-counts)",
+              "DERIVE(prefix-constraint)",
+              "RECALL(model-forgotten)",
+              "STUCK(read-hint)",
+              "ATTEND(hint-bijection)",
+              "BRANCH(three-path-cases)",
+              "PLAN(complement-illegal-paths)",
+              "PLAN(gap-insertion-attempt)",
+              "ABANDON"
+            ]
+          },
+          "trace_ids": [
+            "P05_COMB_A2"
+          ]
+        },
+        {
+          "family_id": "T4",
+          "label": "symmetry attempt then total paths",
+          "strategy": "symmetry_attempt_then_total_paths",
+          "participants": [
+            "P07"
+          ],
+          "participant_signatures": {
+            "P07": [
+              "ATTEND(step-directions)",
+              "PLAN(symmetry-attempt)",
+              "CALCULATE(total-paths)",
+              "PLAN(mapping-uncertain)"
+            ]
+          },
+          "trace_ids": [
+            "P07_COMB_A2"
+          ]
+        },
+        {
+          "family_id": "T5",
+          "label": "case split then hint and first contact sum",
+          "strategy": "case_split_then_hint_and_first_contact_sum",
+          "participants": [
+            "P08"
+          ],
+          "participant_signatures": {
+            "P08": [
+              "REPRESENT(lattice-path)",
+              "BRANCH(endpoint-distance)",
+              "STUCK",
+              "ATTEND(hint-first-contact)",
+              "CALCULATE(total-paths)",
+              "HESITATE(first-contact-mapping)",
+              "ENUMERATE(first-contact-point-sum)",
+              "ANSWER(sum-left-unsimplified)"
+            ]
+          },
+          "trace_ids": [
+            "P08_COMB_A2"
+          ]
+        },
+        {
+          "family_id": "T6",
+          "label": "unconstrained path model then hint stuck",
+          "strategy": "unconstrained_path_model_then_hint_stuck",
+          "participants": [
+            "P09"
+          ],
+          "participant_signatures": {
+            "P09": [
+              "RECALL(unconstrained-path-count)",
+              "ATTEND(diagonal-constraint)",
+              "PLAN(small-example)",
+              "STUCK(read-hint)",
+              "ATTEND(hint-ignore-constraint)",
+              "CALCULATE(total-paths-uncertain)",
+              "HESITATE(first-contact-bijection)",
+              "ABANDON(no-mapping)"
+            ]
+          },
+          "trace_ids": [
+            "P09_COMB_A2"
+          ]
+        }
+      ],
+      "common_prefix": []
+    },
+    {
+      "question_id": "COMB_A3",
+      "group_id": "COMB_A",
+      "n_participants": 6,
+      "valid_traces": 6,
+      "low_confidence_traces": 3,
+      "participants": [
+        "P01",
+        "P02",
+        "P05",
+        "P07",
+        "P08",
+        "P09"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "direct paired residue bins",
+          "strategy": "direct_paired_residue_bins",
+          "participants": [
+            "P01"
+          ],
+          "participant_signatures": {
+            "P01": [
+              "ATTEND(S1)",
+              "REPRESENT(last-digits-mod-10)",
+              "CLASSIFY(equal-residues-for-difference)",
+              "CLASSIFY(complementary-residues-for-sum)",
+              "REPRESENT(six-paired-bins)",
+              "DERIVE(pigeonhole)"
+            ]
+          },
+          "trace_ids": [
+            "P01_COMB_A3"
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "case split then paired residue bins",
+          "strategy": "case_split_then_paired_residue_bins",
+          "participants": [
+            "P02"
+          ],
+          "participant_signatures": {
+            "P02": [
+              "ATTEND(why-seven)",
+              "REPRESENT(residues-mod-10)",
+              "CLASSIFY(equal-residue-case)",
+              "BRANCH(all-residues-distinct)",
+              "REPRESENT(six-paired-bins)",
+              "DERIVE(pigeonhole)",
+              "ANSWER"
+            ]
+          },
+          "trace_ids": [
+            "P02_COMB_A3"
+          ]
+        },
+        {
+          "family_id": "T3",
+          "label": "residue algebra attempts then pigeonhole bins",
+          "strategy": "residue_algebra_attempts_then_pigeonhole_bins",
+          "participants": [
+            "P05"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "ATTEND(7-and-10)",
+              "REPRESENT(residue-parameters)",
+              "ENUMERATE(sum-difference-grid)",
+              "BACKTRACK(first-algebra-attempt)",
+              "DERIVE(add-equations)",
+              "CHECK(reject-derivation)",
+              "CALCULATE(residue-pairs-attempt)",
+              "BACKTRACK(to-contradiction)",
+              "CLASSIFY(distinct-residues)",
+              "REPRESENT(six-residue-bins)",
+              "ANSWER(pigeonhole-contradiction)"
+            ]
+          },
+          "trace_ids": [
+            "P05_COMB_A3"
+          ]
+        },
+        {
+          "family_id": "T4",
+          "label": "noisy mod10 pairing attempt",
+          "strategy": "noisy_mod10_pairing_attempt",
+          "participants": [
+            "P07"
+          ],
+          "participant_signatures": {
+            "P07": [
+              "ATTEND(seven-distinct)",
+              "REPRESENT(mod10)",
+              "REPRESENT(residue-pairs-uncertain)",
+              "DERIVE(case-pigeonhole)",
+              "ANSWER(proof-uncertain)"
+            ]
+          },
+          "trace_ids": [
+            "P07_COMB_A3"
+          ]
+        },
+        {
+          "family_id": "T5",
+          "label": "contradiction then hint residue pairing",
+          "strategy": "contradiction_then_hint_residue_pairing",
+          "participants": [
+            "P08"
+          ],
+          "participant_signatures": {
+            "P08": [
+              "PLAN(contradiction)",
+              "ATTEND(hint-mod10)",
+              "REPRESENT(last-digits)",
+              "DERIVE(equal-or-complementary)",
+              "RECALL(pigeonhole)",
+              "REPRESENT(complementary-pairs)",
+              "ANSWER(pair-and-pigeonhole-incomplete)"
+            ]
+          },
+          "trace_ids": [
+            "P08_COMB_A3"
+          ]
+        },
+        {
+          "family_id": "T6",
+          "label": "equation attempt then last digit contradiction",
+          "strategy": "equation_attempt_then_last_digit_contradiction",
+          "participants": [
+            "P09"
+          ],
+          "participant_signatures": {
+            "P09": [
+              "REPRESENT(mod-equations)",
+              "HESITATE(formula-forgotten)",
+              "ATTEND(last-digit-relation)",
+              "DERIVE(equal-or-complementary)",
+              "PLAN(contradiction)",
+              "CLASSIFY(distinct-noncomplementary-digits)",
+              "DERIVE(distinct-last-digits)"
+            ]
+          },
+          "trace_ids": [
+            "P09_COMB_A3"
+          ]
+        }
+      ],
+      "common_prefix": []
+    },
+    {
+      "question_id": "COMB_B1",
+      "group_id": "COMB_B",
+      "n_participants": 4,
+      "valid_traces": 4,
+      "low_confidence_traces": 1,
+      "participants": [
+        "P03",
+        "P05",
+        "P06",
+        "P07"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "direct size enumeration then coordinate choices",
+          "strategy": "direct_size_enumeration_then_coordinate_choices",
+          "participants": [
+            "P03"
+          ],
+          "participant_signatures": {
+            "P03": [
+              "CALCULATE(square-size-counts-partial)",
+              "CALCULATE(square-total-ASR-uncertain)",
+              "ATTEND(G1)",
+              "CALCULATE(C(10,2)×C(8,2))",
+              "ANSWER(45×28)"
+            ]
+          },
+          "trace_ids": [
+            "P03_COMB_B1"
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "choose coordinate pairs then enumerate square sizes",
+          "strategy": "choose_coordinate_pairs_then_enumerate_square_sizes",
+          "participants": [
+            "P05"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "REPRESENT(grid)",
+              "CALCULATE(C10,2-times-C8,2)",
+              "CLASSIFY(square-side-length)",
+              "ENUMERATE(square-placements)",
+              "ANSWER(leave-as-sum)"
+            ]
+          },
+          "trace_ids": [
+            "P05_COMB_B1"
+          ]
+        },
+        {
+          "family_id": "T3",
+          "label": "lower left attempt then coordinate choices",
+          "strategy": "lower_left_attempt_then_coordinate_choices",
+          "participants": [
+            "P06"
+          ],
+          "participant_signatures": {
+            "P06": [
+              "REPRESENT(coordinate-choice)",
+              "PLAN(lower-left-length-width)",
+              "ENUMERATE(lower-left-points)",
+              "ANSWER(C8,2-times-C10,2)",
+              "ATTEND(G2)",
+              "CLASSIFY(square-side-length)",
+              "CALCULATE(square-sum-uncertain)"
+            ]
+          },
+          "trace_ids": [
+            "P06_COMB_B1"
+          ]
+        },
+        {
+          "family_id": "T4",
+          "label": "point pair attempt then square side enumeration",
+          "strategy": "point_pair_attempt_then_square_side_enumeration",
+          "participants": [
+            "P07"
+          ],
+          "participant_signatures": {
+            "P07": [
+              "ATTEND(80-points)",
+              "CALCULATE(point-pair-method)",
+              "PLAN(lower-left-and-side)",
+              "BACKTRACK(coordinate-cases)",
+              "PLAN(small-cases)",
+              "ENUMERATE(square-sizes)"
+            ]
+          },
+          "trace_ids": [
+            "P07_COMB_B1"
+          ]
+        }
+      ],
+      "common_prefix": []
+    },
+    {
+      "question_id": "COMB_B2",
+      "group_id": "COMB_B",
+      "n_participants": 4,
+      "valid_traces": 4,
+      "low_confidence_traces": 2,
+      "participants": [
+        "P03",
+        "P05",
+        "P06",
+        "P07"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "occupancy partition enumeration",
+          "strategy": "occupancy_partition_enumeration",
+          "participants": [
+            "P03"
+          ],
+          "participant_signatures": {
+            "P03": [
+              "ATTEND(S1,S2)",
+              "PLAN(partition-9-by-entrance-loads)",
+              "ENUMERATE(6+3-cases)",
+              "ENUMERATE(5+4-cases)",
+              "CHECK(duplicate-partitions)"
+            ]
+          },
+          "trace_ids": [
+            "P03_COMB_B2"
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "multiple recurrence attempts then grid recurrence",
+          "strategy": "multiple_recurrence_attempts_then_grid_recurrence",
+          "participants": [
+            "P05"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "HESITATE(problem-meaning)",
+              "PLAN(all-six-used)",
+              "CALCULATE(seed-each-door)",
+              "BACKTRACK(all-six-used)",
+              "PLAN(recurrence-Snm)",
+              "DERIVE(add-one-person)",
+              "CHECK(recurrence-problem)",
+              "BACKTRACK(rebuild-recurrence)",
+              "REPRESENT(grid-recurrence)",
+              "ANSWER(formula-uncertain)"
+            ]
+          },
+          "trace_ids": [
+            "P05_COMB_B2"
+          ]
+        },
+        {
+          "family_id": "T3",
+          "label": "occupancy composition then distribution case enumeration incomplete",
+          "strategy": "occupancy_composition_then_distribution_case_enumeration_incomplete",
+          "participants": [
+            "P06"
+          ],
+          "participant_signatures": {
+            "P06": [
+              "HESITATE(problem-meaning)",
+              "REPRESENT(occupancy-sum)",
+              "CALCULATE(sum-over-used-entrances)",
+              "ENUMERATE(distribution-cases)"
+            ]
+          },
+          "trace_ids": [
+            "P06_COMB_B2"
+          ]
+        },
+        {
+          "family_id": "T4",
+          "label": "balls into boxes fragment",
+          "strategy": "balls_into_boxes_fragment",
+          "participants": [
+            "P07"
+          ],
+          "participant_signatures": {
+            "P07": [
+              "REPRESENT(balls-into-boxes)"
+            ]
+          },
+          "trace_ids": [
+            "P07_COMB_B2"
+          ]
+        }
+      ],
+      "common_prefix": []
+    },
+    {
+      "question_id": "COMB_B3",
+      "group_id": "COMB_B",
+      "n_participants": 4,
+      "valid_traces": 4,
+      "low_confidence_traces": 1,
+      "participants": [
+        "P03",
+        "P05",
+        "P06",
+        "P07"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "stuck then pigeonhole attempt",
+          "strategy": "stuck_then_pigeonhole_attempt",
+          "participants": [
+            "P03"
+          ],
+          "participant_signatures": {
+            "P03": [
+              "STUCK(no-understanding)",
+              "PLAN(pigeonhole-attempt)"
+            ]
+          },
+          "trace_ids": [
+            "P03_COMB_B3"
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "doubling pairs pigeonhole attempt",
+          "strategy": "doubling_pairs_pigeonhole_attempt",
+          "participants": [
+            "P05"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "RECALL(pigeonhole)",
+              "PLAN(doubling-only)",
+              "PLAN(contradiction)",
+              "REPRESENT(doubling-pairs)",
+              "CHECK(pair-count)",
+              "ANSWER(pigeonhole-doubling-pairs)"
+            ]
+          },
+          "trace_ids": [
+            "P05_COMB_B3"
+          ]
+        },
+        {
+          "family_id": "T3",
+          "label": "contradiction then odd part pigeonhole",
+          "strategy": "contradiction_then_odd_part_pigeonhole",
+          "participants": [
+            "P06"
+          ],
+          "participant_signatures": {
+            "P06": [
+              "PLAN(contradiction)",
+              "REPRESENT(power-of-two-times-q)",
+              "ENUMERATE(factorization-examples)",
+              "CORRECT(odd-part-factorization)",
+              "CLASSIFY(odd-part-bins)",
+              "DERIVE(pigeonhole)",
+              "ANSWER(same-odd-part)"
+            ]
+          },
+          "trace_ids": [
+            "P06_COMB_B3"
+          ]
+        },
+        {
+          "family_id": "T4",
+          "label": "induction then pairing fragments",
+          "strategy": "induction_then_pairing_fragments",
+          "participants": [
+            "P07"
+          ],
+          "participant_signatures": {
+            "P07": [
+              "PLAN(induction)",
+              "ENUMERATE(doubling-pairs)",
+              "REPRESENT(n-groups-uncertain)",
+              "CALCULATE(n-bins-uncertain)",
+              "CHECK(n=2-example)"
+            ]
+          },
+          "trace_ids": [
+            "P07_COMB_B3"
+          ]
+        }
+      ],
+      "common_prefix": []
+    },
+    {
+      "question_id": "COMB_C1",
+      "group_id": "COMB_C",
+      "n_participants": 1,
+      "valid_traces": 1,
+      "low_confidence_traces": 1,
+      "participants": [
+        "P04"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "direct classification by length and digit position",
+          "strategy": "direct_classification_by_length_and_digit_position",
+          "participants": [
+            "P04"
+          ],
+          "participant_signatures": {
+            "P04": [
+              "ATTEND(S1,G1)",
+              "CLASSIFY(by-length-and-position)",
+              "CALCULATE(one-and-two-digit-cases)",
+              "CALCULATE(three-and-four-digit-cases-uncertain)",
+              "ATTEND(G2)",
+              "CLASSIFY(by-number-of-zeros)",
+              "CORRECT",
+              "ABANDON(arithmetic)"
+            ]
+          },
+          "trace_ids": [
+            "P04_COMB_C1"
+          ]
+        }
+      ],
+      "common_prefix": [
+        "ATTEND(S1,G1)",
+        "CLASSIFY(by-length-and-position)",
+        "CALCULATE(one-and-two-digit-cases)",
+        "CALCULATE(three-and-four-digit-cases-uncertain)",
+        "ATTEND(G2)",
+        "CLASSIFY(by-number-of-zeros)",
+        "CORRECT",
+        "ABANDON(arithmetic)"
+      ]
+    },
+    {
+      "question_id": "COMB_C2",
+      "group_id": "COMB_C",
+      "n_participants": 1,
+      "valid_traces": 1,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P04"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "catalan grid reflection",
+          "strategy": "catalan_grid_reflection",
+          "participants": [
+            "P04"
+          ],
+          "participant_signatures": {
+            "P04": [
+              "ATTEND(S2)",
+              "RECALL(Catalan)",
+              "REPRESENT(grid-(0,0)-to-(n,n))",
+              "ANSWER(Catalan-formula)",
+              "REPRESENT(reflection-at-y=x+1)"
+            ]
+          },
+          "trace_ids": [
+            "P04_COMB_C2"
+          ]
+        }
+      ],
+      "common_prefix": [
+        "ATTEND(S2)",
+        "RECALL(Catalan)",
+        "REPRESENT(grid-(0,0)-to-(n,n))",
+        "ANSWER(Catalan-formula)",
+        "REPRESENT(reflection-at-y=x+1)"
+      ]
+    },
+    {
+      "question_id": "COMB_C3",
+      "group_id": "COMB_C",
+      "n_participants": 1,
+      "valid_traces": 1,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P04"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "geometric series then fermat",
+          "strategy": "geometric_series_then_fermat",
+          "participants": [
+            "P04"
+          ],
+          "participant_signatures": {
+            "P04": [
+              "ATTEND(233-prime)",
+              "DERIVE(gcd(23,233)=1)",
+              "TRANSFORM(repeated-23-to-base-100-series)",
+              "DERIVE(100^n≡1-mod-233)",
+              "CHECK(gcd(99,233)=1)",
+              "RECALL(Fermat)",
+              "ANSWER(true)"
+            ]
+          },
+          "trace_ids": [
+            "P04_COMB_C3"
+          ]
+        }
+      ],
+      "common_prefix": [
+        "ATTEND(233-prime)",
+        "DERIVE(gcd(23,233)=1)",
+        "TRANSFORM(repeated-23-to-base-100-series)",
+        "DERIVE(100^n≡1-mod-233)",
+        "CHECK(gcd(99,233)=1)",
+        "RECALL(Fermat)",
+        "ANSWER(true)"
+      ]
+    },
+    {
+      "question_id": "TRIG_A1",
+      "group_id": "TRIG_A",
+      "n_participants": 2,
+      "valid_traces": 2,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P05",
+        "P06"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "periodicity counterexample",
+          "strategy": "periodicity_counterexample",
+          "participants": [
+            "P05"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "ATTEND(S3)",
+              "RECALL(tan-periodicity)",
+              "ENUMERATE(α=1+2π,β=1)",
+              "ANSWER(counterexample)"
+            ]
+          },
+          "trace_ids": [
+            "P05_TRIG_A1"
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "acute interval monotonicity then domain correction",
+          "strategy": "acute_interval_monotonicity_then_domain_correction",
+          "participants": [
+            "P06"
+          ],
+          "participant_signatures": {
+            "P06": [
+              "HESITATE(counterexample-exists?)",
+              "RECALL(tan-monotonic)",
+              "ERROR(first-quadrant-as-acute-angle)",
+              "BACKTRACK(没事了)",
+              "ATTEND(first-quadrant)",
+              "RECALL(+2kπ)",
+              "CORRECT(periodic-domain)"
+            ]
+          },
+          "trace_ids": [
+            "P06_TRIG_A1"
+          ]
+        }
+      ],
+      "common_prefix": []
+    },
+    {
+      "question_id": "TRIG_A2",
+      "group_id": "TRIG_A",
+      "n_participants": 2,
+      "valid_traces": 2,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P05",
+        "P06"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "infer period then frequency",
+          "strategy": "infer_period_then_frequency",
+          "participants": [
+            "P05",
+            "P06"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "DERIVE(T=π)",
+              "RECALL(T=2π/ω)",
+              "ANSWER(ω=2)"
+            ],
+            "P06": [
+              "DERIVE(T=π)",
+              "ANSWER(ω=2)"
+            ]
+          },
+          "trace_ids": [
+            "P05_TRIG_A2",
+            "P06_TRIG_A2"
+          ]
+        }
+      ],
+      "common_prefix": [
+        "DERIVE(T=π)"
+      ]
+    },
+    {
+      "question_id": "TRIG_A3",
+      "group_id": "TRIG_A",
+      "n_participants": 2,
+      "valid_traces": 2,
+      "low_confidence_traces": 0,
+      "participants": [
+        "P05",
+        "P06"
+      ],
+      "trace_families": [
+        {
+          "family_id": "T1",
+          "label": "no strategy verbalized",
+          "strategy": "no_strategy_verbalized",
+          "participants": [
+            "P05"
+          ],
+          "participant_signatures": {
+            "P05": [
+              "STUCK(no-entry)",
+              "RECALL(failed-formula-retrieval)",
+              "ABANDON"
+            ]
+          },
+          "trace_ids": [
+            "P05_TRIG_A3"
+          ]
+        },
+        {
+          "family_id": "T2",
+          "label": "sine law then cosine law area",
+          "strategy": "sine_law_then_cosine_law_area",
+          "participants": [
+            "P06"
+          ],
+          "participant_signatures": {
+            "P06": [
+              "TRANSFORM(sine-law-edge-to-angle)",
+              "CHECK(sinC>0)",
+              "TRANSFORM(cancel-sinC)",
+              "TRANSFORM(auxiliary-angle)",
+              "CHECK(angle-range)",
+              "ANSWER(B=π/6)",
+              "TRANSFORM(b=4-c)",
+              "DERIVE(cosine-law)",
+              "CALCULATE(c=2,b=2)",
+              "CALCULATE(area)",
+              "ANSWER(S=√3)"
+            ]
+          },
+          "trace_ids": [
+            "P06_TRIG_A3"
+          ]
+        }
+      ],
+      "common_prefix": []
+    }
+  ]
+}

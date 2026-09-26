@@ -1,0 +1,463 @@
+{
+  "schema_version": "1.0",
+  "participant_id": "P08",
+  "input_group": "COMB_A",
+  "target_group": "COMB_B",
+  "blindness_note": "This file contains no current-participant B transcript, B trace, or B outcome.",
+  "a_group_observations": [
+    {
+      "question_id": "COMB_A1",
+      "first_attention": {
+        "signal_refs": [
+          "C1"
+        ],
+        "operation": "ATTEND",
+        "evidence": "任何两个男生都不相邻。",
+        "confidence": 0.8
+      },
+      "strategy": "boys_first_internal_gaps_formula_uncertain",
+      "path_signature": [
+        "ATTEND(C1)",
+        "REPRESENT(m-1-internal-gaps)",
+        "ATTEND(end-gaps)",
+        "CALCULATE(combination-uncertain)",
+        "CALCULATE(permutation-factors-uncertain)"
+      ],
+      "observed_steps": [
+        {
+          "start_sec": 90,
+          "end_sec": 119,
+          "evidence_text": "任何两个男生都不相邻。",
+          "signal_refs": [
+            "C1"
+          ],
+          "action_type": "ATTEND",
+          "content": "关注男生互不相邻。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.8,
+          "representation": null,
+          "result": null,
+          "step_id": "s01",
+          "order": 1,
+          "clean_text": "任何两个男生都不相邻。"
+        },
+        {
+          "start_sec": 145,
+          "end_sec": 155.6,
+          "evidence_text": "M-1 里面至少每一个位置都要放一个女生进去。",
+          "signal_refs": [
+            "C1"
+          ],
+          "action_type": "REPRESENT",
+          "content": "先排男生，并要求m-1个内部间隔各放一名女生。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.7,
+          "representation": null,
+          "result": null,
+          "step_id": "s02",
+          "order": 2,
+          "clean_text": "M-1 里面至少每一个位置都要放一个女生进去。"
+        },
+        {
+          "start_sec": 215.6,
+          "end_sec": 233.14,
+          "evidence_text": "男生的左边就是这个位置和这个位置也是可以插入的。",
+          "signal_refs": [
+            "C1"
+          ],
+          "action_type": "ATTEND",
+          "content": "进一步考虑男生序列两端也可插入女生。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.73,
+          "representation": null,
+          "result": null,
+          "step_id": "s03",
+          "order": 3,
+          "clean_text": "男生的左边就是这个位置和这个位置也是可以插入的。"
+        },
+        {
+          "start_sec": 233.14,
+          "end_sec": 237,
+          "evidence_text": "所以现在就是c n-m-a。词中有数字,请读。",
+          "signal_refs": [
+            "C1"
+          ],
+          "action_type": "CALCULATE",
+          "content": "尝试写选择空位的组合数，但上下标无法恢复。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.35,
+          "representation": null,
+          "result": "[ASR_UNCERTAIN: combination indices]",
+          "step_id": "s04",
+          "order": 4,
+          "clean_text": "所以现在就是c n-m-a。词中有数字,请读。"
+        },
+        {
+          "start_sec": 295,
+          "end_sec": 322,
+          "evidence_text": "试习后,还要对女生进行一个全排列。",
+          "signal_refs": [
+            "C1"
+          ],
+          "action_type": "CALCULATE",
+          "content": "补充女生需要全排列，并口述若干乘积因子。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.58,
+          "representation": null,
+          "result": "[ASR_UNCERTAIN: permutation product]",
+          "step_id": "s05",
+          "order": 5,
+          "clean_text": "试习后,还要对女生进行一个全排列。"
+        }
+      ],
+      "analyst_inferences": [
+        {
+          "content": "A1第二、三小问在ASR中没有可靠内容，未补写。",
+          "status": "ANALYST_INFERENCE",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "question_id": "COMB_A2",
+      "first_attention": {
+        "signal_refs": [
+          "S1",
+          "S2"
+        ],
+        "operation": "REPRESENT",
+        "evidence": "0 1 出发。",
+        "confidence": 0.9
+      },
+      "strategy": "case_split_then_hint_and_first_contact_sum",
+      "path_signature": [
+        "REPRESENT(lattice-path)",
+        "BRANCH(endpoint-distance)",
+        "STUCK",
+        "ATTEND(hint-first-contact)",
+        "CALCULATE(total-paths)",
+        "HESITATE(first-contact-mapping)",
+        "ENUMERATE(first-contact-point-sum)",
+        "ANSWER(sum-left-unsimplified)"
+      ],
+      "observed_steps": [
+        {
+          "start_sec": 477,
+          "end_sec": 494.22,
+          "evidence_text": "0 1 出发。",
+          "signal_refs": [
+            "S1"
+          ],
+          "action_type": "REPRESENT",
+          "content": "从(0,1)出发并识别每步向右或向上。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.9,
+          "representation": "lattice_path",
+          "result": null,
+          "step_id": "s01",
+          "order": 1,
+          "clean_text": "0 1 出发。"
+        },
+        {
+          "start_sec": 622,
+          "end_sec": 643.52,
+          "evidence_text": "然后那这个分两种情况嘛。",
+          "signal_refs": [
+            "S1",
+            "S3"
+          ],
+          "action_type": "BRANCH",
+          "content": "尝试按m=n-1等终点与对角线距离分类。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.74,
+          "representation": null,
+          "result": null,
+          "step_id": "s02",
+          "order": 2,
+          "clean_text": "然后那这个分两种情况嘛。"
+        },
+        {
+          "start_sec": 737,
+          "end_sec": 741,
+          "evidence_text": "感觉现在就是有点想不下去了。",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "STUCK",
+          "content": "明确卡住。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.99,
+          "representation": null,
+          "result": null,
+          "step_id": "s03",
+          "order": 3,
+          "clean_text": "感觉现在就是有点想不下去了。"
+        },
+        {
+          "start_sec": 771,
+          "end_sec": 784.86,
+          "evidence_text": "能不能把第一次碰到 x 等于 y 的不合法路径和另一类更容易数的路径建立一一对应关系?",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "ATTEND",
+          "content": "读取第一次接触边界并建立对应的提示。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.98,
+          "representation": null,
+          "result": null,
+          "step_id": "s04",
+          "order": 4,
+          "clean_text": "能不能把第一次碰到 x 等于 y 的不合法路径和另一类更容易数的路径建立一一对应关系?"
+        },
+        {
+          "start_sec": 801,
+          "end_sec": 825.58,
+          "evidence_text": "不关x等于y这个条件。",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "CALCULATE",
+          "content": "先忽略限制，计算总路径为在m+n-1步中选m步。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.92,
+          "representation": null,
+          "result": "C(m+n-1,m)",
+          "step_id": "s05",
+          "order": 5,
+          "clean_text": "不关x等于y这个条件。"
+        },
+        {
+          "start_sec": 892,
+          "end_sec": 904,
+          "evidence_text": "什么是第一次接触到的这个路径?",
+          "signal_refs": [
+            "S3"
+          ],
+          "action_type": "HESITATE",
+          "content": "仍不理解第一次接触路径的对应。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.9,
+          "representation": null,
+          "result": null,
+          "step_id": "s06",
+          "order": 6,
+          "clean_text": "什么是第一次接触到的这个路径?"
+        },
+        {
+          "start_sec": 982,
+          "end_sec": 1020.82,
+          "evidence_text": "那么首先从01到AA有多少种可能性呢?",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "ENUMERATE",
+          "content": "改为按首次接触点(a,a)求和。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.8,
+          "representation": null,
+          "result": "Σ C(2a-1,a)",
+          "step_id": "s07",
+          "order": 7,
+          "clean_text": "那么首先从01到AA有多少种可能性呢?"
+        },
+        {
+          "start_sec": 1021.9,
+          "end_sec": 1111,
+          "evidence_text": "我感觉这个可能算到这里不就可以了",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "ANSWER",
+          "content": "把首次接触点组合数求和作为结果，表示不会继续化简。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.75,
+          "representation": null,
+          "result": null,
+          "step_id": "s08",
+          "order": 8,
+          "clean_text": "我感觉这个可能算到这里不就可以了"
+        }
+      ],
+      "analyst_inferences": [
+        {
+          "content": "771秒后的提示参与了策略变化；该过程不是无提示独立解答。",
+          "status": "ANALYST_INFERENCE",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "question_id": "COMB_A3",
+      "first_attention": {
+        "signal_refs": [
+          "S1"
+        ],
+        "operation": "ATTEND",
+        "evidence": "感觉可能是要远反正反",
+        "confidence": 0.72
+      },
+      "strategy": "contradiction_then_hint_residue_pairing",
+      "path_signature": [
+        "PLAN(contradiction)",
+        "ATTEND(hint-mod10)",
+        "REPRESENT(last-digits)",
+        "DERIVE(equal-or-complementary)",
+        "RECALL(pigeonhole)",
+        "REPRESENT(complementary-pairs)",
+        "ANSWER(pair-and-pigeonhole-incomplete)"
+      ],
+      "observed_steps": [
+        {
+          "start_sec": 1161,
+          "end_sec": 1173,
+          "evidence_text": "感觉可能是要远反正反",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "PLAN",
+          "content": "第一反应是尝试反证，并追问为什么必须是7个数。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.72,
+          "representation": null,
+          "result": null,
+          "step_id": "s01",
+          "order": 1,
+          "clean_text": "感觉可能是要远反正反"
+        },
+        {
+          "start_sec": 1245.46,
+          "end_sec": 1261.98,
+          "evidence_text": "从模10来想,观察两颗整数,这分别意味着它们个位数之间有什么关系。",
+          "signal_refs": [
+            "S2",
+            "S3"
+          ],
+          "action_type": "ATTEND",
+          "content": "读取按模10和个位数分类的提示。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.86,
+          "representation": null,
+          "result": null,
+          "step_id": "s02",
+          "order": 2,
+          "clean_text": "从模10来想,观察两颗整数,这分别意味着它们个位数之间有什么关系。"
+        },
+        {
+          "start_sec": 1261.98,
+          "end_sec": 1281.88,
+          "evidence_text": "好,我们考虑它的个位数。",
+          "signal_refs": [
+            "S3"
+          ],
+          "action_type": "REPRESENT",
+          "content": "转而考虑七个数的个位数。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.88,
+          "representation": null,
+          "result": null,
+          "step_id": "s03",
+          "order": 3,
+          "clean_text": "好,我们考虑它的个位数。"
+        },
+        {
+          "start_sec": 1281.88,
+          "end_sec": 1338,
+          "evidence_text": "要么他们的个位数相等",
+          "signal_refs": [
+            "S2",
+            "S3"
+          ],
+          "action_type": "DERIVE",
+          "content": "推出所需关系对应个位数相等或互补为10。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.7,
+          "representation": null,
+          "result": null,
+          "step_id": "s04",
+          "order": 4,
+          "clean_text": "要么他们的个位数相等"
+        },
+        {
+          "start_sec": 1338,
+          "end_sec": 1358,
+          "evidence_text": "鸽巢原理是什么来着?",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "RECALL",
+          "content": "尝试回忆鸽巢原理及其与余数分组的关系。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.83,
+          "representation": null,
+          "result": null,
+          "step_id": "s05",
+          "order": 5,
+          "clean_text": "鸽巢原理是什么来着?"
+        },
+        {
+          "start_sec": 1491,
+          "end_sec": 1502,
+          "evidence_text": "比如说这个地方其实就是个4和6是冲突的。",
+          "signal_refs": [
+            "S2",
+            "S3"
+          ],
+          "action_type": "REPRESENT",
+          "content": "用4与6说明互补余数冲突，并主张任取7个会出现冲突对。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.72,
+          "representation": null,
+          "result": null,
+          "step_id": "s06",
+          "order": 6,
+          "clean_text": "比如说这个地方其实就是个4和6是冲突的。"
+        },
+        {
+          "start_sec": 1502,
+          "end_sec": 1533.441,
+          "evidence_text": "我们可以把它对半",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "ANSWER",
+          "content": "提出把10个个位数配对后使用鸽巢原理，但结尾被ASR幻觉截断。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.58,
+          "representation": null,
+          "result": null,
+          "step_id": "s07",
+          "order": 7,
+          "clean_text": "我们可以把它对半"
+        }
+      ],
+      "analyst_inferences": [
+        {
+          "content": "1245秒后由提示引导；1491秒后的最终配对分组需人工听音确认。",
+          "status": "ANALYST_INFERENCE",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ]
+}
