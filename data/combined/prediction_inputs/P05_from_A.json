@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "participant_id": "P05",
   "input_group": "COMB_A",
   "target_group": "COMB_B",
@@ -11,12 +11,440 @@
         "signal_refs": [
           "C1"
         ],
-        "operation": "ATTEND",
-        "evidence": "任何两个男生都不相邻",
-        "confidence": 0.99
+        "operation": {
+          "value": "ATTEND",
+          "subtype": null,
+          "status": "OBSERVED",
+          "confidence": 0.99
+        },
+        "control": {
+          "value": null,
+          "subtype": null,
+          "status": "UNKNOWN",
+          "confidence": null
+        },
+        "cognitive_state": {
+          "value": null,
+          "subtype": null,
+          "status": "UNKNOWN",
+          "confidence": null
+        },
+        "evidence": {
+          "text": "任何两个男生都不相邻",
+          "confidence": 0.99
+        },
+        "legacy_label": "ATTEND"
       },
       "strategy": "girls_first_gap_insertion_then_complement",
-      "path_signature": [
+      "observed_steps": [
+        {
+          "step_id": "s01",
+          "order": 1,
+          "content": "先关注男生互不相邻。",
+          "operation": {
+            "value": "ATTEND",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "任何两个男生都不相邻",
+            "clean_text": "任何两个男生都不相邻",
+            "signal_refs": [
+              "C1"
+            ],
+            "start_sec": 12,
+            "end_sec": 58,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "ATTEND"
+        },
+        {
+          "step_id": "s02",
+          "order": 2,
+          "content": "先排列女生，并把女生之间及两端表示为 n+1 个空位。",
+          "operation": {
+            "value": "REPRESENT",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.98
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": "gap_insertion",
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "女生看作一共有这样的 N 个点",
+            "clean_text": "女生看作一共有这样的 N 个点",
+            "signal_refs": [
+              "C1"
+            ],
+            "start_sec": 58,
+            "end_sec": 143,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.98,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "REPRESENT"
+        },
+        {
+          "step_id": "s03",
+          "order": 3,
+          "content": "从 n+1 个空位中选 m 个，再排列 m 名男生。",
+          "operation": {
+            "value": "COMPUTE",
+            "subtype": "CALCULATE",
+            "status": "OBSERVED",
+            "confidence": 0.94
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "要在 N 加一个空格里面去放 M 个男生",
+            "clean_text": "要在 N 加一个空格里面去放 M 个男生",
+            "signal_refs": [
+              "C1"
+            ],
+            "start_sec": 58,
+            "end_sec": 143,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.94,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "CALCULATE"
+        },
+        {
+          "step_id": "s04",
+          "order": 4,
+          "content": "知道间隔法结构，但不确定排列组合记号。",
+          "operation": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": "HESITATING",
+            "subtype": "HESITATE",
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "correctness": {
+            "value": "not_applicable",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "这里公式可能不记得了",
+            "clean_text": "这里公式可能不记得了",
+            "signal_refs": [
+              "C1"
+            ],
+            "start_sec": 143,
+            "end_sec": 174,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "HESITATE"
+        },
+        {
+          "step_id": "s05",
+          "order": 5,
+          "content": "转入女生形成整体的小问。",
+          "operation": {
+            "value": "ATTEND",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "好，然后是第二题。N 个女生形成一个整整体。",
+            "clean_text": "好，然后是第二题。N 个女生形成一个整整体。",
+            "signal_refs": [
+              "C2"
+            ],
+            "start_sec": 143,
+            "end_sec": 200,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "ATTEND"
+        },
+        {
+          "step_id": "s06",
+          "order": 6,
+          "content": "把女生整体与男生排列，并乘女生内部排列。",
+          "operation": {
+            "value": "COMPUTE",
+            "subtype": "CALCULATE",
+            "status": "OBSERVED",
+            "confidence": 0.91
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "那我理解就是一个 pm 加一的全排列！女生之间也可以。全排列一下。",
+            "clean_text": "那我理解就是一个 pm 加一的全排列！女生之间也可以。全排列一下。",
+            "signal_refs": [
+              "C2"
+            ],
+            "start_sec": 200,
+            "end_sec": 311,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.91,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "CALCULATE"
+        },
+        {
+          "step_id": "s07",
+          "order": 7,
+          "content": "对指定 A、B 不相邻采用补集。",
+          "operation": {
+            "value": "PLAN",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "指定男生 a 和指定女生 B 不相邻，我们可以用补集的思想",
+            "clean_text": "指定男生 a 和指定女生 B 不相邻，我们可以用补集的思想",
+            "signal_refs": [
+              "C3"
+            ],
+            "start_sec": 200,
+            "end_sec": 311,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "PLAN"
+        },
+        {
+          "step_id": "s08",
+          "order": 8,
+          "content": "把相邻的 AB 或 BA 捆绑为一个整体。",
+          "operation": {
+            "value": "REPRESENT",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.98
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "相邻有两种可能，是 ab，一个是 ba。我们把他们看作一个整体",
+            "clean_text": "相邻有两种可能，是 ab，一个是 ba。我们把他们看作一个整体",
+            "signal_refs": [
+              "C3"
+            ],
+            "start_sec": 200,
+            "end_sec": 311,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.98,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "REPRESENT"
+        },
+        {
+          "step_id": "s09",
+          "order": 9,
+          "content": "用总排列减去两种相邻次序的排列。",
+          "operation": {
+            "value": "RESPOND",
+            "subtype": "ANSWER",
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": "(m+n)!-2(m+n-1)!",
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "最终的答案就是 M 加 N 的。阶乘减去两倍的 M 加 N 减一的阶乘。",
+            "clean_text": "最终的答案就是 M 加 N 的。阶乘减去两倍的 M 加 N 减一的阶乘。",
+            "signal_refs": [
+              "C3"
+            ],
+            "start_sec": 311,
+            "end_sec": 364,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "ANSWER"
+        }
+      ],
+      "analyst_inferences": [],
+      "legacy_path_signature": [
         "ATTEND(C1)",
         "REPRESENT(n+1-gaps)",
         "CALCULATE(select-gaps-and-permute-boys)",
@@ -27,171 +455,16 @@
         "REPRESENT(adjacent-pair)",
         "ANSWER(total-minus-adjacent)"
       ],
-      "observed_steps": [
-        {
-          "start_sec": 12,
-          "end_sec": 58,
-          "evidence_text": "任何两个男生都不相邻",
-          "signal_refs": [
-            "C1"
-          ],
-          "action_type": "ATTEND",
-          "content": "先关注男生互不相邻。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": null,
-          "step_id": "s01",
-          "order": 1,
-          "clean_text": "任何两个男生都不相邻"
-        },
-        {
-          "start_sec": 58,
-          "end_sec": 143,
-          "evidence_text": "女生看作一共有这样的 N 个点",
-          "signal_refs": [
-            "C1"
-          ],
-          "action_type": "REPRESENT",
-          "content": "先排列女生，并把女生之间及两端表示为 n+1 个空位。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.98,
-          "representation": "gap_insertion",
-          "result": null,
-          "step_id": "s02",
-          "order": 2,
-          "clean_text": "女生看作一共有这样的 N 个点"
-        },
-        {
-          "start_sec": 58,
-          "end_sec": 143,
-          "evidence_text": "要在 N 加一个空格里面去放 M 个男生",
-          "signal_refs": [
-            "C1"
-          ],
-          "action_type": "CALCULATE",
-          "content": "从 n+1 个空位中选 m 个，再排列 m 名男生。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.94,
-          "representation": null,
-          "result": null,
-          "step_id": "s03",
-          "order": 3,
-          "clean_text": "要在 N 加一个空格里面去放 M 个男生"
-        },
-        {
-          "start_sec": 143,
-          "end_sec": 174,
-          "evidence_text": "这里公式可能不记得了",
-          "signal_refs": [
-            "C1"
-          ],
-          "action_type": "HESITATE",
-          "content": "知道间隔法结构，但不确定排列组合记号。",
-          "correctness": "not_applicable",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": null,
-          "step_id": "s04",
-          "order": 4,
-          "clean_text": "这里公式可能不记得了"
-        },
-        {
-          "start_sec": 143,
-          "end_sec": 200,
-          "evidence_text": "好，然后是第二题。N 个女生形成一个整整体。",
-          "signal_refs": [
-            "C2"
-          ],
-          "action_type": "ATTEND",
-          "content": "转入女生形成整体的小问。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": null,
-          "step_id": "s05",
-          "order": 5,
-          "clean_text": "好，然后是第二题。N 个女生形成一个整整体。"
-        },
-        {
-          "start_sec": 200,
-          "end_sec": 311,
-          "evidence_text": "那我理解就是一个 pm 加一的全排列！女生之间也可以。全排列一下。",
-          "signal_refs": [
-            "C2"
-          ],
-          "action_type": "CALCULATE",
-          "content": "把女生整体与男生排列，并乘女生内部排列。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.91,
-          "representation": null,
-          "result": null,
-          "step_id": "s06",
-          "order": 6,
-          "clean_text": "那我理解就是一个 pm 加一的全排列！女生之间也可以。全排列一下。"
-        },
-        {
-          "start_sec": 200,
-          "end_sec": 311,
-          "evidence_text": "指定男生 a 和指定女生 B 不相邻，我们可以用补集的思想",
-          "signal_refs": [
-            "C3"
-          ],
-          "action_type": "PLAN",
-          "content": "对指定 A、B 不相邻采用补集。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": null,
-          "step_id": "s07",
-          "order": 7,
-          "clean_text": "指定男生 a 和指定女生 B 不相邻，我们可以用补集的思想"
-        },
-        {
-          "start_sec": 200,
-          "end_sec": 311,
-          "evidence_text": "相邻有两种可能，是 ab，一个是 ba。我们把他们看作一个整体",
-          "signal_refs": [
-            "C3"
-          ],
-          "action_type": "REPRESENT",
-          "content": "把相邻的 AB 或 BA 捆绑为一个整体。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.98,
-          "representation": null,
-          "result": null,
-          "step_id": "s08",
-          "order": 8,
-          "clean_text": "相邻有两种可能，是 ab，一个是 ba。我们把他们看作一个整体"
-        },
-        {
-          "start_sec": 311,
-          "end_sec": 364,
-          "evidence_text": "最终的答案就是 M 加 N 的。阶乘减去两倍的 M 加 N 减一的阶乘。",
-          "signal_refs": [
-            "C3"
-          ],
-          "action_type": "ANSWER",
-          "content": "用总排列减去两种相邻次序的排列。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": "(m+n)!-2(m+n-1)!",
-          "step_id": "s09",
-          "order": 9,
-          "clean_text": "最终的答案就是 M 加 N 的。阶乘减去两倍的 M 加 N 减一的阶乘。"
-        }
-      ],
-      "analyst_inferences": []
+      "operation_path": [
+        "ATTEND",
+        "REPRESENT",
+        "COMPUTE",
+        "ATTEND",
+        "COMPUTE",
+        "PLAN",
+        "REPRESENT",
+        "RESPOND"
+      ]
     },
     {
       "question_id": "COMB_A2",
@@ -201,12 +474,491 @@
           "S2",
           "S3"
         ],
-        "operation": "REPRESENT",
-        "evidence": "平面点01？从这里出发",
-        "confidence": 0.98
+        "operation": {
+          "value": "REPRESENT",
+          "subtype": null,
+          "status": "OBSERVED",
+          "confidence": 0.98
+        },
+        "control": {
+          "value": null,
+          "subtype": null,
+          "status": "UNKNOWN",
+          "confidence": null
+        },
+        "cognitive_state": {
+          "value": null,
+          "subtype": null,
+          "status": "UNKNOWN",
+          "confidence": null
+        },
+        "evidence": {
+          "text": "平面点01？从这里出发",
+          "confidence": 0.98
+        },
+        "legacy_label": "REPRESENT"
       },
       "strategy": "grid_model_then_hint_and_abandon",
-      "path_signature": [
+      "observed_steps": [
+        {
+          "step_id": "s01",
+          "order": 1,
+          "content": "从 (0,1) 出发画格路图。",
+          "operation": {
+            "value": "REPRESENT",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.98
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": "lattice_path",
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "平面点01？从这里出发",
+            "clean_text": "平面点01？从这里出发",
+            "signal_refs": [
+              "S1"
+            ],
+            "start_sec": 364,
+            "end_sec": 411,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.98,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "REPRESENT"
+        },
+        {
+          "step_id": "s02",
+          "order": 2,
+          "content": "识别横向走 m 步、纵向走 n-1 步。",
+          "operation": {
+            "value": "COMPUTE",
+            "subtype": "CALCULATE",
+            "status": "OBSERVED",
+            "confidence": 0.96
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "X 轴走。M.",
+            "clean_text": "X 轴走。M.",
+            "signal_refs": [
+              "S2"
+            ],
+            "start_sec": 411,
+            "end_sec": 554,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.96,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "CALCULATE"
+        },
+        {
+          "step_id": "s03",
+          "order": 3,
+          "content": "把不接触对角线改写为前缀步数约束。",
+          "operation": {
+            "value": "REASON",
+            "subtype": "DERIVE",
+            "status": "OBSERVED",
+            "confidence": 0.9
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "现在相当于就是 y0大于等于 x0",
+            "clean_text": "现在相当于就是 y0大于等于 x0",
+            "signal_refs": [
+              "S3"
+            ],
+            "start_sec": 554,
+            "end_sec": 619,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.9,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "DERIVE"
+        },
+        {
+          "step_id": "s04",
+          "order": 4,
+          "content": "想起存在标准格路模型，但无法回忆。",
+          "operation": {
+            "value": "RECALL",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "not_applicable",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "我记得好像是有个模型，但是我有点忘记了",
+            "clean_text": "我记得好像是有个模型，但是我有点忘记了",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 799,
+            "end_sec": 866,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "RECALL"
+        },
+        {
+          "step_id": "s05",
+          "order": 5,
+          "content": "在无法继续后查看附录提示。",
+          "operation": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": "STUCK",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "correctness": {
+            "value": "not_applicable",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "实在是想不起来了，我们看一下附录。",
+            "clean_text": "实在是想不起来了，我们看一下附录。",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 866,
+            "end_sec": 907,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "STUCK"
+        },
+        {
+          "step_id": "s06",
+          "order": 6,
+          "content": "读到一一对应提示，但认为提示抽象。",
+          "operation": {
+            "value": "ATTEND",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "not_applicable",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "需要和另一类更容易数的路径。建立11对应的关系。这说的有点抽象。",
+            "clean_text": "需要和另一类更容易数的路径。建立11对应的关系。这说的有点抽象。",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 907,
+            "end_sec": 1019,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "ATTEND"
+        },
+        {
+          "step_id": "s07",
+          "order": 7,
+          "content": "按路径始终在上方、接触、越过三种情况分类。",
+          "operation": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "control": {
+            "value": "BRANCH",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.87
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "partially_correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "我们可以把它分为三种情况",
+            "clean_text": "我们可以把它分为三种情况",
+            "signal_refs": [
+              "S3"
+            ],
+            "start_sec": 1019,
+            "end_sec": 1091,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.87,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "BRANCH"
+        },
+        {
+          "step_id": "s08",
+          "order": 8,
+          "content": "尝试计算坏路径再用补集。",
+          "operation": {
+            "value": "PLAN",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.92
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "其他的用补集的思想就可以解决",
+            "clean_text": "其他的用补集的思想就可以解决",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 1091,
+            "end_sec": 1139,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.92,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "PLAN"
+        },
+        {
+          "step_id": "s09",
+          "order": 9,
+          "content": "尝试把横向步插入纵向步序列，但未形成完整计数。",
+          "operation": {
+            "value": "PLAN",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.82
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "uncertain",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "我们现在要在这个里面插入 x0",
+            "clean_text": "我们现在要在这个里面插入 x0",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 1139,
+            "end_sec": 1216,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.82,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "PLAN"
+        },
+        {
+          "step_id": "s10",
+          "order": 10,
+          "content": "明确停止该题。",
+          "operation": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "control": {
+            "value": "ABANDON",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "not_applicable",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "这道题实在想不出来，我们过吧",
+            "clean_text": "这道题实在想不出来，我们过吧",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 1216,
+            "end_sec": 1216,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "ABANDON"
+        }
+      ],
+      "analyst_inferences": [
+        {
+          "content": "附录内容参与了后续思路，因此该 trace 不是无提示独立解答。",
+          "status": "ANALYST_INFERENCE",
+          "confidence": 1
+        }
+      ],
+      "legacy_path_signature": [
         "REPRESENT(lattice-path)",
         "CALCULATE(step-counts)",
         "DERIVE(prefix-constraint)",
@@ -218,194 +970,14 @@
         "PLAN(gap-insertion-attempt)",
         "ABANDON"
       ],
-      "observed_steps": [
-        {
-          "start_sec": 364,
-          "end_sec": 411,
-          "evidence_text": "平面点01？从这里出发",
-          "signal_refs": [
-            "S1"
-          ],
-          "action_type": "REPRESENT",
-          "content": "从 (0,1) 出发画格路图。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.98,
-          "representation": "lattice_path",
-          "result": null,
-          "step_id": "s01",
-          "order": 1,
-          "clean_text": "平面点01？从这里出发"
-        },
-        {
-          "start_sec": 411,
-          "end_sec": 554,
-          "evidence_text": "X 轴走。M.",
-          "signal_refs": [
-            "S2"
-          ],
-          "action_type": "CALCULATE",
-          "content": "识别横向走 m 步、纵向走 n-1 步。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.96,
-          "representation": null,
-          "result": null,
-          "step_id": "s02",
-          "order": 2,
-          "clean_text": "X 轴走。M."
-        },
-        {
-          "start_sec": 554,
-          "end_sec": 619,
-          "evidence_text": "现在相当于就是 y0大于等于 x0",
-          "signal_refs": [
-            "S3"
-          ],
-          "action_type": "DERIVE",
-          "content": "把不接触对角线改写为前缀步数约束。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.9,
-          "representation": null,
-          "result": null,
-          "step_id": "s03",
-          "order": 3,
-          "clean_text": "现在相当于就是 y0大于等于 x0"
-        },
-        {
-          "start_sec": 799,
-          "end_sec": 866,
-          "evidence_text": "我记得好像是有个模型，但是我有点忘记了",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "RECALL",
-          "content": "想起存在标准格路模型，但无法回忆。",
-          "correctness": "not_applicable",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": null,
-          "step_id": "s04",
-          "order": 4,
-          "clean_text": "我记得好像是有个模型，但是我有点忘记了"
-        },
-        {
-          "start_sec": 866,
-          "end_sec": 907,
-          "evidence_text": "实在是想不起来了，我们看一下附录。",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "STUCK",
-          "content": "在无法继续后查看附录提示。",
-          "correctness": "not_applicable",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": null,
-          "step_id": "s05",
-          "order": 5,
-          "clean_text": "实在是想不起来了，我们看一下附录。"
-        },
-        {
-          "start_sec": 907,
-          "end_sec": 1019,
-          "evidence_text": "需要和另一类更容易数的路径。建立11对应的关系。这说的有点抽象。",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "ATTEND",
-          "content": "读到一一对应提示，但认为提示抽象。",
-          "correctness": "not_applicable",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": null,
-          "step_id": "s06",
-          "order": 6,
-          "clean_text": "需要和另一类更容易数的路径。建立11对应的关系。这说的有点抽象。"
-        },
-        {
-          "start_sec": 1019,
-          "end_sec": 1091,
-          "evidence_text": "我们可以把它分为三种情况",
-          "signal_refs": [
-            "S3"
-          ],
-          "action_type": "BRANCH",
-          "content": "按路径始终在上方、接触、越过三种情况分类。",
-          "correctness": "partially_correct",
-          "status": "VERBALIZED",
-          "confidence": 0.87,
-          "representation": null,
-          "result": null,
-          "step_id": "s07",
-          "order": 7,
-          "clean_text": "我们可以把它分为三种情况"
-        },
-        {
-          "start_sec": 1091,
-          "end_sec": 1139,
-          "evidence_text": "其他的用补集的思想就可以解决",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "PLAN",
-          "content": "尝试计算坏路径再用补集。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.92,
-          "representation": null,
-          "result": null,
-          "step_id": "s08",
-          "order": 8,
-          "clean_text": "其他的用补集的思想就可以解决"
-        },
-        {
-          "start_sec": 1139,
-          "end_sec": 1216,
-          "evidence_text": "我们现在要在这个里面插入 x0",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "PLAN",
-          "content": "尝试把横向步插入纵向步序列，但未形成完整计数。",
-          "correctness": "uncertain",
-          "status": "VERBALIZED",
-          "confidence": 0.82,
-          "representation": null,
-          "result": null,
-          "step_id": "s09",
-          "order": 9,
-          "clean_text": "我们现在要在这个里面插入 x0"
-        },
-        {
-          "start_sec": 1216,
-          "end_sec": 1216,
-          "evidence_text": "这道题实在想不出来，我们过吧",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "ABANDON",
-          "content": "明确停止该题。",
-          "correctness": "not_applicable",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": null,
-          "step_id": "s10",
-          "order": 10,
-          "clean_text": "这道题实在想不出来，我们过吧"
-        }
-      ],
-      "analyst_inferences": [
-        {
-          "content": "附录内容参与了后续思路，因此该 trace 不是无提示独立解答。",
-          "status": "ANALYST_INFERENCE",
-          "confidence": 1.0
-        }
+      "operation_path": [
+        "REPRESENT",
+        "COMPUTE",
+        "REASON",
+        "RECALL",
+        "ATTEND",
+        "PLAN",
+        "PLAN"
       ]
     },
     {
@@ -415,12 +987,534 @@
           "S1",
           "S3"
         ],
-        "operation": "ATTEND",
-        "evidence": "七和10是这两个数字会比较特殊",
-        "confidence": 0.98
+        "operation": {
+          "value": "ATTEND",
+          "subtype": null,
+          "status": "OBSERVED",
+          "confidence": 0.98
+        },
+        "control": {
+          "value": null,
+          "subtype": null,
+          "status": "UNKNOWN",
+          "confidence": null
+        },
+        "cognitive_state": {
+          "value": null,
+          "subtype": null,
+          "status": "UNKNOWN",
+          "confidence": null
+        },
+        "evidence": {
+          "text": "七和10是这两个数字会比较特殊",
+          "confidence": 0.98
+        },
+        "legacy_label": "ATTEND"
       },
       "strategy": "residue_algebra_attempts_then_pigeonhole_bins",
-      "path_signature": [
+      "observed_steps": [
+        {
+          "step_id": "s01",
+          "order": 1,
+          "content": "先注意数字7与模10结构。",
+          "operation": {
+            "value": "ATTEND",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.98
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "not_applicable",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "七和10是这两个数字会比较特殊",
+            "clean_text": "七和10是这两个数字会比较特殊",
+            "signal_refs": [
+              "S1",
+              "S3"
+            ],
+            "start_sec": 1216,
+            "end_sec": 1290,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.98,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "ATTEND"
+        },
+        {
+          "step_id": "s02",
+          "order": 2,
+          "content": "尝试用除以10后的余数参数表示各整数。",
+          "operation": {
+            "value": "REPRESENT",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.8
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "partially_correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": "mod_10",
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "设 yi 等于10加 xi",
+            "clean_text": "设 yi 等于10加 xi",
+            "signal_refs": [
+              "S3"
+            ],
+            "start_sec": 1290,
+            "end_sec": 1420,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.8,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "REPRESENT"
+        },
+        {
+          "step_id": "s03",
+          "order": 3,
+          "content": "尝试在余数坐标图中枚举和、差。",
+          "operation": {
+            "value": "REASON",
+            "subtype": "ENUMERATE",
+            "status": "OBSERVED",
+            "confidence": 0.78
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "uncertain",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "理论上这里已经能够枚举了",
+            "clean_text": "理论上这里已经能够枚举了",
+            "signal_refs": [
+              "S2",
+              "S3"
+            ],
+            "start_sec": 1420,
+            "end_sec": 1601,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.78,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "ENUMERATE"
+        },
+        {
+          "step_id": "s04",
+          "order": 4,
+          "content": "因代数枚举复杂而重新开始。",
+          "operation": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "control": {
+            "value": "BACKTRACK",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "not_applicable",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "我感觉好像有点算复杂了。再重新思考一下这个问题。",
+            "clean_text": "我感觉好像有点算复杂了。再重新思考一下这个问题。",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 1735,
+            "end_sec": 1820,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "BACKTRACK"
+        },
+        {
+          "step_id": "s05",
+          "order": 5,
+          "content": "把和、差条件相加，尝试推出余数为5的倍数。",
+          "operation": {
+            "value": "REASON",
+            "subtype": "DERIVE",
+            "status": "OBSERVED",
+            "confidence": 0.81
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "partially_correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "把这两个式子加1加就是2xi 是10的倍数",
+            "clean_text": "把这两个式子加1加就是2xi 是10的倍数",
+            "signal_refs": [
+              "S2",
+              "S3"
+            ],
+            "start_sec": 1820,
+            "end_sec": 1900,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.81,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "DERIVE"
+        },
+        {
+          "step_id": "s06",
+          "order": 6,
+          "content": "检查并否定刚才的推导。",
+          "operation": {
+            "value": "CHECK",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.98
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "not_applicable",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "感觉不太对，再看一下",
+            "clean_text": "感觉不太对，再看一下",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 1890,
+            "end_sec": 1984,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.98,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "CHECK"
+        },
+        {
+          "step_id": "s07",
+          "order": 7,
+          "content": "尝试直接计数和或差为10倍数的余数对。",
+          "operation": {
+            "value": "COMPUTE",
+            "subtype": "CALCULATE",
+            "status": "OBSERVED",
+            "confidence": 0.76
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "uncertain",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "我们直接用这个直接算这个数",
+            "clean_text": "我们直接用这个直接算这个数",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 2161,
+            "end_sec": 2323,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.76,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "CALCULATE"
+        },
+        {
+          "step_id": "s08",
+          "order": 8,
+          "content": "再次回退并改用反证法。",
+          "operation": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "control": {
+            "value": "BACKTRACK",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.99
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "not_applicable",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "现在思路有点乱，我们重新捋一下，我们直接用反证法",
+            "clean_text": "现在思路有点乱，我们重新捋一下，我们直接用反证法",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 2483,
+            "end_sec": 2580,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.99,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "BACKTRACK"
+        },
+        {
+          "step_id": "s09",
+          "order": 9,
+          "content": "反设下先推出七个余数两两不同。",
+          "operation": {
+            "value": "REASON",
+            "subtype": "CLASSIFY",
+            "status": "OBSERVED",
+            "confidence": 0.93
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "他们这个余数肯定都是不相等的",
+            "clean_text": "他们这个余数肯定都是不相等的",
+            "signal_refs": [
+              "S2",
+              "S3"
+            ],
+            "start_sec": 2525,
+            "end_sec": 2645,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.93,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "CLASSIFY"
+        },
+        {
+          "step_id": "s10",
+          "order": 10,
+          "content": "把个位数按相等或和为10的关系分成六组。",
+          "operation": {
+            "value": "REPRESENT",
+            "subtype": null,
+            "status": "OBSERVED",
+            "confidence": 0.97
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": "pigeonhole_bins",
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "六组里面却要选7个，根据鸽巢原理",
+            "clean_text": "六组里面却要选7个，根据鸽巢原理",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 2702,
+            "end_sec": null,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.97,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "REPRESENT"
+        },
+        {
+          "step_id": "s11",
+          "order": 11,
+          "content": "用七个余数进入六组的鸽巢原理完成反证。",
+          "operation": {
+            "value": "RESPOND",
+            "subtype": "ANSWER",
+            "status": "OBSERVED",
+            "confidence": 0.97
+          },
+          "control": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "cognitive_state": {
+            "value": null,
+            "subtype": null,
+            "status": "UNKNOWN",
+            "confidence": null
+          },
+          "correctness": {
+            "value": "correct",
+            "status": "ANNOTATED",
+            "confidence": null
+          },
+          "representation": null,
+          "result": null,
+          "revision": null,
+          "affect": null,
+          "evidence": {
+            "text": "势必会有两个，那么就不成立，所以这道题就得证。",
+            "clean_text": "势必会有两个，那么就不成立，所以这道题就得证。",
+            "signal_refs": [
+              "G"
+            ],
+            "start_sec": 2702,
+            "end_sec": null,
+            "observation_status": "VERBALIZED",
+            "confidence": 0.97,
+            "visual_evidence": null
+          },
+          "legacy_action_type": "ANSWER"
+        }
+      ],
+      "analyst_inferences": [],
+      "legacy_path_signature": [
         "ATTEND(7-and-10)",
         "REPRESENT(residue-parameters)",
         "ENUMERATE(sum-difference-grid)",
@@ -433,211 +1527,18 @@
         "REPRESENT(six-residue-bins)",
         "ANSWER(pigeonhole-contradiction)"
       ],
-      "observed_steps": [
-        {
-          "start_sec": 1216,
-          "end_sec": 1290,
-          "evidence_text": "七和10是这两个数字会比较特殊",
-          "signal_refs": [
-            "S1",
-            "S3"
-          ],
-          "action_type": "ATTEND",
-          "content": "先注意数字7与模10结构。",
-          "correctness": "not_applicable",
-          "status": "VERBALIZED",
-          "confidence": 0.98,
-          "representation": null,
-          "result": null,
-          "step_id": "s01",
-          "order": 1,
-          "clean_text": "七和10是这两个数字会比较特殊"
-        },
-        {
-          "start_sec": 1290,
-          "end_sec": 1420,
-          "evidence_text": "设 yi 等于10加 xi",
-          "signal_refs": [
-            "S3"
-          ],
-          "action_type": "REPRESENT",
-          "content": "尝试用除以10后的余数参数表示各整数。",
-          "correctness": "partially_correct",
-          "status": "VERBALIZED",
-          "confidence": 0.8,
-          "representation": "mod_10",
-          "result": null,
-          "step_id": "s02",
-          "order": 2,
-          "clean_text": "设 yi 等于10加 xi"
-        },
-        {
-          "start_sec": 1420,
-          "end_sec": 1601,
-          "evidence_text": "理论上这里已经能够枚举了",
-          "signal_refs": [
-            "S2",
-            "S3"
-          ],
-          "action_type": "ENUMERATE",
-          "content": "尝试在余数坐标图中枚举和、差。",
-          "correctness": "uncertain",
-          "status": "VERBALIZED",
-          "confidence": 0.78,
-          "representation": null,
-          "result": null,
-          "step_id": "s03",
-          "order": 3,
-          "clean_text": "理论上这里已经能够枚举了"
-        },
-        {
-          "start_sec": 1735,
-          "end_sec": 1820,
-          "evidence_text": "我感觉好像有点算复杂了。再重新思考一下这个问题。",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "BACKTRACK",
-          "content": "因代数枚举复杂而重新开始。",
-          "correctness": "not_applicable",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": null,
-          "step_id": "s04",
-          "order": 4,
-          "clean_text": "我感觉好像有点算复杂了。再重新思考一下这个问题。"
-        },
-        {
-          "start_sec": 1820,
-          "end_sec": 1900,
-          "evidence_text": "把这两个式子加1加就是2xi 是10的倍数",
-          "signal_refs": [
-            "S2",
-            "S3"
-          ],
-          "action_type": "DERIVE",
-          "content": "把和、差条件相加，尝试推出余数为5的倍数。",
-          "correctness": "partially_correct",
-          "status": "VERBALIZED",
-          "confidence": 0.81,
-          "representation": null,
-          "result": null,
-          "step_id": "s05",
-          "order": 5,
-          "clean_text": "把这两个式子加1加就是2xi 是10的倍数"
-        },
-        {
-          "start_sec": 1890,
-          "end_sec": 1984,
-          "evidence_text": "感觉不太对，再看一下",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "CHECK",
-          "content": "检查并否定刚才的推导。",
-          "correctness": "not_applicable",
-          "status": "VERBALIZED",
-          "confidence": 0.98,
-          "representation": null,
-          "result": null,
-          "step_id": "s06",
-          "order": 6,
-          "clean_text": "感觉不太对，再看一下"
-        },
-        {
-          "start_sec": 2161,
-          "end_sec": 2323,
-          "evidence_text": "我们直接用这个直接算这个数",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "CALCULATE",
-          "content": "尝试直接计数和或差为10倍数的余数对。",
-          "correctness": "uncertain",
-          "status": "VERBALIZED",
-          "confidence": 0.76,
-          "representation": null,
-          "result": null,
-          "step_id": "s07",
-          "order": 7,
-          "clean_text": "我们直接用这个直接算这个数"
-        },
-        {
-          "start_sec": 2483,
-          "end_sec": 2580,
-          "evidence_text": "现在思路有点乱，我们重新捋一下，我们直接用反证法",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "BACKTRACK",
-          "content": "再次回退并改用反证法。",
-          "correctness": "not_applicable",
-          "status": "VERBALIZED",
-          "confidence": 0.99,
-          "representation": null,
-          "result": null,
-          "step_id": "s08",
-          "order": 8,
-          "clean_text": "现在思路有点乱，我们重新捋一下，我们直接用反证法"
-        },
-        {
-          "start_sec": 2525,
-          "end_sec": 2645,
-          "evidence_text": "他们这个余数肯定都是不相等的",
-          "signal_refs": [
-            "S2",
-            "S3"
-          ],
-          "action_type": "CLASSIFY",
-          "content": "反设下先推出七个余数两两不同。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.93,
-          "representation": null,
-          "result": null,
-          "step_id": "s09",
-          "order": 9,
-          "clean_text": "他们这个余数肯定都是不相等的"
-        },
-        {
-          "start_sec": 2702,
-          "end_sec": null,
-          "evidence_text": "六组里面却要选7个，根据鸽巢原理",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "REPRESENT",
-          "content": "把个位数按相等或和为10的关系分成六组。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.97,
-          "representation": "pigeonhole_bins",
-          "result": null,
-          "step_id": "s10",
-          "order": 10,
-          "clean_text": "六组里面却要选7个，根据鸽巢原理"
-        },
-        {
-          "start_sec": 2702,
-          "end_sec": null,
-          "evidence_text": "势必会有两个，那么就不成立，所以这道题就得证。",
-          "signal_refs": [
-            "G"
-          ],
-          "action_type": "ANSWER",
-          "content": "用七个余数进入六组的鸽巢原理完成反证。",
-          "correctness": "correct",
-          "status": "VERBALIZED",
-          "confidence": 0.97,
-          "representation": null,
-          "result": null,
-          "step_id": "s11",
-          "order": 11,
-          "clean_text": "势必会有两个，那么就不成立，所以这道题就得证。"
-        }
-      ],
-      "analyst_inferences": []
+      "operation_path": [
+        "ATTEND",
+        "REPRESENT",
+        "REASON",
+        "REASON",
+        "CHECK",
+        "COMPUTE",
+        "REASON",
+        "REPRESENT",
+        "RESPOND"
+      ]
     }
-  ]
+  ],
+  "trace_schema": "multi_axis_student_trace_v2"
 }
