@@ -107,7 +107,7 @@ def normalize(value: str) -> str:
 def load_source_text(repo: Path, trace: dict[str, Any]) -> str:
     if trace["participant_id"] == "P05":
         return (repo / trace["source_relative_path"]).read_text(encoding="utf-8")
-    transcript = repo / "音频转写_待结构化" / trace["participant_id"] / "sessions" / trace["session_id"] / "transcript.txt"
+    transcript = repo / "data" / "interim" / "audio_transcripts" / trace["participant_id"] / "sessions" / trace["session_id"] / "transcript.txt"
     return transcript.read_text(encoding="utf-8")
 
 
@@ -222,8 +222,8 @@ def build_variants(traces: list[dict[str, Any]], question_groups: list[dict[str,
 
 def build_traces() -> list[dict[str, Any]]:
     traces: list[dict[str, Any]] = []
-    p05a = "学生素材/1/A组/原文.md"
-    p05b = "学生素材/1/B组/原文.md"
+    p05a = "data/raw/student_materials/1/A组/原文.md"
+    p05b = "data/raw/student_materials/1/B组/原文.md"
     p05type = "user_provided_timestamped_transcript"
     machine = MACHINE_SOURCE
 
@@ -312,7 +312,7 @@ def build_traces() -> list[dict[str, Any]]:
         [inference("原文没有证明 (k,2k) 构成互不重叠的 N 个鸽巢，因此最终论证的正确性需另行数学复核。", 0.98)], "completed_with_logical_gap"))
 
     # P06: B group, long video-derived audio.
-    p06src = "学生素材/2/RPReplay_Final1790170222.MP4"
+    p06src = "data/raw/student_materials/2/RPReplay_Final1790170222.MP4"
     p06sid = "P06__2__RPReplay_Final1790170222"
     traces.append(make_trace("P06", "COMB_B1", 1, 0.72,
         {"signal_refs": ["G1"], "operation": "REPRESENT", "evidence": "那长方形不就是四个,四个坐标,四个坐标来决定这个长方形吗?", "confidence": 0.91},
@@ -351,7 +351,7 @@ def build_traces() -> list[dict[str, Any]]:
         [inference("902–1034秒包含多处 review_required，奇数部分分解需要优先听音复核。", 1.0)], "completed_pending_audio_review"))
 
     # P07: one long audio containing both A and B groups; highly noisy ASR.
-    p07src = "学生素材/3/20260923-180329-b45f3662/audio.m4a"
+    p07src = "data/raw/student_materials/3/20260923-180329-b45f3662/audio.m4a"
     p07sid = "P07__20260923-180329-b45f3662__audio"
     traces.append(make_trace("P07", "COMB_A1", 1, 0.51,
         {"signal_refs": ["C2"], "operation": "REPRESENT", "evidence": "M 女生形成一个整体,那你把 M 女生看成是一个", "confidence": 0.68},
@@ -413,7 +413,7 @@ def build_traces() -> list[dict[str, Any]]:
         [inference("B3没有足够语音证据确认学生形成了标准奇数部分分类。", 1.0)], "incomplete"))
 
     # P08: A group.
-    p08src = "学生素材/4/873b577486d64746e50992d1b86ac88d.mp4"
+    p08src = "data/raw/student_materials/4/873b577486d64746e50992d1b86ac88d.mp4"
     p08sid = "P08__4__873b577486d64746e50992d1b86ac88d"
     traces.append(make_trace("P08", "COMB_A1", 1, 0.57,
         {"signal_refs": ["C1"], "operation": "ATTEND", "evidence": "任何两个男生都不相邻。", "confidence": 0.80},
@@ -466,7 +466,7 @@ def build_traces() -> list[dict[str, Any]]:
             step(445, 461, "男生A和女生B不相邻。", ["C3"], "ATTEND", "转入指定A、B不相邻的小问；第二小问未从ASR恢复。", "not_applicable", 0.85, "ATTEND(C3)"),
             step(537, 556.376, "M-N-2它进行全排列。", ["C3"], "PLAN", "尝试先排列其余m+n-2人，再把A、B插入空位。", "uncertain", 0.62, "PLAN(arrange-rest-then-insert)"),
             step(556.376, 584.676, "只要是不相连,它基本上都插空站。", ["C3"], "CALCULATE", "用插空处理A、B不相邻，但最终乘积公式无法可靠恢复。", "uncertain", 0.55, "CALCULATE(two-person-gap-formula)", result="[ASR_UNCERTAIN: A/B insertion formula]")
-        ], "学生素材/5/A1.m4a", "P09__5__A1", p09type,
+        ], "data/raw/student_materials/5/A1.m4a", "P09__5__A1", p09type,
         [inference("A1第二小问在ASR中没有可靠语义内容，未补写。", 1.0)], "partial"))
 
     traces.append(make_trace("P09", "COMB_A2", 2, 0.73,
@@ -480,7 +480,7 @@ def build_traces() -> list[dict[str, Any]]:
             step(473.8, 496, "横杠书冠它本身是没有什么要求的嘛", ["G"], "CALCULATE", "尝试写无约束路径组合数，但ASR公式不清。", "partially_correct", 0.56, "CALCULATE(total-paths-uncertain)", result="[ASR_UNCERTAIN: total path combination indices]"),
             step(496, 517, "能不能把第一次碰到和另一类容易数的路径建立一一对应?", ["G"], "HESITATE", "读到首次接触反射提示，但询问其含义。", "not_applicable", 0.93, "HESITATE(first-contact-bijection)"),
             step(517, 550, "什么叫第一次碰到X等于Y的不合法路径和另一类更容易数的路径?", ["G"], "ABANDON", "未观察到建立映射或最终答案。", "not_applicable", 0.88, "ABANDON(no-mapping)")
-        ], "学生素材/5/A2.m4a", "P09__5__A2", p09type,
+        ], "data/raw/student_materials/5/A2.m4a", "P09__5__A2", p09type,
         [inference("提示在432秒后直接影响路径，不能把后续视为盲解。", 1.0)], "no_answer_observed"))
 
     traces.append(make_trace("P09", "COMB_A3", 3, 0.67,
@@ -493,7 +493,7 @@ def build_traces() -> list[dict[str, Any]]:
             step(429, 460, "证明反正法是否有用?", ["G"], "PLAN", "尝试反设任意一对的和、差都不能被10整除。", "partially_correct", 0.72, "PLAN(contradiction)"),
             step(537, 583.3, "任意两个都不能相同,也不能互补。", ["S2", "S3"], "CLASSIFY", "反设下要求七个个位数互异且无互补对。", "correct", 0.66, "CLASSIFY(distinct-noncomplementary-digits)"),
             step(583.3, 601.6, "第二点,既然它都不相同,就必定要选0-9当中的7个不同的末位数。", ["S1", "G"], "DERIVE", "由余数互异推出需选七个不同末位数；之后未观察到鸽巢分组或最终证明。", "partially_correct", 0.58, "DERIVE(distinct-last-digits)")
-        ], "学生素材/5/A3.m4a", "P09__5__A3", p09type,
+        ], "data/raw/student_materials/5/A3.m4a", "P09__5__A3", p09type,
         [inference("录音末尾未出现可恢复的六类余数分组，不能补成标准答案。", 1.0)], "incomplete"))
 
     return traces
@@ -505,10 +505,10 @@ def main() -> int:
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     repo = args.repo_root.resolve()
-    output = (args.output or (repo / "第三周_音频结构化数据")).resolve()
+    output = (args.output or (repo / "data" / "exports" / "week3_combinatorics")).resolve()
     output.mkdir(parents=True, exist_ok=True)
 
-    metadata_source = repo / "第二周排列组合结构化数据" / "question_metadata_combinatorics.json"
+    metadata_source = repo / "configs" / "question_metadata_combinatorics.json"
     metadata = json.loads(metadata_source.read_text(encoding="utf-8"))
     traces = build_traces()
 

@@ -32,14 +32,14 @@ from typing import Any, Iterable
 PARTICIPANT_MAP = {"1": "P05", "2": "P06", "3": "P07", "4": "P08", "5": "P09"}
 VIDEO_EXTS = {".mp4", ".mov", ".mkv", ".webm", ".mpeg", ".mpg"}
 
-CORE = Path("第三周_音频结构化数据/participant_traces_combinatorics.jsonl")
-ANNOTATIONS = Path("第三周_音频结构化数据/reviewed_trace_annotations_combinatorics.json")
-VARIANTS = Path("第三周_音频结构化数据/question_trace_variants_combinatorics.json")
-METADATA = Path("第三周_音频结构化数据/question_metadata_combinatorics.json")
-PRED_DIR = Path("第三周_音频结构化数据/prediction_inputs")
-MANIFEST = Path("第三周_音频结构化数据/transfer_manifest.json")
-REVIEW_LOG = Path("第三周_音频结构化数据/VIDEO_REVIEW_LOG.jsonl")
-BACKUP_DIR = Path("第三周_音频结构化数据/backups")
+CORE = Path("data/exports/week3_combinatorics/participant_traces_combinatorics.jsonl")
+ANNOTATIONS = Path("data/exports/week3_combinatorics/reviewed_trace_annotations_combinatorics.json")
+VARIANTS = Path("data/exports/week3_combinatorics/question_trace_variants_combinatorics.json")
+METADATA = Path("data/exports/week3_combinatorics/question_metadata_combinatorics.json")
+PRED_DIR = Path("data/exports/week3_combinatorics/prediction_inputs")
+MANIFEST = Path("data/exports/week3_combinatorics/transfer_manifest.json")
+REVIEW_LOG = Path("data/exports/week3_combinatorics/VIDEO_REVIEW_LOG.jsonl")
+BACKUP_DIR = Path("data/exports/week3_combinatorics/backups")
 TMP_ROOT = Path(".video_review_tmp")
 
 ALLOWED_STATUS = {"VERBALIZED", "VISUALLY_OBSERVED", "MULTIMODAL_CONFIRMED"}
@@ -81,7 +81,7 @@ def infer_group(path: Path) -> str | None:
     return None
 
 def discover_videos(repo: Path) -> list[dict[str, Any]]:
-    root = repo / "学生素材"
+    root = repo / "data" / "raw" / "student_materials"
     out = []
     for student_dir in sorted((p for p in root.iterdir() if p.is_dir()), key=lambda p: p.name):
         student = student_dir.name
@@ -439,7 +439,7 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 def sync_manifest(repo: Path, traces: list[dict[str, Any]]) -> None:
-    out=repo/"第三周_音频结构化数据"
+    out=repo/"data/exports/week3_combinatorics"
     files=sorted(p for p in out.rglob("*") if p.is_file()
                  and p.name!="transfer_manifest.json" and "backups" not in p.parts)
     pred=list((repo/PRED_DIR).glob("*_from_A.json"))
@@ -565,7 +565,7 @@ def main() -> int:
     f=sub.add_parser("finalize"); f.add_argument("--video-id",required=True)
     c=sub.add_parser("cleanup"); c.add_argument("--video-id"); c.add_argument("--all",action="store_true")
     a=ap.parse_args(); repo=a.repo_root.resolve()
-    if not (repo/"学生素材").exists():
+    if not (repo/"data/raw/student_materials").exists():
         raise RuntimeError("Run from data_process repo root or use --repo-root")
     if a.cmd=="list": return cmd_list(repo)
     if a.cmd=="prepare": return cmd_prepare(repo,a.video_id,a.interval,a.max_width)

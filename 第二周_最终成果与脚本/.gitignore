@@ -1,7 +1,0 @@
-/data/raw/
-/data/interim/
-/logs/
-/收集数据结果/
-/收集数据结果.zip
-__pycache__/
-*.py[cod]
