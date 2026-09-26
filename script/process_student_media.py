@@ -4,10 +4,10 @@
 Audio-first preprocessing for f18192819/data_process.
 
 Default behavior:
-- DO NOT process 学生素材/1 media. Student 1 already has timestamped transcripts:
-  学生素材/1/A组/原文.md
-  学生素材/1/B组/原文.md
-- Process 学生素材/2, /3, /4, /5.
+- DO NOT process data/raw/student_materials/1 media. Student 1 already has timestamped transcripts:
+  data/raw/student_materials/1/A组/原文.md
+  data/raw/student_materials/1/B组/原文.md
+- Process data/raw/student_materials/2, /3, /4, /5.
 - For student 3, process audio.m4a ONLY. Ignore video-front.mp4 and ink.points.bin for now.
 - For students 2 and 4, extract audio from MP4.
 - For student 5, transcribe A1.m4a/A2.m4a/A3.m4a directly.
@@ -128,7 +128,7 @@ def discover_media(
     students: list[str],
     participant_map: dict[str, str],
 ) -> list[SourceRecord]:
-    root = repo_root / "学生素材"
+    root = repo_root / "data" / "raw" / "student_materials"
     records: list[SourceRecord] = []
 
     for student in students:
@@ -408,7 +408,7 @@ def process_one(
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo-root", type=Path, default=Path("."))
-    parser.add_argument("--output-root", type=Path, default=Path("音频转写_待结构化"))
+    parser.add_argument("--output-root", type=Path, default=Path("data/interim/audio_transcripts"))
     parser.add_argument("--students", nargs="+", default=DEFAULT_STUDENTS)
     parser.add_argument("--participant-map", default=None)
     parser.add_argument("--model", default="whisper-large-v3")
@@ -434,7 +434,7 @@ def main() -> int:
 
     output_root.mkdir(parents=True, exist_ok=True)
     write_json(output_root / "media_inventory.json", {
-        "note": "Student 1 media intentionally skipped; use 学生素材/1/A组/原文.md and B组/原文.md.",
+        "note": "Student 1 media intentionally skipped; use data/raw/student_materials/1/A组/原文.md and B组/原文.md.",
         "students_processed_by_asr": args.students,
         "participant_map": participant_map,
         "records": [asdict(r) for r in records],

@@ -17,18 +17,18 @@ def main() -> int:
     repo = Path(__file__).resolve().parent.parent
     python = sys.executable
     run([
-        python, "scripts/transcribe_groq_batch.py",
+        python, "script/transcribe_groq_batch.py",
         "--input-dir", "收集数据结果",
         "--output-dir", "data/interim/transcripts_raw",
     ], repo)
     run([
-        python, "scripts/transcribe_question_clips_groq.py",
+        python, "script/transcribe_question_clips_groq.py",
         "--input-dir", "收集数据结果",
         "--clip-dir", "data/interim/asr_clips",
         "--output-dir", "data/interim/transcripts_raw_resegmented",
     ], repo)
     run([
-        python, "scripts/build_student_traces.py",
+        python, "script/build_student_traces.py",
         "--input", "收集数据结果.zip",
         "--question-bank", "configs/question_bank_selected.json",
         "--output", "data/processed/trace_pilot",

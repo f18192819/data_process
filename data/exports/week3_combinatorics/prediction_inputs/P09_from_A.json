@@ -1,0 +1,523 @@
+{
+  "schema_version": "1.0",
+  "participant_id": "P09",
+  "input_group": "COMB_A",
+  "target_group": "COMB_B",
+  "blindness_note": "This file contains no current-participant B transcript, B trace, or B outcome.",
+  "a_group_observations": [
+    {
+      "question_id": "COMB_A1",
+      "first_attention": {
+        "signal_refs": [
+          "C1"
+        ],
+        "operation": "REPRESENT",
+        "evidence": "男生用方块表示,女生用圆圈表示。",
+        "confidence": 0.86
+      },
+      "strategy": "small_example_then_gap_insertion_and_two_person_insertion",
+      "path_signature": [
+        "REPRESENT(symbols)",
+        "PLAN(small-example)",
+        "CHECK(C-vs-A)",
+        "PLAN(gap-insertion)",
+        "CORRECT(n-factorial)",
+        "ATTEND(C3)",
+        "PLAN(arrange-rest-then-insert)",
+        "CALCULATE(two-person-gap-formula)"
+      ],
+      "observed_steps": [
+        {
+          "start_sec": 40.04,
+          "end_sec": 48.04,
+          "evidence_text": "男生用方块表示,女生用圆圈表示。",
+          "signal_refs": [
+            "S1",
+            "C1"
+          ],
+          "action_type": "REPRESENT",
+          "content": "用方块和圆圈表示男女生。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.86,
+          "representation": null,
+          "result": null,
+          "step_id": "s01",
+          "order": 1,
+          "clean_text": "男生用方块表示,女生用圆圈表示。"
+        },
+        {
+          "start_sec": 48.04,
+          "end_sec": 90.04,
+          "evidence_text": "先画一个图,进行一个尝试。",
+          "signal_refs": [
+            "C1"
+          ],
+          "action_type": "PLAN",
+          "content": "先取具体m、n画图找规律。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.9,
+          "representation": null,
+          "result": null,
+          "step_id": "s02",
+          "order": 2,
+          "clean_text": "先画一个图,进行一个尝试。"
+        },
+        {
+          "start_sec": 109.54,
+          "end_sec": 158.32,
+          "evidence_text": "四个空都可以,那就是C42,从,不对,A42。",
+          "signal_refs": [
+            "C1"
+          ],
+          "action_type": "CHECK",
+          "content": "在n=3、m=2例子中纠结应使用组合还是排列，随后确认男生不同。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.78,
+          "representation": null,
+          "result": null,
+          "step_id": "s03",
+          "order": 3,
+          "clean_text": "四个空都可以,那就是C42,从,不对,A42。"
+        },
+        {
+          "start_sec": 194.32,
+          "end_sec": 224.12,
+          "evidence_text": "我先排女生,然后呢,因为男生不能相邻",
+          "signal_refs": [
+            "C1"
+          ],
+          "action_type": "PLAN",
+          "content": "识别插空法：先排女生，再把男生放入空位。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.9,
+          "representation": null,
+          "result": null,
+          "step_id": "s04",
+          "order": 4,
+          "clean_text": "我先排女生,然后呢,因为男生不能相邻"
+        },
+        {
+          "start_sec": 257,
+          "end_sec": 294.5,
+          "evidence_text": "女生先进行全排列,就是m的,不是,n的阶层",
+          "signal_refs": [
+            "C1"
+          ],
+          "action_type": "CORRECT",
+          "content": "自我修正女生全排列为n!，再尝试写男生插空因子。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.73,
+          "representation": null,
+          "result": "[ASR_UNCERTAIN: remaining gap factor]",
+          "step_id": "s05",
+          "order": 5,
+          "clean_text": "女生先进行全排列,就是m的,不是,n的阶层"
+        },
+        {
+          "start_sec": 445,
+          "end_sec": 461,
+          "evidence_text": "男生A和女生B不相邻。",
+          "signal_refs": [
+            "C3"
+          ],
+          "action_type": "ATTEND",
+          "content": "转入指定A、B不相邻的小问；第二小问未从ASR恢复。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.85,
+          "representation": null,
+          "result": null,
+          "step_id": "s06",
+          "order": 6,
+          "clean_text": "男生A和女生B不相邻。"
+        },
+        {
+          "start_sec": 537,
+          "end_sec": 556.376,
+          "evidence_text": "M-N-2它进行全排列。",
+          "signal_refs": [
+            "C3"
+          ],
+          "action_type": "PLAN",
+          "content": "尝试先排列其余m+n-2人，再把A、B插入空位。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.62,
+          "representation": null,
+          "result": null,
+          "step_id": "s07",
+          "order": 7,
+          "clean_text": "M-N-2它进行全排列。"
+        },
+        {
+          "start_sec": 556.376,
+          "end_sec": 584.676,
+          "evidence_text": "只要是不相连,它基本上都插空站。",
+          "signal_refs": [
+            "C3"
+          ],
+          "action_type": "CALCULATE",
+          "content": "用插空处理A、B不相邻，但最终乘积公式无法可靠恢复。",
+          "correctness": "uncertain",
+          "status": "VERBALIZED",
+          "confidence": 0.55,
+          "representation": null,
+          "result": "[ASR_UNCERTAIN: A/B insertion formula]",
+          "step_id": "s08",
+          "order": 8,
+          "clean_text": "只要是不相连,它基本上都插空站。"
+        }
+      ],
+      "analyst_inferences": [
+        {
+          "content": "A1第二小问在ASR中没有可靠语义内容，未补写。",
+          "status": "ANALYST_INFERENCE",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "question_id": "COMB_A2",
+      "first_attention": {
+        "signal_refs": [
+          "S2",
+          "S3"
+        ],
+        "operation": "RECALL",
+        "evidence": "如果要是没有不接触直线X等于Y的这个条件的话",
+        "confidence": 0.82
+      },
+      "strategy": "unconstrained_path_model_then_hint_stuck",
+      "path_signature": [
+        "RECALL(unconstrained-path-count)",
+        "ATTEND(diagonal-constraint)",
+        "PLAN(small-example)",
+        "STUCK(read-hint)",
+        "ATTEND(hint-ignore-constraint)",
+        "CALCULATE(total-paths-uncertain)",
+        "HESITATE(first-contact-bijection)",
+        "ABANDON(no-mapping)"
+      ],
+      "observed_steps": [
+        {
+          "start_sec": 26.3,
+          "end_sec": 47.64,
+          "evidence_text": "如果要是没有不接触直线X等于Y的这个条件的话",
+          "signal_refs": [
+            "S2",
+            "S3"
+          ],
+          "action_type": "RECALL",
+          "content": "先想到忽略对角线限制时是典型步序排列。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.82,
+          "representation": null,
+          "result": null,
+          "step_id": "s01",
+          "order": 1,
+          "clean_text": "如果要是没有不接触直线X等于Y的这个条件的话"
+        },
+        {
+          "start_sec": 47.64,
+          "end_sec": 68.64,
+          "evidence_text": "我发现这块多了一个要求,就是不接触直线。",
+          "signal_refs": [
+            "S3"
+          ],
+          "action_type": "ATTEND",
+          "content": "识别困难来自不能接触或穿过x=y。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.94,
+          "representation": null,
+          "result": null,
+          "step_id": "s02",
+          "order": 2,
+          "clean_text": "我发现这块多了一个要求,就是不接触直线。"
+        },
+        {
+          "start_sec": 68.64,
+          "end_sec": 93.64,
+          "evidence_text": "Mn 先作为例子,假设 m 等于几,n 等于几",
+          "signal_refs": [
+            "S1"
+          ],
+          "action_type": "PLAN",
+          "content": "画网格并尝试具体m、n寻找规律。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.7,
+          "representation": null,
+          "result": null,
+          "step_id": "s03",
+          "order": 3,
+          "clean_text": "Mn 先作为例子,假设 m 等于几,n 等于几"
+        },
+        {
+          "start_sec": 415,
+          "end_sec": 424.6,
+          "evidence_text": "其实我有点没有思路了。",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "STUCK",
+          "content": "明确表示没有思路并决定查看提示。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.99,
+          "representation": null,
+          "result": null,
+          "step_id": "s04",
+          "order": 4,
+          "clean_text": "其实我有点没有思路了。"
+        },
+        {
+          "start_sec": 432.44,
+          "end_sec": 443.8,
+          "evidence_text": "可以先忽略X等于Y这个限制。",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "ATTEND",
+          "content": "读取先计算无约束路径的提示。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.95,
+          "representation": null,
+          "result": null,
+          "step_id": "s05",
+          "order": 5,
+          "clean_text": "可以先忽略X等于Y这个限制。"
+        },
+        {
+          "start_sec": 473.8,
+          "end_sec": 496,
+          "evidence_text": "横杠书冠它本身是没有什么要求的嘛",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "CALCULATE",
+          "content": "尝试写无约束路径组合数，但ASR公式不清。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.56,
+          "representation": null,
+          "result": "[ASR_UNCERTAIN: total path combination indices]",
+          "step_id": "s06",
+          "order": 6,
+          "clean_text": "横杠书冠它本身是没有什么要求的嘛"
+        },
+        {
+          "start_sec": 496,
+          "end_sec": 517,
+          "evidence_text": "能不能把第一次碰到和另一类容易数的路径建立一一对应?",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "HESITATE",
+          "content": "读到首次接触反射提示，但询问其含义。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.93,
+          "representation": null,
+          "result": null,
+          "step_id": "s07",
+          "order": 7,
+          "clean_text": "能不能把第一次碰到和另一类容易数的路径建立一一对应?"
+        },
+        {
+          "start_sec": 517,
+          "end_sec": 550,
+          "evidence_text": "什么叫第一次碰到X等于Y的不合法路径和另一类更容易数的路径?",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "ABANDON",
+          "content": "未观察到建立映射或最终答案。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.88,
+          "representation": null,
+          "result": null,
+          "step_id": "s08",
+          "order": 8,
+          "clean_text": "什么叫第一次碰到X等于Y的不合法路径和另一类更容易数的路径?"
+        }
+      ],
+      "analyst_inferences": [
+        {
+          "content": "提示在432秒后直接影响路径，不能把后续视为盲解。",
+          "status": "ANALYST_INFERENCE",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "question_id": "COMB_A3",
+      "first_attention": {
+        "signal_refs": [
+          "S2",
+          "S3"
+        ],
+        "operation": "REPRESENT",
+        "evidence": "A-b 模10等于0?",
+        "confidence": 0.62
+      },
+      "strategy": "equation_attempt_then_last_digit_contradiction",
+      "path_signature": [
+        "REPRESENT(mod-equations)",
+        "HESITATE(formula-forgotten)",
+        "ATTEND(last-digit-relation)",
+        "DERIVE(equal-or-complementary)",
+        "PLAN(contradiction)",
+        "CLASSIFY(distinct-noncomplementary-digits)",
+        "DERIVE(distinct-last-digits)"
+      ],
+      "observed_steps": [
+        {
+          "start_sec": 145,
+          "end_sec": 183,
+          "evidence_text": "A-b 模10等于0?",
+          "signal_refs": [
+            "S2",
+            "S3"
+          ],
+          "action_type": "REPRESENT",
+          "content": "先把整除条件写成模10同余或10的倍数方程。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.62,
+          "representation": null,
+          "result": null,
+          "step_id": "s01",
+          "order": 1,
+          "clean_text": "A-b 模10等于0?"
+        },
+        {
+          "start_sec": 265,
+          "end_sec": 273,
+          "evidence_text": "他那个公式我忘了。我想一想啊。",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "HESITATE",
+          "content": "忘记所需公式并停顿。",
+          "correctness": "not_applicable",
+          "status": "VERBALIZED",
+          "confidence": 0.95,
+          "representation": null,
+          "result": null,
+          "step_id": "s02",
+          "order": 2,
+          "clean_text": "他那个公式我忘了。我想一想啊。"
+        },
+        {
+          "start_sec": 281,
+          "end_sec": 297,
+          "evidence_text": "各位数之间有什么关系?哦!",
+          "signal_refs": [
+            "S3"
+          ],
+          "action_type": "ATTEND",
+          "content": "转而关注个位数关系。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.87,
+          "representation": null,
+          "result": null,
+          "step_id": "s03",
+          "order": 3,
+          "clean_text": "各位数之间有什么关系?哦!"
+        },
+        {
+          "start_sec": 338,
+          "end_sec": 352,
+          "evidence_text": "我知道他们两个是相等或是互补了,然后呢?",
+          "signal_refs": [
+            "S2",
+            "S3"
+          ],
+          "action_type": "DERIVE",
+          "content": "识别两数个位相等或互补，但不知道如何继续。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.9,
+          "representation": null,
+          "result": null,
+          "step_id": "s04",
+          "order": 4,
+          "clean_text": "我知道他们两个是相等或是互补了,然后呢?"
+        },
+        {
+          "start_sec": 429,
+          "end_sec": 460,
+          "evidence_text": "证明反正法是否有用?",
+          "signal_refs": [
+            "G"
+          ],
+          "action_type": "PLAN",
+          "content": "尝试反设任意一对的和、差都不能被10整除。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.72,
+          "representation": null,
+          "result": null,
+          "step_id": "s05",
+          "order": 5,
+          "clean_text": "证明反正法是否有用?"
+        },
+        {
+          "start_sec": 537,
+          "end_sec": 583.3,
+          "evidence_text": "任意两个都不能相同,也不能互补。",
+          "signal_refs": [
+            "S2",
+            "S3"
+          ],
+          "action_type": "CLASSIFY",
+          "content": "反设下要求七个个位数互异且无互补对。",
+          "correctness": "correct",
+          "status": "VERBALIZED",
+          "confidence": 0.66,
+          "representation": null,
+          "result": null,
+          "step_id": "s06",
+          "order": 6,
+          "clean_text": "任意两个都不能相同,也不能互补。"
+        },
+        {
+          "start_sec": 583.3,
+          "end_sec": 601.6,
+          "evidence_text": "第二点,既然它都不相同,就必定要选0-9当中的7个不同的末位数。",
+          "signal_refs": [
+            "S1",
+            "G"
+          ],
+          "action_type": "DERIVE",
+          "content": "由余数互异推出需选七个不同末位数；之后未观察到鸽巢分组或最终证明。",
+          "correctness": "partially_correct",
+          "status": "VERBALIZED",
+          "confidence": 0.58,
+          "representation": null,
+          "result": null,
+          "step_id": "s07",
+          "order": 7,
+          "clean_text": "第二点,既然它都不相同,就必定要选0-9当中的7个不同的末位数。"
+        }
+      ],
+      "analyst_inferences": [
+        {
+          "content": "录音末尾未出现可恢复的六类余数分组，不能补成标准答案。",
+          "status": "ANALYST_INFERENCE",
+          "confidence": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "scripts" / "build_student_traces.py"
+SCRIPT = ROOT / "script" / "build_student_traces.py"
 SPEC = importlib.util.spec_from_file_location("build_student_traces", SCRIPT)
 MODULE = importlib.util.module_from_spec(SPEC)
 assert SPEC.loader is not None
@@ -139,7 +139,7 @@ class TracePipelineTests(unittest.TestCase):
         self.assertIn("P06", derived)
 
     def test_question_report_has_participant_index(self):
-        report = (ROOT / "reports" / "by_question_trace_report.md").read_text(encoding="utf-8")
+        report = (ROOT / "data" / "reports" / "week2" / "by_question_trace_report.md").read_text(encoding="utf-8")
         self.assertIn("## 按被测者索引", report)
         self.assertIn("**P01**：[COMB_A1](#comb_a1), [COMB_A2](#comb_a2), [COMB_A3](#comb_a3)", report)
 

@@ -614,7 +614,7 @@ def main() -> int:
     annotations_path = (repo / args.annotations) if not args.annotations.is_absolute() else args.annotations
     output_dir = (repo / args.output) if not args.output.is_absolute() else args.output
     output_dir.mkdir(parents=True, exist_ok=True)
-    reports = repo / "reports"
+    reports = repo / "data" / "reports" / "week2"
     reports.mkdir(parents=True, exist_ok=True)
 
     inventory = audit_sources(repo, source_dir, source_zip)
@@ -645,7 +645,7 @@ def main() -> int:
             manual_rows.append({
                 "participant_id": participant_id, "question_slot": "", "question_id": "UNKNOWN",
                 "issue_type": "ASR_UNCERTAIN", "evidence": "No raw transcript exists for the participant audio.",
-                "suggested_action": "Set GROQ_API_KEY and run scripts/transcribe_groq_batch.py, then review the transcript against audio.",
+                "suggested_action": "Set GROQ_API_KEY and run script/transcribe_groq_batch.py, then review the transcript against audio.",
                 "priority": "critical",
             })
             manual_rows.append({
@@ -831,11 +831,11 @@ def main() -> int:
         "10. 当前样本支持一个受限描述：P01/P02 与 P05/P06 分别在相同题目上出现了可观察的路径差异；样本不足以外推这些差异的总体分布或穷尽题目解法。", "",
         "## Primary output", "", "- `reports/by_question_trace_report.md`", "- `reports/trace_granularity_audit.md`", "",
         "## Reproduce", "", "```powershell",
-        "python scripts/run_full_pipeline.py",
+        "python script/run_full_pipeline.py",
         "# Or run each stage separately:",
-        "python scripts/transcribe_groq_batch.py --input-dir '收集数据结果' --output-dir 'data/interim/transcripts_raw'",
-        "python scripts/transcribe_question_clips_groq.py --input-dir '收集数据结果' --clip-dir 'data/interim/asr_clips' --output-dir 'data/interim/transcripts_raw_resegmented'",
-        "python scripts/build_student_traces.py --input '收集数据结果.zip' --question-bank 'configs/question_bank_selected.json' --output 'data/processed/trace_pilot'",
+        "python script/transcribe_groq_batch.py --input-dir '收集数据结果' --output-dir 'data/interim/transcripts_raw'",
+        "python script/transcribe_question_clips_groq.py --input-dir '收集数据结果' --clip-dir 'data/interim/asr_clips' --output-dir 'data/interim/transcripts_raw_resegmented'",
+        "python script/build_student_traces.py --input '收集数据结果.zip' --question-bank 'configs/question_bank_selected.json' --output 'data/processed/trace_pilot'",
         "python -m unittest discover -s tests -v", "```", "",
         "The transcription command requires `GROQ_API_KEY` in the process environment. No key is read from files or written to outputs.", "",
     ]

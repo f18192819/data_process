@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "note": "Question metadata only; answer keys are intentionally excluded.",
+  "groups": [
+    {
+      "group_id": "COMB_A",
+      "questions": [
+        {
+          "question_id": "COMB_A1",
+          "title": "排列约束 / 分类与补集",
+          "canonical_text": "m 个男生和 n 个女生排成一行：(1)男生互不相邻；(2)n 个女生形成整体；(3)指定男A与女B不相邻。求方案数。",
+          "source": "Homework 1, 1.3",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "m 个男生、n 个女生排一行"
+            },
+            {
+              "signal_id": "C1",
+              "text": "男生互不相邻"
+            },
+            {
+              "signal_id": "C2",
+              "text": "女生形成整体"
+            },
+            {
+              "signal_id": "C3",
+              "text": "指定 A,B 不相邻"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_A2",
+          "title": "格路 / 反射模型",
+          "canonical_text": "从 (0,1) 到 (m,n), m<n，每步向右或向上一个单位，求不接触 x=y 的格路数（接触含穿过）。",
+          "source": "2025秋-C1-3_PC.pdf 格路例题",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "起点(0,1)，终点(m,n)，m<n"
+            },
+            {
+              "signal_id": "S2",
+              "text": "只能向右/向上"
+            },
+            {
+              "signal_id": "S3",
+              "text": "不能接触 x=y"
+            },
+            {
+              "signal_id": "G",
+              "text": "计数"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_A3",
+          "title": "鸽巢 / 余数配对",
+          "canonical_text": "7 个互不相同正整数，证明存在 a,b，使 a+b 或 a-b 被10整除。",
+          "source": "Homework 2, 2.1",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "7 个互不相同正整数"
+            },
+            {
+              "signal_id": "S2",
+              "text": "a+b 或 a-b"
+            },
+            {
+              "signal_id": "S3",
+              "text": "被10整除"
+            },
+            {
+              "signal_id": "G",
+              "text": "证明必存在"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "COMB_B",
+      "questions": [
+        {
+          "question_id": "COMB_B1",
+          "title": "格点 / 长方形与正方形",
+          "canonical_text": "A={(a,b):a,b∈Z,0≤a≤9,0≤b≤7}。(1)轴平行长方形数；(2)正方形数。",
+          "source": "Homework 1, 1.4",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "10 个横坐标、8 个纵坐标的格点集"
+            },
+            {
+              "signal_id": "G1",
+              "text": "数轴平行长方形"
+            },
+            {
+              "signal_id": "G2",
+              "text": "数正方形"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_B2",
+          "title": "进站方案 / 多种编码",
+          "canonical_text": "车站有6个入口，每个入口每次只能进1人，9个不同的人进站，共多少种不同方案？同一入口内进入顺序也属于方案。",
+          "source": "2025秋-C1-3_PC.pdf 排列与组合例题",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "6 个入口"
+            },
+            {
+              "signal_id": "S2",
+              "text": "9 个不同的人"
+            },
+            {
+              "signal_id": "S3",
+              "text": "同一入口有先后顺序"
+            },
+            {
+              "signal_id": "G",
+              "text": "计数"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_B3",
+          "title": "鸽巢 / 规范化奇数部分",
+          "canonical_text": "从1到2n中任取n+1个数，证明至少有一对其中一个是另一个的倍数。",
+          "source": "2025秋-C2-0_pigeon-class.pdf",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "从1..2n取n+1个"
+            },
+            {
+              "signal_id": "S2",
+              "text": "要找整除/倍数关系"
+            },
+            {
+              "signal_id": "G",
+              "text": "证明必存在"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "COMB_C",
+      "questions": [
+        {
+          "question_id": "COMB_C1",
+          "title": "数字计数 / 前导零陷阱",
+          "canonical_text": "(1)小于10000且十进制表示含数字1的正整数有多少？(2)含数字0的有多少？",
+          "source": "2025秋-C1-2_permutation.pdf",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "小于10000的正整数"
+            },
+            {
+              "signal_id": "G1",
+              "text": "含数字1计数"
+            },
+            {
+              "signal_id": "G2",
+              "text": "含数字0计数"
+            },
+            {
+              "signal_id": "TRAP",
+              "text": "前导零不能直接与数字1完全对称处理"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_C2",
+          "title": "二进制串 / Catalan 型约束",
+          "canonical_text": "n个0和n个1组成2n位串；任意前k位中0的个数不少于1的个数。求串数。",
+          "source": "Homework 1, 1.5",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "n个0和n个1"
+            },
+            {
+              "signal_id": "S2",
+              "text": "任意前缀0数≥1数"
+            },
+            {
+              "signal_id": "G",
+              "text": "计数"
+            }
+          ]
+        },
+        {
+          "question_id": "COMB_C3",
+          "title": "鸽巢 + 同余 / 重复数字",
+          "canonical_text": "证明或证伪：23,2323,232323,... 中存在一个数能被233整除。",
+          "source": "Homework 2, 2.5",
+          "signals": [
+            {
+              "signal_id": "S1",
+              "text": "重复拼接23形成序列"
+            },
+            {
+              "signal_id": "S2",
+              "text": "模233整除"
+            },
+            {
+              "signal_id": "G",
+              "text": "证明或证伪"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

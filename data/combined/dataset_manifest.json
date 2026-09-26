@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-26T16:10:50.003Z",
+  "sources": {
+    "week2": "data/processed/traces/participant_traces.jsonl",
+    "week3": "data/exports/week3_combinatorics/participant_traces_combinatorics.jsonl"
+  },
+  "counts": {
+    "traces": 39,
+    "week2_traces": 18,
+    "week3_traces": 21,
+    "participants": 9,
+    "questions": 12,
+    "observed_steps": 241
+  },
+  "participants": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09"
+  ],
+  "questions": [
+    "COMB_A1",
+    "COMB_A2",
+    "COMB_A3",
+    "COMB_B1",
+    "COMB_B2",
+    "COMB_B3",
+    "COMB_C1",
+    "COMB_C2",
+    "COMB_C3",
+    "TRIG_A1",
+    "TRIG_A2",
+    "TRIG_A3"
+  ],
+  "note": "P05 and P06 appear in both periods on different question domains; trace_id remains unique."
+}

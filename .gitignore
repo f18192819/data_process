@@ -1,6 +1,7 @@
 # Reproducible audio intermediates; source media and transcripts remain tracked.
-音频转写_待结构化/**/audio/
-音频转写_待结构化/**/chunks/
+data/interim/audio_transcripts/**/audio/
+data/interim/audio_transcripts/**/chunks/
 
+.video_review_tmp/
 __pycache__/
 *.py[cod]
